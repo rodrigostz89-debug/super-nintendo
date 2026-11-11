@@ -576,6 +576,7 @@
     <div class="emu-topbar">
       <div class="emu-title" id="emuTitle">Jogando Super Nintendo</div>
       <div class="emu-actions">
+        <button class="btn" id="emuLockYBtn" title="Mantém o botão Y segurado automaticamente (ótimo para correr em Mario e Donkey Kong!)">🔒 Segurar Y: OFF</button>
         <button class="btn" id="emuFsBtn">⛶ Tela Cheia</button>
         <button class="btn-close-emu" id="emuCloseBtn">✕ Sair do Jogo (ESC)</button>
       </div>
@@ -729,12 +730,23 @@
     `).join('');
   }
 
+  const emuLockYBtn = document.getElementById('emuLockYBtn');
+
+  function updateLockYButtonUI(locked) {
+    if (!emuLockYBtn) return;
+    emuLockYBtn.textContent = locked ? '🔒 Segurar Y: ON' : '🔒 Segurar Y: OFF';
+    emuLockYBtn.style.background = locked ? '#20c05c' : '';
+    emuLockYBtn.style.borderColor = locked ? '#40ff80' : '';
+    emuLockYBtn.style.color = locked ? '#fff' : '';
+  }
+
   function openGameInBrowser(game) {
     if (!game) return;
     userData.recent = [game.id, ...userData.recent.filter(id => id !== game.id)].slice(0, 30);
     updateCounts();
     saveUserData();
 
+    updateLockYButtonUI(false);
     emuTitle.textContent = `🕹️ ${game.title} (${game.region})`;
     emuModal.classList.add('open');
 
@@ -747,8 +759,70 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <style>
-  html, body { margin:0; padding:0; width:100%; height:100%; background:#000; overflow:hidden; }
-  #player { width:100%; height:100%; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    overflow: hidden;
+    touch-action: none !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -webkit-touch-callout: none !important;
+  }
+  #player,
+  .ejs_virtualGamepad_parent,
+  .ejs_virtualGamepad_left,
+  .ejs_virtualGamepad_right,
+  .ejs_virtualGamepad_top,
+  .ejs_virtualGamepad_bottom,
+  .ejs_virtualGamepad_button,
+  .ejs_dpad_main {
+    touch-action: none !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -webkit-touch-callout: none !important;
+  }
+  #player { width: 100%; height: 100%; }
+  .ejs_virtualGamepad_button.b_yb {
+    left: -14px !important;
+    top: 86px !important;
+    width: 46px !important;
+    height: 46px !important;
+    line-height: 44px !important;
+    font-size: 14px !important;
+    font-weight: 800 !important;
+    background: rgba(245, 196, 28, 0.28) !important;
+    border: 2px solid #f5c41c !important;
+    color: #fff !important;
+    box-shadow: 0 0 10px rgba(245, 196, 28, 0.35);
+    z-index: 25;
+  }
+  .ejs_virtualGamepad_button.b_lock_y {
+    left: -14px !important;
+    top: -6px !important;
+    width: 46px !important;
+    height: 32px !important;
+    line-height: 30px !important;
+    font-size: 12px !important;
+    font-weight: 800 !important;
+    border-radius: 10px !important;
+    background: rgba(121, 80, 242, 0.3) !important;
+    border: 1.5px solid #9775fa !important;
+    color: #fff !important;
+    z-index: 25;
+  }
+  .ejs_virtualGamepad_button.b_lock_y.locked {
+    background: rgba(32, 192, 92, 0.85) !important;
+    border-color: #51cf66 !important;
+    box-shadow: 0 0 12px rgba(32, 192, 92, 0.8);
+  }
+  .ejs_virtualGamepad_button_down {
+    background-color: rgba(121, 80, 242, 0.78) !important;
+    border-color: #fff !important;
+    transform: scale(0.94);
+  }
 </style>
 </head>
 <body>
@@ -761,11 +835,312 @@
     window.EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
     window.EJS_startOnLoaded = true;
     window.EJS_color = "#7950f2";
+
+    (function() {
+      // SNES Button IDs in EmulatorJS:
+      // 0=B, 1=Y, 2=Select, 3=Start, 4=Up, 5=Down, 6=Left, 7=Right, 8=A, 9=X, 10=L, 11=R
+      const touchBtns = new Set();
+      const keyBtns = new Set();
+      const heldCodes = new Set();
+      const touchOrigins = new Map();
+      const prevManaged = new Map();
+      const externalHeld = new Set();
+      let lockY = false;
+      let rawSim = null;
+
+      // Multi-key anti-ghosting keyboard map (supports Setas + S/X/Z/A, Shift+Space, Y/B literals, J/K/L/I, and C for Y+B combo!)
+      const CODE_MAP = {
+        ArrowUp: [4], ArrowDown: [5], ArrowLeft: [6], ArrowRight: [7],
+        // Y (Correr / Segurar): S, Y, J, Shift, Numpad4, Numpad1
+        KeyS: [1], KeyY: [1], KeyJ: [1], ShiftLeft: [1], ShiftRight: [1], Numpad4: [1], Numpad1: [1],
+        // B (Pular): X, B, K, Espaco, Numpad2, Numpad0
+        KeyX: [0], KeyB: [0], KeyK: [0], Space: [0], Numpad2: [0], Numpad0: [0],
+        // A (Pulo Giratorio / Especial): Z, L, Numpad6, Numpad3
+        KeyZ: [8], KeyL: [8], Numpad6: [8], Numpad3: [8],
+        // X (Item / Acao Superior): A, I, Numpad8, Numpad5
+        KeyA: [9], KeyI: [9], Numpad8: [9], Numpad5: [9],
+        // L & R (Ombros): Q/U e W/E/O
+        KeyQ: [10], KeyU: [10], Numpad7: [10],
+        KeyE: [11], KeyW: [11], KeyO: [11], Numpad9: [11],
+        // Combo 1-tecla Y + B juntos: C
+        KeyC: [1, 0],
+        // Start & Select
+        Enter: [3], NumpadEnter: [3],
+        KeyV: [2], Backspace: [2]
+      };
+
+      function isHeld(btnId) {
+        return touchBtns.has(btnId) || keyBtns.has(btnId) || (btnId === 1 && lockY);
+      }
+
+      function ensureHooked() {
+        const emu = window.EJS_emulator;
+        if (!emu || !emu.gameManager) return null;
+        const gm = emu.gameManager;
+        if (!gm._multiWrapped && typeof gm.simulateInput === "function") {
+          rawSim = gm.simulateInput.bind(gm);
+          gm.simulateInput = function(player, btnId, val) {
+            if (player === 0) {
+              if (val === 0 && isHeld(btnId)) {
+                // Never allow a release of a button (like Y) while it is still held via thumb-roll, multi-touch, key, or Lock-Y!
+                rawSim(0, btnId, 1);
+                return;
+              }
+              if (val > 0) externalHeld.add(btnId);
+              else externalHeld.delete(btnId);
+            }
+            rawSim(player, btnId, val);
+            if (player === 0 && val > 0) {
+              // Re-assert all other held buttons (including D-Pad + Y + B) so simultaneous inputs never drop
+              for (let b = 0; b <= 11; b++) {
+                if (b !== btnId && (isHeld(b) || externalHeld.has(b))) {
+                  rawSim(0, b, 1);
+                }
+              }
+            }
+          };
+          gm._multiWrapped = true;
+        }
+        return rawSim;
+      }
+
+      function syncAllInputs() {
+        const sim = ensureHooked();
+        if (!sim) return;
+        for (let b = 0; b <= 11; b++) {
+          const nowActive = isHeld(b);
+          const wasActive = prevManaged.get(b) || false;
+          if (nowActive) {
+            sim(0, b, 1);
+            prevManaged.set(b, true);
+          } else if (wasActive) {
+            sim(0, b, 0);
+            prevManaged.set(b, false);
+          }
+        }
+        updateGamepadVisuals();
+      }
+
+      function updateGamepadVisuals() {
+        const rightPad = document.querySelector(".ejs_virtualGamepad_right");
+        if (!rightPad) return;
+        const map = [
+          [".b_y", 1],
+          [".b_b", 0],
+          [".b_a", 8],
+          [".b_x", 9]
+        ];
+        for (const [sel, id] of map) {
+          const el = rightPad.querySelector(sel);
+          if (el) el.classList.toggle("ejs_virtualGamepad_button_down", isHeld(id));
+        }
+        const ybEl = rightPad.querySelector(".b_yb");
+        if (ybEl) ybEl.classList.toggle("ejs_virtualGamepad_button_down", touchBtns.has(1) && touchBtns.has(0));
+        const lockEl = rightPad.querySelector(".b_lock_y");
+        if (lockEl) {
+          lockEl.classList.toggle("locked", lockY);
+          lockEl.textContent = lockY ? "🔒Y ON" : "🔒Y";
+        }
+      }
+
+      window.toggleLockY = function(forceState) {
+        lockY = typeof forceState === "boolean" ? forceState : !lockY;
+        syncAllInputs();
+        try {
+          if (window.parent && window.parent.updateLockYButtonUI) {
+            window.parent.updateLockYButtonUI(lockY);
+          }
+        } catch (e) {}
+        return lockY;
+      };
+
+      // Inject Y+B combo button and Lock-Y button into mobile virtual gamepad once created
+      function enhanceVirtualGamepad() {
+        ensureHooked();
+        const rightPad = document.querySelector(".ejs_virtualGamepad_right");
+        if (!rightPad || rightPad.dataset.multiEnhanced === "1") return;
+        rightPad.dataset.multiEnhanced = "1";
+
+        const ybBtn = document.createElement("div");
+        ybBtn.className = "ejs_virtualGamepad_button b_yb";
+        ybBtn.textContent = "Y+B";
+        rightPad.appendChild(ybBtn);
+
+        const lockBtn = document.createElement("div");
+        lockBtn.className = "ejs_virtualGamepad_button b_lock_y";
+        lockBtn.textContent = "🔒Y";
+        rightPad.appendChild(lockBtn);
+      }
+
+      setInterval(enhanceVirtualGamepad, 350);
+
+      function getButtonCenters() {
+        const rightPad = document.querySelector(".ejs_virtualGamepad_right");
+        if (!rightPad || rightPad.offsetParent === null) return null;
+        const specs = [
+          { sel: ".b_y", ids: [1], r: 38 },
+          { sel: ".b_b", ids: [0], r: 38 },
+          { sel: ".b_a", ids: [8], r: 38 },
+          { sel: ".b_x", ids: [9], r: 38 },
+          { sel: ".b_yb", ids: [1, 0], r: 35 }
+        ];
+        const list = [];
+        for (const s of specs) {
+          const el = rightPad.querySelector(s.sel);
+          if (!el) continue;
+          const rect = el.getBoundingClientRect();
+          if (rect.width === 0) continue;
+          list.push({
+            ids: s.ids,
+            cx: rect.left + rect.width / 2,
+            cy: rect.top + rect.height / 2,
+            r: s.r
+          });
+        }
+        return list.length ? list : null;
+      }
+
+      function handleActionTouch(e) {
+        const rightPad = document.querySelector(".ejs_virtualGamepad_right");
+        if (!rightPad || rightPad.offsetParent === null) return;
+
+        if (e.type === "touchstart") {
+          for (let i = 0; i < e.changedTouches.length; i++) {
+            const t = e.changedTouches[i];
+            const lockEl = rightPad.querySelector(".b_lock_y");
+            if (lockEl) {
+              const lr = lockEl.getBoundingClientRect();
+              if (t.clientX >= lr.left - 8 && t.clientX <= lr.right + 8 && t.clientY >= lr.top - 8 && t.clientY <= lr.bottom + 8) {
+                window.toggleLockY();
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                return;
+              }
+            }
+          }
+        }
+
+        const centers = getButtonCenters();
+        if (!centers) return;
+
+        let intercepted = false;
+
+        if (e.type === "touchstart") {
+          for (let i = 0; i < e.changedTouches.length; i++) {
+            const t = e.changedTouches[i];
+            const hitOrigin = new Set();
+            for (const c of centers) {
+              if (Math.hypot(t.clientX - c.cx, t.clientY - c.cy) <= c.r + 6) {
+                c.ids.forEach(id => hitOrigin.add(id));
+              }
+            }
+            if (hitOrigin.size > 0) {
+              touchOrigins.set(t.identifier, hitOrigin);
+              intercepted = true;
+            }
+          }
+        }
+
+        // Remove ended touches
+        const activeIds = new Set();
+        for (let i = 0; i < e.touches.length; i++) {
+          activeIds.add(e.touches[i].identifier);
+          if (touchOrigins.has(e.touches[i].identifier)) intercepted = true;
+        }
+        for (const oldId of Array.from(touchOrigins.keys())) {
+          if (!activeIds.has(oldId)) {
+            touchOrigins.delete(oldId);
+            intercepted = true;
+          }
+        }
+
+        if (!intercepted && touchBtns.size === 0) return;
+
+        // Recompute all pressed action buttons across all active fingers + thumb-roll memory
+        touchBtns.clear();
+        for (let i = 0; i < e.touches.length; i++) {
+          const t = e.touches[i];
+          const originSet = touchOrigins.get(t.identifier);
+          if (!originSet) continue;
+
+          // 1. Check direct & overlapping bridge hitboxes (rolling thumb between Y and B hits both!)
+          for (const c of centers) {
+            const dist = Math.hypot(t.clientX - c.cx, t.clientY - c.cy);
+            if (dist <= c.r) {
+              c.ids.forEach(id => touchBtns.add(id));
+            }
+          }
+
+          // 2. Thumb-roll memory: if this finger started on Y (or B) and rolled onto B (or Y/A/X) without leaving the diamond, keep the original button held too!
+          for (const origId of originSet) {
+            const origCenter = centers.find(c => c.ids.length === 1 && c.ids[0] === origId);
+            if (origCenter) {
+              const distFromOrigin = Math.hypot(t.clientX - origCenter.cx, t.clientY - origCenter.cy);
+              if (distFromOrigin <= 85) {
+                touchBtns.add(origId);
+              }
+            }
+          }
+        }
+
+        syncAllInputs();
+        if (intercepted) {
+          e.preventDefault();
+          e.stopImmediatePropagation();
+        }
+      }
+
+      document.addEventListener("touchstart", handleActionTouch, { passive: false, capture: true });
+      document.addEventListener("touchmove", handleActionTouch, { passive: false, capture: true });
+      document.addEventListener("touchend", handleActionTouch, { passive: false, capture: true });
+      document.addEventListener("touchcancel", handleActionTouch, { passive: false, capture: true });
+
+      function rebuildKeyBtns() {
+        keyBtns.clear();
+        for (const code of heldCodes) {
+          const mapped = CODE_MAP[code];
+          if (mapped) {
+            for (const b of mapped) keyBtns.add(b);
+          }
+        }
+        syncAllInputs();
+      }
+
+      function onKeyEvent(e) {
+        const emu = window.EJS_emulator;
+        if (emu && emu.controlPopup && emu.controlPopup.parentElement && emu.controlPopup.parentElement.parentElement && !emu.controlPopup.parentElement.parentElement.hasAttribute("hidden")) {
+          return;
+        }
+        const mapped = CODE_MAP[e.code];
+        if (!mapped) return;
+
+        if (e.type === "keydown") {
+          if (!e.repeat) {
+            heldCodes.add(e.code);
+            rebuildKeyBtns();
+          }
+        } else if (e.type === "keyup") {
+          heldCodes.delete(e.code);
+          rebuildKeyBtns();
+        }
+        e.preventDefault();
+        e.stopImmediatePropagation();
+      }
+
+      window.addEventListener("keydown", onKeyEvent, true);
+      window.addEventListener("keyup", onKeyEvent, true);
+      window.addEventListener("blur", () => {
+        heldCodes.clear();
+        rebuildKeyBtns();
+      });
+      window._forwardKeyEvent = onKeyEvent;
+    })();
   <\/script>
   <script src="https://cdn.emulatorjs.org/stable/data/loader.js"><\/script>
 </body>
 </html>`;
     emuFrame.srcdoc = doc;
+    setTimeout(() => { try { emuFrame.focus(); } catch (e) {} }, 150);
   }
 
   function closeGame() {
@@ -777,18 +1152,44 @@
   }
 
   document.getElementById('emuCloseBtn').addEventListener('click', closeGame);
+  document.getElementById('emuLockYBtn').addEventListener('click', () => {
+    try {
+      if (emuFrame.contentWindow && typeof emuFrame.contentWindow.toggleLockY === 'function') {
+        const state = emuFrame.contentWindow.toggleLockY();
+        updateLockYButtonUI(state);
+      }
+    } catch (e) {}
+    try { emuFrame.focus(); } catch (e) {}
+  });
   document.getElementById('emuFsBtn').addEventListener('click', () => {
     if (!document.fullscreenElement) {
       emuModal.requestFullscreen().catch(() => {});
     } else {
       document.exitFullscreen().catch(() => {});
     }
+    try { emuFrame.focus(); } catch (e) {}
   });
 
   window.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && emuModal.classList.contains('open')) {
+    if (!emuModal.classList.contains('open')) return;
+    if (e.key === 'Escape') {
       closeGame();
+      return;
     }
+    try {
+      if (emuFrame.contentWindow && typeof emuFrame.contentWindow._forwardKeyEvent === 'function') {
+        emuFrame.contentWindow._forwardKeyEvent(e);
+      }
+    } catch (err) {}
+  });
+
+  window.addEventListener('keyup', e => {
+    if (!emuModal.classList.contains('open')) return;
+    try {
+      if (emuFrame.contentWindow && typeof emuFrame.contentWindow._forwardKeyEvent === 'function') {
+        emuFrame.contentWindow._forwardKeyEvent(e);
+      }
+    } catch (err) {}
   });
 
   gridEl.addEventListener('click', e => {

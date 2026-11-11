@@ -151,13 +151,29 @@ def render_browser_emulator(game):
           background: #090810;
           overflow: hidden;
           font-family: "Segoe UI", system-ui, sans-serif;
-          user-select: none;
-          -webkit-user-select: none;
+          touch-action: none !important;
+          user-select: none !important;
+          -webkit-user-select: none !important;
+          -webkit-touch-callout: none !important;
+        }}
+        #ejs-player,
+        .ejs_virtualGamepad_parent,
+        .ejs_virtualGamepad_left,
+        .ejs_virtualGamepad_right,
+        .ejs_virtualGamepad_top,
+        .ejs_virtualGamepad_bottom,
+        .ejs_virtualGamepad_button,
+        .ejs_dpad_main {{
+          touch-action: none !important;
+          user-select: none !important;
+          -webkit-user-select: none !important;
+          -webkit-touch-callout: none !important;
         }}
         .player-bar {{
           display: flex;
           align-items: center;
           justify-content: space-between;
+          gap: 8px;
           background: #151226;
           border: 1px solid #3D2E75;
           border-bottom: none;
@@ -166,14 +182,19 @@ def render_browser_emulator(game):
           color: #EAE9F5;
           font-size: 13px;
         }}
+        .bar-btns {{
+          display: flex;
+          gap: 8px;
+          align-items: center;
+        }}
         .fs-btn {{
           background: linear-gradient(135deg, #7950F2, #5F3DC4);
           color: #fff;
           border: 1px solid #9775FA;
           border-radius: 8px;
-          padding: 6px 14px;
+          padding: 6px 12px;
           font-weight: 700;
-          font-size: 12.5px;
+          font-size: 12px;
           cursor: pointer;
         }}
         .fs-btn:hover {{
@@ -192,12 +213,53 @@ def render_browser_emulator(game):
           width: 100%;
           height: 100%;
         }}
+        .ejs_virtualGamepad_button.b_yb {{
+          left: -14px !important;
+          top: 86px !important;
+          width: 46px !important;
+          height: 46px !important;
+          line-height: 44px !important;
+          font-size: 14px !important;
+          font-weight: 800 !important;
+          background: rgba(245, 196, 28, 0.28) !important;
+          border: 2px solid #f5c41c !important;
+          color: #fff !important;
+          box-shadow: 0 0 10px rgba(245, 196, 28, 0.35);
+          z-index: 25;
+        }}
+        .ejs_virtualGamepad_button.b_lock_y {{
+          left: -14px !important;
+          top: -6px !important;
+          width: 46px !important;
+          height: 32px !important;
+          line-height: 30px !important;
+          font-size: 12px !important;
+          font-weight: 800 !important;
+          border-radius: 10px !important;
+          background: rgba(121, 80, 242, 0.3) !important;
+          border: 1.5px solid #9775fa !important;
+          color: #fff !important;
+          z-index: 25;
+        }}
+        .ejs_virtualGamepad_button.b_lock_y.locked {{
+          background: rgba(32, 192, 92, 0.85) !important;
+          border-color: #51cf66 !important;
+          box-shadow: 0 0 12px rgba(32, 192, 92, 0.8);
+        }}
+        .ejs_virtualGamepad_button_down {{
+          background-color: rgba(121, 80, 242, 0.78) !important;
+          border-color: #fff !important;
+          transform: scale(0.94);
+        }}
       </style>
     </head>
     <body>
       <div class="player-bar">
-        <span>📱 <b>No celular:</b> gire o aparelho na horizontal para jogar com os botões na tela!</span>
-        <button class="fs-btn" onclick="goFullscreen()">⛶ Tela Cheia (Celular / PC)</button>
+        <span>📱 <b>Correr + Pular (Y+B):</b> deslize o polegar do Y para o B, use o botão <b>Y+B</b> ou ative <b>🔒 Segurar Y</b>!</span>
+        <div class="bar-btns">
+          <button class="fs-btn" id="topLockYBtn" onclick="window.toggleLockY && window.toggleLockY()">🔒 Segurar Y: OFF</button>
+          <button class="fs-btn" onclick="goFullscreen()">⛶ Tela Cheia</button>
+        </div>
       </div>
       <div id="game-container">
         <div id="ejs-player"></div>
@@ -232,6 +294,281 @@ def render_browser_emulator(game):
           window.EJS_defaultOptions = {{
             "save-state-location": "browser"
           }};
+
+          const touchBtns = new Set();
+          const keyBtns = new Set();
+          const heldCodes = new Set();
+          const touchOrigins = new Map();
+          const prevManaged = new Map();
+          const externalHeld = new Set();
+          let lockY = false;
+          let rawSim = null;
+
+          const CODE_MAP = {{
+            ArrowUp: [4], ArrowDown: [5], ArrowLeft: [6], ArrowRight: [7],
+            KeyS: [1], KeyY: [1], KeyJ: [1], ShiftLeft: [1], ShiftRight: [1], Numpad4: [1], Numpad1: [1],
+            KeyX: [0], KeyB: [0], KeyK: [0], Space: [0], Numpad2: [0], Numpad0: [0],
+            KeyZ: [8], KeyL: [8], Numpad6: [8], Numpad3: [8],
+            KeyA: [9], KeyI: [9], Numpad8: [9], Numpad5: [9],
+            KeyQ: [10], KeyU: [10], Numpad7: [10],
+            KeyE: [11], KeyW: [11], KeyO: [11], Numpad9: [11],
+            KeyC: [1, 0],
+            Enter: [3], NumpadEnter: [3],
+            KeyV: [2], Backspace: [2]
+          }};
+
+          function isHeld(btnId) {{
+            return touchBtns.has(btnId) || keyBtns.has(btnId) || (btnId === 1 && lockY);
+          }}
+
+          function ensureHooked() {{
+            const emu = window.EJS_emulator;
+            if (!emu || !emu.gameManager) return null;
+            const gm = emu.gameManager;
+            if (!gm._multiWrapped && typeof gm.simulateInput === "function") {{
+              rawSim = gm.simulateInput.bind(gm);
+              gm.simulateInput = function(player, btnId, val) {{
+                if (player === 0) {{
+                  if (val === 0 && isHeld(btnId)) {{
+                    rawSim(0, btnId, 1);
+                    return;
+                  }}
+                  if (val > 0) externalHeld.add(btnId);
+                  else externalHeld.delete(btnId);
+                }}
+                rawSim(player, btnId, val);
+                if (player === 0 && val > 0) {{
+                  for (let b = 0; b <= 11; b++) {{
+                    if (b !== btnId && (isHeld(b) || externalHeld.has(b))) {{
+                      rawSim(0, b, 1);
+                    }}
+                  }}
+                }}
+              }};
+              gm._multiWrapped = true;
+            }}
+            return rawSim;
+          }}
+
+          function syncAllInputs() {{
+            const sim = ensureHooked();
+            if (!sim) return;
+            for (let b = 0; b <= 11; b++) {{
+              const nowActive = isHeld(b);
+              const wasActive = prevManaged.get(b) || false;
+              if (nowActive) {{
+                sim(0, b, 1);
+                prevManaged.set(b, true);
+              }} else if (wasActive) {{
+                sim(0, b, 0);
+                prevManaged.set(b, false);
+              }}
+            }}
+            updateGamepadVisuals();
+          }}
+
+          function updateGamepadVisuals() {{
+            const topBtn = document.getElementById("topLockYBtn");
+            if (topBtn) {{
+              topBtn.textContent = lockY ? "🔒 Segurar Y: ON" : "🔒 Segurar Y: OFF";
+              topBtn.style.background = lockY ? "#20c05c" : "";
+            }}
+            const rightPad = document.querySelector(".ejs_virtualGamepad_right");
+            if (!rightPad) return;
+            const map = [[".b_y", 1], [".b_b", 0], [".b_a", 8], [".b_x", 9]];
+            for (const [sel, id] of map) {{
+              const el = rightPad.querySelector(sel);
+              if (el) el.classList.toggle("ejs_virtualGamepad_button_down", isHeld(id));
+            }}
+            const ybEl = rightPad.querySelector(".b_yb");
+            if (ybEl) ybEl.classList.toggle("ejs_virtualGamepad_button_down", touchBtns.has(1) && touchBtns.has(0));
+            const lockEl = rightPad.querySelector(".b_lock_y");
+            if (lockEl) {{
+              lockEl.classList.toggle("locked", lockY);
+              lockEl.textContent = lockY ? "🔒Y ON" : "🔒Y";
+            }}
+          }}
+
+          window.toggleLockY = function(forceState) {{
+            lockY = typeof forceState === "boolean" ? forceState : !lockY;
+            syncAllInputs();
+            return lockY;
+          }};
+
+          function enhanceVirtualGamepad() {{
+            ensureHooked();
+            const rightPad = document.querySelector(".ejs_virtualGamepad_right");
+            if (!rightPad || rightPad.dataset.multiEnhanced === "1") return;
+            rightPad.dataset.multiEnhanced = "1";
+
+            const ybBtn = document.createElement("div");
+            ybBtn.className = "ejs_virtualGamepad_button b_yb";
+            ybBtn.textContent = "Y+B";
+            rightPad.appendChild(ybBtn);
+
+            const lockBtn = document.createElement("div");
+            lockBtn.className = "ejs_virtualGamepad_button b_lock_y";
+            lockBtn.textContent = "🔒Y";
+            rightPad.appendChild(lockBtn);
+          }}
+
+          setInterval(enhanceVirtualGamepad, 350);
+
+          function getButtonCenters() {{
+            const rightPad = document.querySelector(".ejs_virtualGamepad_right");
+            if (!rightPad || rightPad.offsetParent === null) return null;
+            const specs = [
+              {{ sel: ".b_y", ids: [1], r: 38 }},
+              {{ sel: ".b_b", ids: [0], r: 38 }},
+              {{ sel: ".b_a", ids: [8], r: 38 }},
+              {{ sel: ".b_x", ids: [9], r: 38 }},
+              {{ sel: ".b_yb", ids: [1, 0], r: 35 }}
+            ];
+            const list = [];
+            for (const s of specs) {{
+              const el = rightPad.querySelector(s.sel);
+              if (!el) continue;
+              const rect = el.getBoundingClientRect();
+              if (rect.width === 0) continue;
+              list.push({{
+                ids: s.ids,
+                cx: rect.left + rect.width / 2,
+                cy: rect.top + rect.height / 2,
+                r: s.r
+              }});
+            }}
+            return list.length ? list : null;
+          }}
+
+          function handleActionTouch(e) {{
+            const rightPad = document.querySelector(".ejs_virtualGamepad_right");
+            if (!rightPad || rightPad.offsetParent === null) return;
+
+            if (e.type === "touchstart") {{
+              for (let i = 0; i < e.changedTouches.length; i++) {{
+                const t = e.changedTouches[i];
+                const lockEl = rightPad.querySelector(".b_lock_y");
+                if (lockEl) {{
+                  const lr = lockEl.getBoundingClientRect();
+                  if (t.clientX >= lr.left - 8 && t.clientX <= lr.right + 8 && t.clientY >= lr.top - 8 && t.clientY <= lr.bottom + 8) {{
+                    window.toggleLockY();
+                    e.preventDefault();
+                    e.stopImmediatePropagation();
+                    return;
+                  }}
+                }}
+              }}
+            }}
+
+            const centers = getButtonCenters();
+            if (!centers) return;
+
+            let intercepted = false;
+
+            if (e.type === "touchstart") {{
+              for (let i = 0; i < e.changedTouches.length; i++) {{
+                const t = e.changedTouches[i];
+                const hitOrigin = new Set();
+                for (const c of centers) {{
+                  if (Math.hypot(t.clientX - c.cx, t.clientY - c.cy) <= c.r + 6) {{
+                    c.ids.forEach(id => hitOrigin.add(id));
+                  }}
+                }}
+                if (hitOrigin.size > 0) {{
+                  touchOrigins.set(t.identifier, hitOrigin);
+                  intercepted = true;
+                }}
+              }}
+            }}
+
+            const activeIds = new Set();
+            for (let i = 0; i < e.touches.length; i++) {{
+              activeIds.add(e.touches[i].identifier);
+              if (touchOrigins.has(e.touches[i].identifier)) intercepted = true;
+            }}
+            for (const oldId of Array.from(touchOrigins.keys())) {{
+              if (!activeIds.has(oldId)) {{
+                touchOrigins.delete(oldId);
+                intercepted = true;
+              }}
+            }}
+
+            if (!intercepted && touchBtns.size === 0) return;
+
+            touchBtns.clear();
+            for (let i = 0; i < e.touches.length; i++) {{
+              const t = e.touches[i];
+              const originSet = touchOrigins.get(t.identifier);
+              if (!originSet) continue;
+
+              for (const c of centers) {{
+                const dist = Math.hypot(t.clientX - c.cx, t.clientY - c.cy);
+                if (dist <= c.r) {{
+                  c.ids.forEach(id => touchBtns.add(id));
+                }}
+              }}
+
+              for (const origId of originSet) {{
+                const origCenter = centers.find(c => c.ids.length === 1 && c.ids[0] === origId);
+                if (origCenter) {{
+                  const distFromOrigin = Math.hypot(t.clientX - origCenter.cx, t.clientY - origCenter.cy);
+                  if (distFromOrigin <= 85) {{
+                    touchBtns.add(origId);
+                  }}
+                }}
+              }}
+            }}
+
+            syncAllInputs();
+            if (intercepted) {{
+              e.preventDefault();
+              e.stopImmediatePropagation();
+            }}
+          }}
+
+          document.addEventListener("touchstart", handleActionTouch, {{ passive: false, capture: true }});
+          document.addEventListener("touchmove", handleActionTouch, {{ passive: false, capture: true }});
+          document.addEventListener("touchend", handleActionTouch, {{ passive: false, capture: true }});
+          document.addEventListener("touchcancel", handleActionTouch, {{ passive: false, capture: true }});
+
+          function rebuildKeyBtns() {{
+            keyBtns.clear();
+            for (const code of heldCodes) {{
+              const mapped = CODE_MAP[code];
+              if (mapped) {{
+                for (const b of mapped) keyBtns.add(b);
+              }}
+            }}
+            syncAllInputs();
+          }}
+
+          function onKeyEvent(e) {{
+            const emu = window.EJS_emulator;
+            if (emu && emu.controlPopup && emu.controlPopup.parentElement && emu.controlPopup.parentElement.parentElement && !emu.controlPopup.parentElement.parentElement.hasAttribute("hidden")) {{
+              return;
+            }}
+            const mapped = CODE_MAP[e.code];
+            if (!mapped) return;
+
+            if (e.type === "keydown") {{
+              if (!e.repeat) {{
+                heldCodes.add(e.code);
+                rebuildKeyBtns();
+              }}
+            }} else if (e.type === "keyup") {{
+              heldCodes.delete(e.code);
+              rebuildKeyBtns();
+            }}
+            e.preventDefault();
+            e.stopImmediatePropagation();
+          }}
+
+          window.addEventListener("keydown", onKeyEvent, true);
+          window.addEventListener("keyup", onKeyEvent, true);
+          window.addEventListener("blur", () => {{
+            heldCodes.clear();
+            rebuildKeyBtns();
+          }});
 
           const script = document.createElement("script");
           script.src = "https://cdn.emulatorjs.org/stable/data/loader.js";
