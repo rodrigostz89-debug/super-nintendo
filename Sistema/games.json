@@ -1,0 +1,7452 @@
+[
+  {
+    "id": "ff7205d9976e",
+    "title": "2020 Super Baseball",
+    "file": "2020 Super Baseball (U).smc",
+    "cover": "Capas/ff7205d9976e.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "#",
+    "sizeKB": 1536
+  },
+  {
+    "id": "0cf77b6c1540",
+    "title": "3 Ninjas Kick Back",
+    "file": "3 Ninjas Kick Back (U).smc",
+    "cover": "Capas/0cf77b6c1540.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "#",
+    "sizeKB": 2048
+  },
+  {
+    "id": "1ee387aee4d4",
+    "title": "46 Okunen Monogatari - Harukanaru Eden he",
+    "file": "46 Okunen Monogatari - Harukanaru Eden he (J).smc",
+    "cover": "Capas/1ee387aee4d4.jpg",
+    "region": "Japão",
+    "category": "RPG",
+    "letter": "#",
+    "sizeKB": 1536
+  },
+  {
+    "id": "1f68182c60e5",
+    "title": "A.S.P. Air Strike Patrol",
+    "file": "A.S.P. Air Strike Patrol (U).smc",
+    "cover": "Capas/1f68182c60e5.jpg",
+    "region": "EUA",
+    "category": "Nave & Tiro",
+    "letter": "A",
+    "sizeKB": 1024
+  },
+  {
+    "id": "5d25089ae65b",
+    "title": "AAAHH!!! Real Monsters",
+    "file": "AAAHH!!! Real Monsters (U).smc",
+    "cover": "Capas/5d25089ae65b.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "A",
+    "sizeKB": 2048
+  },
+  {
+    "id": "a07495b07c82",
+    "title": "ABC Monday Night Football",
+    "file": "ABC Monday Night Football (U).smc",
+    "cover": "Capas/a07495b07c82.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "A",
+    "sizeKB": 1024
+  },
+  {
+    "id": "01d3e8a7a1ee",
+    "title": "ACME Animation Factory",
+    "file": "ACME Animation Factory (U).smc",
+    "cover": "Capas/01d3e8a7a1ee.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "A",
+    "sizeKB": 1024
+  },
+  {
+    "id": "81892b4fc485",
+    "title": "ActRaiser",
+    "file": "ActRaiser (U) [!].smc",
+    "cover": "Capas/81892b4fc485.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "A",
+    "sizeKB": 1024
+  },
+  {
+    "id": "e07d404cc920",
+    "title": "ActRaiser 2",
+    "file": "ActRaiser 2 (U) [!].smc",
+    "cover": "Capas/e07d404cc920.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "A",
+    "sizeKB": 1536
+  },
+  {
+    "id": "c20f83a5e2e2",
+    "title": "AD&D - Eye of the Beholder",
+    "file": "AD&D - Eye of the Beholder (U).smc",
+    "cover": "Capas/c20f83a5e2e2.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "A",
+    "sizeKB": 1024
+  },
+  {
+    "id": "830f05837447",
+    "title": "Addams Family Values",
+    "file": "Addams Family Values (U).smc",
+    "cover": "Capas/830f05837447.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "A",
+    "sizeKB": 2048
+  },
+  {
+    "id": "5b884dc1e893",
+    "title": "Addams Family, The - Pugsley's Scavenger Hunt",
+    "file": "Addams Family, The - Pugsley's Scavenger Hunt (U).smc",
+    "cover": "Capas/5b884dc1e893.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "A",
+    "sizeKB": 1024
+  },
+  {
+    "id": "ace4e334f6d4",
+    "title": "Aero Fighters",
+    "file": "Aero Fighters (U).smc",
+    "cover": "Capas/ace4e334f6d4.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "A",
+    "sizeKB": 1280
+  },
+  {
+    "id": "d7da6ce8a9f2",
+    "title": "Aero the Acro-Bat",
+    "file": "Aero the Acro-Bat (U) [!].smc",
+    "cover": "Capas/d7da6ce8a9f2.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "A",
+    "sizeKB": 1024
+  },
+  {
+    "id": "0fa29eda2632",
+    "title": "Aero the Acro-Bat 2",
+    "file": "Aero the Acro-Bat 2 (U).smc",
+    "cover": "Capas/0fa29eda2632.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "A",
+    "sizeKB": 2048
+  },
+  {
+    "id": "7c58282f094a",
+    "title": "Aerobiz",
+    "file": "Aerobiz (U).smc",
+    "cover": "Capas/7c58282f094a.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "A",
+    "sizeKB": 1024
+  },
+  {
+    "id": "c6f4957fa719",
+    "title": "Aerobiz Supersonic",
+    "file": "Aerobiz Supersonic (U).smc",
+    "cover": "Capas/c6f4957fa719.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "A",
+    "sizeKB": 1024
+  },
+  {
+    "id": "d5d273a82bb1",
+    "title": "Air Cavalry",
+    "file": "Air Cavalry (U).smc",
+    "cover": "Capas/d5d273a82bb1.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "A",
+    "sizeKB": 1024
+  },
+  {
+    "id": "4865d0e87ef4",
+    "title": "Al Unser Jr's Road to the Top",
+    "file": "Al Unser Jr's Road to the Top (U).smc",
+    "cover": "Capas/4865d0e87ef4.jpg",
+    "region": "EUA",
+    "category": "Corrida",
+    "letter": "A",
+    "sizeKB": 1024
+  },
+  {
+    "id": "c4718115c725",
+    "title": "Aladdin",
+    "file": "Aladdin (U) [!].smc",
+    "cover": "Capas/c4718115c725.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "A",
+    "sizeKB": 1280
+  },
+  {
+    "id": "5e43b36ee084",
+    "title": "Alien 3",
+    "file": "Alien 3 (U).smc",
+    "cover": "Capas/5e43b36ee084.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "A",
+    "sizeKB": 1024
+  },
+  {
+    "id": "ca1ea81c3c91",
+    "title": "Alien vs. Predator",
+    "file": "Alien vs. Predator (U).smc",
+    "cover": "Capas/ca1ea81c3c91.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "A",
+    "sizeKB": 1024
+  },
+  {
+    "id": "c7564985a73e",
+    "title": "American Gladiators",
+    "file": "American Gladiators (U).smc",
+    "cover": "Capas/c7564985a73e.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "A",
+    "sizeKB": 1024
+  },
+  {
+    "id": "6a6579c0736f",
+    "title": "An American Tail - Fievel Goes West",
+    "file": "An American Tail - Fievel Goes West (U).smc",
+    "cover": "Capas/6a6579c0736f.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "A",
+    "sizeKB": 1024
+  },
+  {
+    "id": "e49d76dfe584",
+    "title": "Andre Agassi Tennis",
+    "file": "Andre Agassi Tennis (U).smc",
+    "cover": "Capas/e49d76dfe584.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "A",
+    "sizeKB": 512
+  },
+  {
+    "id": "b56e0d230bcb",
+    "title": "Animaniacs",
+    "file": "Animaniacs (U) [!].smc",
+    "cover": "Capas/b56e0d230bcb.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "A",
+    "sizeKB": 1024
+  },
+  {
+    "id": "32087fd3e41c",
+    "title": "Arcade's Greatest Hits",
+    "file": "Arcade's Greatest Hits (U).smc",
+    "cover": "Capas/32087fd3e41c.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "A",
+    "sizeKB": 512
+  },
+  {
+    "id": "3f9e87922aaa",
+    "title": "Arcade's Greatest Hits - The Atari Collection 1",
+    "file": "Arcade's Greatest Hits - The Atari Collection 1 (U).smc",
+    "cover": "Capas/3f9e87922aaa.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "A",
+    "sizeKB": 512
+  },
+  {
+    "id": "adb65eb5a408",
+    "title": "Arcana",
+    "file": "Arcana (U).smc",
+    "cover": "Capas/adb65eb5a408.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "A",
+    "sizeKB": 1024
+  },
+  {
+    "id": "d1d27974ec8d",
+    "title": "Ardy Lightfoot",
+    "file": "Ardy Lightfoot (U).smc",
+    "cover": "Capas/d1d27974ec8d.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "A",
+    "sizeKB": 1024
+  },
+  {
+    "id": "c5cc3c30201e",
+    "title": "Arkanoid - Doh It Again",
+    "file": "Arkanoid - Doh It Again (U) [!].smc",
+    "cover": "Capas/c5cc3c30201e.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "A",
+    "sizeKB": 512
+  },
+  {
+    "id": "8969f2159127",
+    "title": "Art of Fighting",
+    "file": "Art of Fighting (U).smc",
+    "cover": "Capas/8969f2159127.jpg",
+    "region": "EUA",
+    "category": "Luta",
+    "letter": "A",
+    "sizeKB": 2048
+  },
+  {
+    "id": "0442fc65edfa",
+    "title": "Axelay",
+    "file": "Axelay (U).smc",
+    "cover": "Capas/0442fc65edfa.jpg",
+    "region": "EUA",
+    "category": "Nave & Tiro",
+    "letter": "A",
+    "sizeKB": 1024
+  },
+  {
+    "id": "20535c8b3074",
+    "title": "B.O.B.",
+    "file": "B.O.B. (U) [!].smc",
+    "cover": "Capas/20535c8b3074.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "B",
+    "sizeKB": 1024
+  },
+  {
+    "id": "d5a1a91c292c",
+    "title": "Ballz 3D",
+    "file": "Ballz 3D (U) [!].smc",
+    "cover": "Capas/d5a1a91c292c.jpg",
+    "region": "EUA",
+    "category": "Luta",
+    "letter": "B",
+    "sizeKB": 1024
+  },
+  {
+    "id": "776135b0aa08",
+    "title": "Ballz 3D - Instore Demo",
+    "file": "Ballz 3D - Instore Demo (U) [!].smc",
+    "cover": "Capas/776135b0aa08.jpg",
+    "region": "EUA",
+    "category": "Luta",
+    "letter": "B",
+    "sizeKB": 1024
+  },
+  {
+    "id": "2de0cb3ba957",
+    "title": "Barbie Super Model",
+    "file": "Barbie Super Model (U).smc",
+    "cover": "Capas/2de0cb3ba957.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "B",
+    "sizeKB": 1024
+  },
+  {
+    "id": "b4dd33de349e",
+    "title": "Barbie Vacation Adventure",
+    "file": "Barbie Vacation Adventure (U).smc",
+    "cover": "Capas/b4dd33de349e.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "B",
+    "sizeKB": 1024
+  },
+  {
+    "id": "76282db24863",
+    "title": "Barkley Shut Up and Jam!",
+    "file": "Barkley Shut Up and Jam! (U).smc",
+    "cover": "Capas/76282db24863.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "B",
+    "sizeKB": 1536
+  },
+  {
+    "id": "6c2a16e58cf1",
+    "title": "Bass Masters Classic",
+    "file": "Bass Masters Classic (U).smc",
+    "cover": "Capas/6c2a16e58cf1.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "B",
+    "sizeKB": 1536
+  },
+  {
+    "id": "c073ef3cf9f3",
+    "title": "Bass Masters Classic - Pro Edition",
+    "file": "Bass Masters Classic - Pro Edition (U).smc",
+    "cover": "Capas/c073ef3cf9f3.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "B",
+    "sizeKB": 2048
+  },
+  {
+    "id": "fb9d334e9ee2",
+    "title": "Bassins' Black Bass",
+    "file": "Bassins' Black Bass (U).smc",
+    "cover": "Capas/fb9d334e9ee2.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "B",
+    "sizeKB": 2048
+  },
+  {
+    "id": "5582508226e3",
+    "title": "Batman - Revenge of the Joker",
+    "file": "Batman - Revenge of the Joker (U).smc",
+    "cover": "Capas/5582508226e3.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "B",
+    "sizeKB": 1024
+  },
+  {
+    "id": "ec50bf8e34f7",
+    "title": "Batman Forever",
+    "file": "Batman Forever (U).smc",
+    "cover": "Capas/ec50bf8e34f7.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "B",
+    "sizeKB": 3072
+  },
+  {
+    "id": "2201a7b5c54c",
+    "title": "Batman Returns",
+    "file": "Batman Returns (U) [!].smc",
+    "cover": "Capas/2201a7b5c54c.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "B",
+    "sizeKB": 1024
+  },
+  {
+    "id": "6a7ebdfdd959",
+    "title": "Battle Blaze",
+    "file": "Battle Blaze (U) [!].smc",
+    "cover": "Capas/6a7ebdfdd959.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "B",
+    "sizeKB": 1024
+  },
+  {
+    "id": "17a1784839e3",
+    "title": "Battle Cars",
+    "file": "Battle Cars (U).smc",
+    "cover": "Capas/17a1784839e3.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "B",
+    "sizeKB": 1024
+  },
+  {
+    "id": "43f460120007",
+    "title": "Battle Clash",
+    "file": "Battle Clash (U) [!].smc",
+    "cover": "Capas/43f460120007.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "B",
+    "sizeKB": 1024
+  },
+  {
+    "id": "e41e1c9ce937",
+    "title": "Battle Grand Prix",
+    "file": "Battle Grand Prix (U).smc",
+    "cover": "Capas/e41e1c9ce937.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "B",
+    "sizeKB": 1024
+  },
+  {
+    "id": "34fcfdc42ee0",
+    "title": "Battletoads & Double Dragon - The Ultimate Team",
+    "file": "Battletoads & Double Dragon - The Ultimate Team (U) [!].smc",
+    "cover": "Capas/34fcfdc42ee0.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "B",
+    "sizeKB": 1024
+  },
+  {
+    "id": "0edf3db03594",
+    "title": "Battletoads in Battlemaniacs",
+    "file": "Battletoads in Battlemaniacs (U) [!].smc",
+    "cover": "Capas/0edf3db03594.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "B",
+    "sizeKB": 1024
+  },
+  {
+    "id": "5b7b5b417f11",
+    "title": "Bazooka Blitzkrieg",
+    "file": "Bazooka Blitzkrieg (U).smc",
+    "cover": "Capas/5b7b5b417f11.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "B",
+    "sizeKB": 512
+  },
+  {
+    "id": "6315fac2d571",
+    "title": "Beauty and the Beast",
+    "file": "Beauty and the Beast (U).smc",
+    "cover": "Capas/6315fac2d571.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "B",
+    "sizeKB": 1024
+  },
+  {
+    "id": "301d18c36415",
+    "title": "Beavis and Butt-Head",
+    "file": "Beavis and Butt-Head (U).smc",
+    "cover": "Capas/301d18c36415.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "B",
+    "sizeKB": 1536
+  },
+  {
+    "id": "3749b234d6f9",
+    "title": "Bebe's Kids",
+    "file": "Bebe's Kids (U).smc",
+    "cover": "Capas/3749b234d6f9.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "B",
+    "sizeKB": 1024
+  },
+  {
+    "id": "69f982c31e0b",
+    "title": "Beethoven's 2nd",
+    "file": "Beethoven's 2nd (U).smc",
+    "cover": "Capas/69f982c31e0b.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "B",
+    "sizeKB": 512
+  },
+  {
+    "id": "19f5fd80a09d",
+    "title": "Best of the Best - Championship Karate",
+    "file": "Best of the Best - Championship Karate (U).smc",
+    "cover": "Capas/19f5fd80a09d.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "B",
+    "sizeKB": 1024
+  },
+  {
+    "id": "6fbb135b8413",
+    "title": "Big Sky Trooper",
+    "file": "Big Sky Trooper (U).smc",
+    "cover": "Capas/6fbb135b8413.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "B",
+    "sizeKB": 1024
+  },
+  {
+    "id": "0f39f71a9423",
+    "title": "Biker Mice From Mars",
+    "file": "Biker Mice From Mars (U) [!].smc",
+    "cover": "Capas/0f39f71a9423.jpg",
+    "region": "EUA",
+    "category": "Corrida",
+    "letter": "B",
+    "sizeKB": 1024
+  },
+  {
+    "id": "3e1b41f3040d",
+    "title": "Bill Laimbeer's Combat Basketball",
+    "file": "Bill Laimbeer's Combat Basketball (U) [!].smc",
+    "cover": "Capas/3e1b41f3040d.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "B",
+    "sizeKB": 512
+  },
+  {
+    "id": "9301b14abc84",
+    "title": "Bill Walsh College Football",
+    "file": "Bill Walsh College Football (U) [!].smc",
+    "cover": "Capas/9301b14abc84.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "B",
+    "sizeKB": 1024
+  },
+  {
+    "id": "aba149e6bff5",
+    "title": "Bio Metal",
+    "file": "Bio Metal (U) [!].smc",
+    "cover": "Capas/aba149e6bff5.jpg",
+    "region": "EUA",
+    "category": "Nave & Tiro",
+    "letter": "B",
+    "sizeKB": 1024
+  },
+  {
+    "id": "0658a44b798f",
+    "title": "Blackthorne",
+    "file": "Blackthorne (U).smc",
+    "cover": "Capas/0658a44b798f.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "B",
+    "sizeKB": 1024
+  },
+  {
+    "id": "87ce76a168f5",
+    "title": "Blazeon",
+    "file": "Blazeon (U).smc",
+    "cover": "Capas/87ce76a168f5.jpg",
+    "region": "EUA",
+    "category": "Nave & Tiro",
+    "letter": "B",
+    "sizeKB": 1024
+  },
+  {
+    "id": "c75d4593ec66",
+    "title": "Bobby's World",
+    "file": "Bobby's World (U).smc",
+    "cover": "Capas/c75d4593ec66.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "B",
+    "sizeKB": 1024
+  },
+  {
+    "id": "fe46b7671219",
+    "title": "Bonkers",
+    "file": "Bonkers (U).smc",
+    "cover": "Capas/fe46b7671219.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "B",
+    "sizeKB": 1024
+  },
+  {
+    "id": "2743d90f07c2",
+    "title": "Boogerman - A Pick and Flick Adventure",
+    "file": "Boogerman - A Pick and Flick Adventure (U).smc",
+    "cover": "Capas/2743d90f07c2.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "B",
+    "sizeKB": 3072
+  },
+  {
+    "id": "f6a7188e2e66",
+    "title": "Boxing Legends of the Ring",
+    "file": "Boxing Legends of the Ring (U).smc",
+    "cover": "Capas/f6a7188e2e66.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "B",
+    "sizeKB": 1024
+  },
+  {
+    "id": "b90a95f4ca95",
+    "title": "Brain Lord",
+    "file": "Brain Lord (U).smc",
+    "cover": "Capas/b90a95f4ca95.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "B",
+    "sizeKB": 1536
+  },
+  {
+    "id": "6593ab1a5a98",
+    "title": "Bram Stoker's Dracula",
+    "file": "Bram Stoker's Dracula (U).smc",
+    "cover": "Capas/6593ab1a5a98.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "B",
+    "sizeKB": 1024
+  },
+  {
+    "id": "6a5515dc7bc7",
+    "title": "Brandish",
+    "file": "Brandish (U) [!].smc",
+    "cover": "Capas/6a5515dc7bc7.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "B",
+    "sizeKB": 1536
+  },
+  {
+    "id": "3894a202d057",
+    "title": "Brawl Brothers",
+    "file": "Brawl Brothers (U) [!].smc",
+    "cover": "Capas/3894a202d057.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "B",
+    "sizeKB": 1536
+  },
+  {
+    "id": "23001d6200b4",
+    "title": "BreakThru!",
+    "file": "BreakThru! (U).smc",
+    "cover": "Capas/23001d6200b4.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "B",
+    "sizeKB": 512
+  },
+  {
+    "id": "a417213cda20",
+    "title": "Breath of Fire",
+    "file": "Breath of Fire (U) [!].smc",
+    "cover": "Capas/a417213cda20.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "B",
+    "sizeKB": 1536
+  },
+  {
+    "id": "cb01d614c2bb",
+    "title": "Breath of Fire II",
+    "file": "Breath of Fire II (U) [!].smc",
+    "cover": "Capas/cb01d614c2bb.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "B",
+    "sizeKB": 3072
+  },
+  {
+    "id": "52412f3c05cf",
+    "title": "Brett Hull Hockey",
+    "file": "Brett Hull Hockey (U).smc",
+    "cover": "Capas/52412f3c05cf.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "B",
+    "sizeKB": 2048
+  },
+  {
+    "id": "9379943047c7",
+    "title": "Brett Hull Hockey '95",
+    "file": "Brett Hull Hockey '95 (U).smc",
+    "cover": "Capas/9379943047c7.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "B",
+    "sizeKB": 2048
+  },
+  {
+    "id": "ce4a64d99cc1",
+    "title": "Bronkie Health Hero",
+    "file": "Bronkie Health Hero (U).smc",
+    "cover": "Capas/ce4a64d99cc1.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "B",
+    "sizeKB": 1024
+  },
+  {
+    "id": "afcd75e82524",
+    "title": "Brunswick World Tournament of Champions",
+    "file": "Brunswick World Tournament of Champions (U).smc",
+    "cover": "Capas/afcd75e82524.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "B",
+    "sizeKB": 2048
+  },
+  {
+    "id": "92e9d4661adf",
+    "title": "Brutal - Paws of Fury",
+    "file": "Brutal - Paws of Fury (U).smc",
+    "cover": "Capas/92e9d4661adf.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "B",
+    "sizeKB": 2048
+  },
+  {
+    "id": "af3636bf493c",
+    "title": "Bubsy II",
+    "file": "Bubsy II (U).smc",
+    "cover": "Capas/af3636bf493c.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "B",
+    "sizeKB": 2048
+  },
+  {
+    "id": "e928f56b9f51",
+    "title": "Bubsy in Claws Encounters of the Furred Kind",
+    "file": "Bubsy in Claws Encounters of the Furred Kind (U) [!].smc",
+    "cover": "Capas/e928f56b9f51.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "B",
+    "sizeKB": 2048
+  },
+  {
+    "id": "d4d0abff5b24",
+    "title": "Bugs Bunny - Rabbit Rampage",
+    "file": "Bugs Bunny - Rabbit Rampage (U) [!].smc",
+    "cover": "Capas/d4d0abff5b24.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "B",
+    "sizeKB": 1536
+  },
+  {
+    "id": "f19b56c241dd",
+    "title": "Bulls Vs Blazers and the NBA Playoffs",
+    "file": "Bulls Vs Blazers and the NBA Playoffs (U) (V1.1) [!].smc",
+    "cover": "Capas/f19b56c241dd.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "B",
+    "sizeKB": 1024
+  },
+  {
+    "id": "4e08526d7fd7",
+    "title": "Bust-A-Move",
+    "file": "Bust-A-Move (U).smc",
+    "cover": "Capas/4e08526d7fd7.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "B",
+    "sizeKB": 512
+  },
+  {
+    "id": "2bfcfe7f7126",
+    "title": "Cacoma Knight in Bizyland",
+    "file": "Cacoma Knight in Bizyland (U).smc",
+    "cover": "Capas/2bfcfe7f7126.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "C",
+    "sizeKB": 512
+  },
+  {
+    "id": "77d632931ab4",
+    "title": "Cal Ripken Jr. Baseball",
+    "file": "Cal Ripken Jr. Baseball (U) [!].smc",
+    "cover": "Capas/77d632931ab4.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "C",
+    "sizeKB": 1024
+  },
+  {
+    "id": "13986e858631",
+    "title": "California Games II",
+    "file": "California Games II (U).smc",
+    "cover": "Capas/13986e858631.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "C",
+    "sizeKB": 1024
+  },
+  {
+    "id": "ef99179f38d5",
+    "title": "Cannondale Cup",
+    "file": "Cannondale Cup (U).smc",
+    "cover": "Capas/ef99179f38d5.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "C",
+    "sizeKB": 1536
+  },
+  {
+    "id": "2192dbb55430",
+    "title": "Capcom's MVP Football",
+    "file": "Capcom's MVP Football (U).smc",
+    "cover": "Capas/2192dbb55430.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "C",
+    "sizeKB": 1024
+  },
+  {
+    "id": "4e8a653bdd2b",
+    "title": "Capcom's Soccer Shootout",
+    "file": "Capcom's Soccer Shootout (U).smc",
+    "cover": "Capas/4e8a653bdd2b.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "C",
+    "sizeKB": 1536
+  },
+  {
+    "id": "8a15aeba0c78",
+    "title": "Captain America and The Avengers",
+    "file": "Captain America and The Avengers (U).smc",
+    "cover": "Capas/8a15aeba0c78.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "C",
+    "sizeKB": 1024
+  },
+  {
+    "id": "eb8333881195",
+    "title": "Captain Commando",
+    "file": "Captain Commando (U).smc",
+    "cover": "Capas/eb8333881195.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "C",
+    "sizeKB": 2048
+  },
+  {
+    "id": "8e0b108b6bfc",
+    "title": "Captain Novolin",
+    "file": "Captain Novolin (U).smc",
+    "cover": "Capas/8e0b108b6bfc.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "C",
+    "sizeKB": 512
+  },
+  {
+    "id": "a40535fa8912",
+    "title": "Carrier Aces",
+    "file": "Carrier Aces (U).smc",
+    "cover": "Capas/a40535fa8912.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "C",
+    "sizeKB": 2048
+  },
+  {
+    "id": "7c1eedee414a",
+    "title": "Casper",
+    "file": "Casper (U).smc",
+    "cover": "Capas/7c1eedee414a.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "C",
+    "sizeKB": 1024
+  },
+  {
+    "id": "866f62b7bf18",
+    "title": "Castlevania - Dracula X",
+    "file": "Castlevania - Dracula X (U).smc",
+    "cover": "Capas/866f62b7bf18.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "C",
+    "sizeKB": 2048
+  },
+  {
+    "id": "053a380157a9",
+    "title": "Champions World Class Soccer",
+    "file": "Champions World Class Soccer (U).smc",
+    "cover": "Capas/053a380157a9.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "C",
+    "sizeKB": 1024
+  },
+  {
+    "id": "59ccfc292043",
+    "title": "Championship Pool",
+    "file": "Championship Pool (U).smc",
+    "cover": "Capas/59ccfc292043.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "C",
+    "sizeKB": 1024
+  },
+  {
+    "id": "0081bb926882",
+    "title": "Championship Soccer '94",
+    "file": "Championship Soccer '94 (U).smc",
+    "cover": "Capas/0081bb926882.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "C",
+    "sizeKB": 512
+  },
+  {
+    "id": "d5712b40593c",
+    "title": "Chavez",
+    "file": "Chavez (U).smc",
+    "cover": "Capas/d5712b40593c.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "C",
+    "sizeKB": 512
+  },
+  {
+    "id": "493271e0c98e",
+    "title": "Chavez II",
+    "file": "Chavez II (U).smc",
+    "cover": "Capas/493271e0c98e.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "C",
+    "sizeKB": 1024
+  },
+  {
+    "id": "1acb6de1327d",
+    "title": "Chester Cheetah - Too Cool to Fool",
+    "file": "Chester Cheetah - Too Cool to Fool (U) [!].smc",
+    "cover": "Capas/1acb6de1327d.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "C",
+    "sizeKB": 1024
+  },
+  {
+    "id": "2594a79512b5",
+    "title": "Chester Cheetah - Wild Wild Quest",
+    "file": "Chester Cheetah - Wild Wild Quest (U) (14145).smc",
+    "cover": "Capas/2594a79512b5.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "C",
+    "sizeKB": 1280
+  },
+  {
+    "id": "d6203fe58f24",
+    "title": "Choplifter III",
+    "file": "Choplifter III (U) (30545).smc",
+    "cover": "Capas/d6203fe58f24.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "C",
+    "sizeKB": 512
+  },
+  {
+    "id": "725bc2933ea2",
+    "title": "Chrono Trigger",
+    "file": "Chrono Trigger (U) [!].smc",
+    "cover": "Capas/725bc2933ea2.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "C",
+    "sizeKB": 4096
+  },
+  {
+    "id": "2bc8dea67653",
+    "title": "Chuck Rock",
+    "file": "Chuck Rock (U).smc",
+    "cover": "Capas/2bc8dea67653.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "C",
+    "sizeKB": 1024
+  },
+  {
+    "id": "3c1667453cf2",
+    "title": "Civilization",
+    "file": "Civilization (U) [!].smc",
+    "cover": "Capas/3c1667453cf2.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "C",
+    "sizeKB": 1536
+  },
+  {
+    "id": "d0abdad14905",
+    "title": "Clay Fighter",
+    "file": "Clay Fighter (U).smc",
+    "cover": "Capas/d0abdad14905.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "C",
+    "sizeKB": 2048
+  },
+  {
+    "id": "b11fc7f5bf46",
+    "title": "Clay Fighter - Tournament Edition",
+    "file": "Clay Fighter - Tournament Edition (U).smc",
+    "cover": "Capas/b11fc7f5bf46.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "C",
+    "sizeKB": 3072
+  },
+  {
+    "id": "c6f8731f2332",
+    "title": "Clay Fighter 2 - Judgment Clay",
+    "file": "Clay Fighter 2 - Judgment Clay (U).smc",
+    "cover": "Capas/c6f8731f2332.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "C",
+    "sizeKB": 3072
+  },
+  {
+    "id": "6b26a253f219",
+    "title": "Claymates",
+    "file": "Claymates (U).smc",
+    "cover": "Capas/6b26a253f219.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "C",
+    "sizeKB": 1024
+  },
+  {
+    "id": "302d2ec9691e",
+    "title": "Claymates Demo",
+    "file": "Claymates Demo (U).smc",
+    "cover": "Capas/302d2ec9691e.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "C",
+    "sizeKB": 1024
+  },
+  {
+    "id": "b8715888a4b1",
+    "title": "Cliffhanger",
+    "file": "Cliffhanger (U).smc",
+    "cover": "Capas/b8715888a4b1.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "C",
+    "sizeKB": 1024
+  },
+  {
+    "id": "710bf2cb19ab",
+    "title": "Clue",
+    "file": "Clue (U) [!].smc",
+    "cover": "Capas/710bf2cb19ab.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "C",
+    "sizeKB": 512
+  },
+  {
+    "id": "faf795e220c3",
+    "title": "College Football USA '97 - The Road to New Orleans",
+    "file": "College Football USA '97 - The Road to New Orleans (U) [!].smc",
+    "cover": "Capas/faf795e220c3.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "C",
+    "sizeKB": 2048
+  },
+  {
+    "id": "ae7a6c4402f2",
+    "title": "College Slam Basketball",
+    "file": "College Slam Basketball (U) [!].smc",
+    "cover": "Capas/ae7a6c4402f2.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "C",
+    "sizeKB": 3072
+  },
+  {
+    "id": "e2d546755a3e",
+    "title": "Congo's Caper",
+    "file": "Congo's Caper (U).smc",
+    "cover": "Capas/e2d546755a3e.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "C",
+    "sizeKB": 512
+  },
+  {
+    "id": "5aefedb8d76a",
+    "title": "Contra III - The Alien Wars",
+    "file": "Contra III - The Alien Wars (U) [!].smc",
+    "cover": "Capas/5aefedb8d76a.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "C",
+    "sizeKB": 1024
+  },
+  {
+    "id": "9c61cd1027e2",
+    "title": "Cool Spot",
+    "file": "Cool Spot (U) [!].smc",
+    "cover": "Capas/9c61cd1027e2.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "C",
+    "sizeKB": 1024
+  },
+  {
+    "id": "423d4c4826b5",
+    "title": "Cool World",
+    "file": "Cool World (U) [!].smc",
+    "cover": "Capas/423d4c4826b5.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "C",
+    "sizeKB": 1024
+  },
+  {
+    "id": "3a2809e5fd77",
+    "title": "Cutthroat Island",
+    "file": "Cutthroat Island (U).smc",
+    "cover": "Capas/3a2809e5fd77.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "C",
+    "sizeKB": 2048
+  },
+  {
+    "id": "b9212c42587f",
+    "title": "Cyber Spin",
+    "file": "Cyber Spin (U) [!].smc",
+    "cover": "Capas/b9212c42587f.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "C",
+    "sizeKB": 512
+  },
+  {
+    "id": "95c51deb44fd",
+    "title": "Cybernator",
+    "file": "Cybernator (U).smc",
+    "cover": "Capas/95c51deb44fd.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "C",
+    "sizeKB": 1024
+  },
+  {
+    "id": "07935ec225a8",
+    "title": "D-Force",
+    "file": "D-Force (U).smc",
+    "cover": "Capas/07935ec225a8.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "D",
+    "sizeKB": 1024
+  },
+  {
+    "id": "208835363d53",
+    "title": "Daffy Duck - The Marvin Missions",
+    "file": "Daffy Duck - The Marvin Missions (U).smc",
+    "cover": "Capas/208835363d53.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "D",
+    "sizeKB": 1024
+  },
+  {
+    "id": "012a064ec973",
+    "title": "Darius Twin",
+    "file": "Darius Twin (U) [!].smc",
+    "cover": "Capas/012a064ec973.jpg",
+    "region": "EUA",
+    "category": "Nave & Tiro",
+    "letter": "D",
+    "sizeKB": 1024
+  },
+  {
+    "id": "445a43a0878d",
+    "title": "David Crane's Amazing Tennis",
+    "file": "David Crane's Amazing Tennis (U) [!].smc",
+    "cover": "Capas/445a43a0878d.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "D",
+    "sizeKB": 1024
+  },
+  {
+    "id": "fbe401e22ad2",
+    "title": "Demolition Man",
+    "file": "Demolition Man (U).smc",
+    "cover": "Capas/fbe401e22ad2.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "D",
+    "sizeKB": 2048
+  },
+  {
+    "id": "3f852f534c01",
+    "title": "Demon's Crest",
+    "file": "Demon's Crest (U) [!].smc",
+    "cover": "Capas/3f852f534c01.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "D",
+    "sizeKB": 2048
+  },
+  {
+    "id": "714b293cc904",
+    "title": "Dennis the Menace",
+    "file": "Dennis the Menace (U).smc",
+    "cover": "Capas/714b293cc904.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "D",
+    "sizeKB": 1024
+  },
+  {
+    "id": "c7b49d7665bc",
+    "title": "Desert Strike - Return to the Gulf",
+    "file": "Desert Strike - Return to the Gulf (U).smc",
+    "cover": "Capas/c7b49d7665bc.jpg",
+    "region": "EUA",
+    "category": "Nave & Tiro",
+    "letter": "D",
+    "sizeKB": 1024
+  },
+  {
+    "id": "b9c1da402d72",
+    "title": "Dig & Spike Volleyball",
+    "file": "Dig & Spike Volleyball (U).smc",
+    "cover": "Capas/b9c1da402d72.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "D",
+    "sizeKB": 1024
+  },
+  {
+    "id": "c78c5178b59c",
+    "title": "Dino City",
+    "file": "Dino City (U).smc",
+    "cover": "Capas/c78c5178b59c.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "D",
+    "sizeKB": 1024
+  },
+  {
+    "id": "63693fc0ab70",
+    "title": "Dirt Trax FX",
+    "file": "Dirt Trax FX (U) [!].smc",
+    "cover": "Capas/63693fc0ab70.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "D",
+    "sizeKB": 512
+  },
+  {
+    "id": "4ae43a8c6441",
+    "title": "Donkey Kong Country",
+    "file": "Donkey Kong Country (U) (V1.2) [!].smc",
+    "cover": "Capas/4ae43a8c6441.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "D",
+    "sizeKB": 4096
+  },
+  {
+    "id": "c6cf8a0d6496",
+    "title": "Donkey Kong Country - Competition Cartridge",
+    "file": "Donkey Kong Country - Competition Cartridge (U).smc",
+    "cover": "Capas/c6cf8a0d6496.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "D",
+    "sizeKB": 4096
+  },
+  {
+    "id": "54e2165b576c",
+    "title": "Donkey Kong Country 2 - Diddy's Kong Quest",
+    "file": "Donkey Kong Country 2 - Diddy's Kong Quest (U) (V1.1) [!].smc",
+    "cover": "Capas/54e2165b576c.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "D",
+    "sizeKB": 4096
+  },
+  {
+    "id": "12f75e9934aa",
+    "title": "Donkey Kong Country 3 - Dixie Kong's Double Trouble",
+    "file": "Donkey Kong Country 3 - Dixie Kong's Double Trouble (U) [!].smc",
+    "cover": "Capas/12f75e9934aa.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "D",
+    "sizeKB": 4096
+  },
+  {
+    "id": "2eb118805901",
+    "title": "Doom",
+    "file": "Doom (U) [!].smc",
+    "cover": "Capas/2eb118805901.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "D",
+    "sizeKB": 2048
+  },
+  {
+    "id": "9567b1246b21",
+    "title": "Doomsday Warrior",
+    "file": "Doomsday Warrior (U).smc",
+    "cover": "Capas/9567b1246b21.jpg",
+    "region": "EUA",
+    "category": "Luta",
+    "letter": "D",
+    "sizeKB": 1024
+  },
+  {
+    "id": "cee90fb2b7b4",
+    "title": "Double Dragon V - The Shadow Falls",
+    "file": "Double Dragon V - The Shadow Falls (U).smc",
+    "cover": "Capas/cee90fb2b7b4.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "D",
+    "sizeKB": 3072
+  },
+  {
+    "id": "b2a68b4d8b08",
+    "title": "Dragon - The Bruce Lee Story",
+    "file": "Dragon - The Bruce Lee Story (U).smc",
+    "cover": "Capas/b2a68b4d8b08.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "D",
+    "sizeKB": 2048
+  },
+  {
+    "id": "8d9f7c1cf45d",
+    "title": "Dragon View",
+    "file": "Dragon View (U) [!].smc",
+    "cover": "Capas/8d9f7c1cf45d.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "D",
+    "sizeKB": 2048
+  },
+  {
+    "id": "8926e4c90201",
+    "title": "Dragon's Lair",
+    "file": "Dragon's Lair (U).smc",
+    "cover": "Capas/8926e4c90201.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "D",
+    "sizeKB": 512
+  },
+  {
+    "id": "08fe3c955694",
+    "title": "Drakkhen",
+    "file": "Drakkhen (U) [!].smc",
+    "cover": "Capas/08fe3c955694.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "D",
+    "sizeKB": 1024
+  },
+  {
+    "id": "e7b6bc4ef783",
+    "title": "Dream TV",
+    "file": "Dream TV (U).smc",
+    "cover": "Capas/e7b6bc4ef783.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "D",
+    "sizeKB": 512
+  },
+  {
+    "id": "488bcf8991aa",
+    "title": "Dungeon Master",
+    "file": "Dungeon Master (U).smc",
+    "cover": "Capas/488bcf8991aa.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "D",
+    "sizeKB": 1024
+  },
+  {
+    "id": "f7eca5dabe1b",
+    "title": "E.V.O. Search for Eden",
+    "file": "E.V.O. Search for Eden (U).smc",
+    "cover": "Capas/f7eca5dabe1b.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "E",
+    "sizeKB": 1536
+  },
+  {
+    "id": "cfd28dbd2fab",
+    "title": "Earthbound",
+    "file": "Earthbound (U).smc",
+    "cover": "Capas/cfd28dbd2fab.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "E",
+    "sizeKB": 3072
+  },
+  {
+    "id": "5da97893c625",
+    "title": "Earthworm Jim",
+    "file": "Earthworm Jim (U).smc",
+    "cover": "Capas/5da97893c625.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "E",
+    "sizeKB": 3072
+  },
+  {
+    "id": "7150c63cd440",
+    "title": "Earthworm Jim 2",
+    "file": "Earthworm Jim 2 (U) [!].smc",
+    "cover": "Capas/7150c63cd440.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "E",
+    "sizeKB": 3072
+  },
+  {
+    "id": "427dfbeb2154",
+    "title": "Eek! The Cat",
+    "file": "Eek! The Cat (U).smc",
+    "cover": "Capas/427dfbeb2154.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "E",
+    "sizeKB": 1024
+  },
+  {
+    "id": "2dc97f396757",
+    "title": "Elite Soccer",
+    "file": "Elite Soccer (U).smc",
+    "cover": "Capas/2dc97f396757.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "E",
+    "sizeKB": 1024
+  },
+  {
+    "id": "a51a6f51a428",
+    "title": "Emmitt Smith Football",
+    "file": "Emmitt Smith Football (U).smc",
+    "cover": "Capas/a51a6f51a428.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "E",
+    "sizeKB": 1024
+  },
+  {
+    "id": "2d8163efbe0b",
+    "title": "Equinox",
+    "file": "Equinox (U).smc",
+    "cover": "Capas/2d8163efbe0b.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "E",
+    "sizeKB": 1024
+  },
+  {
+    "id": "df2052d45f5e",
+    "title": "ESPN Baseball Tonight",
+    "file": "ESPN Baseball Tonight (U) (10548).smc",
+    "cover": "Capas/df2052d45f5e.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "E",
+    "sizeKB": 2048
+  },
+  {
+    "id": "f6b7f7f1fc35",
+    "title": "ESPN National Hockey Night",
+    "file": "ESPN National Hockey Night (U).smc",
+    "cover": "Capas/f6b7f7f1fc35.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "E",
+    "sizeKB": 2048
+  },
+  {
+    "id": "d24071ddc0d4",
+    "title": "ESPN Speedworld",
+    "file": "ESPN Speedworld (U).smc",
+    "cover": "Capas/d24071ddc0d4.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "E",
+    "sizeKB": 2048
+  },
+  {
+    "id": "c7df9a19364b",
+    "title": "ESPN Sunday Night NFL",
+    "file": "ESPN Sunday Night NFL (U).smc",
+    "cover": "Capas/c7df9a19364b.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "E",
+    "sizeKB": 2048
+  },
+  {
+    "id": "a024f2554317",
+    "title": "Extra Innings",
+    "file": "Extra Innings (U).smc",
+    "cover": "Capas/a024f2554317.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "E",
+    "sizeKB": 1024
+  },
+  {
+    "id": "86087e3d8d78",
+    "title": "F-ZERO",
+    "file": "F-ZERO (U) [!].smc",
+    "cover": "Capas/86087e3d8d78.jpg",
+    "region": "EUA",
+    "category": "Corrida",
+    "letter": "F",
+    "sizeKB": 512
+  },
+  {
+    "id": "e25b5e693151",
+    "title": "F1 Pole Position",
+    "file": "F1 Pole Position (U).smc",
+    "cover": "Capas/e25b5e693151.jpg",
+    "region": "EUA",
+    "category": "Corrida",
+    "letter": "F",
+    "sizeKB": 1024
+  },
+  {
+    "id": "2b71d4c37049",
+    "title": "F1 ROC - Race of Champions",
+    "file": "F1 ROC - Race of Champions (U).smc",
+    "cover": "Capas/2b71d4c37049.jpg",
+    "region": "EUA",
+    "category": "Corrida",
+    "letter": "F",
+    "sizeKB": 1024
+  },
+  {
+    "id": "dd17338b7a73",
+    "title": "F1 ROC II - Race of Champions",
+    "file": "F1 ROC II - Race of Champions (U).smc",
+    "cover": "Capas/dd17338b7a73.jpg",
+    "region": "EUA",
+    "category": "Corrida",
+    "letter": "F",
+    "sizeKB": 1024
+  },
+  {
+    "id": "3e044c17857b",
+    "title": "Faceball 2000",
+    "file": "Faceball 2000 (U) [!].smc",
+    "cover": "Capas/3e044c17857b.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "F",
+    "sizeKB": 512
+  },
+  {
+    "id": "39c642a45cfb",
+    "title": "Family Dog",
+    "file": "Family Dog (U).smc",
+    "cover": "Capas/39c642a45cfb.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "F",
+    "sizeKB": 1024
+  },
+  {
+    "id": "5a50ddad7a4f",
+    "title": "Family Feud",
+    "file": "Family Feud (U).smc",
+    "cover": "Capas/5a50ddad7a4f.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "F",
+    "sizeKB": 512
+  },
+  {
+    "id": "070ec9b3192a",
+    "title": "Fatal Fury",
+    "file": "Fatal Fury (U).smc",
+    "cover": "Capas/070ec9b3192a.jpg",
+    "region": "EUA",
+    "category": "Luta",
+    "letter": "F",
+    "sizeKB": 1536
+  },
+  {
+    "id": "e8741bd9ba75",
+    "title": "Fatal Fury 2",
+    "file": "Fatal Fury 2 (U).smc",
+    "cover": "Capas/e8741bd9ba75.jpg",
+    "region": "EUA",
+    "category": "Luta",
+    "letter": "F",
+    "sizeKB": 2560
+  },
+  {
+    "id": "e42c17228051",
+    "title": "Fatal Fury Special",
+    "file": "Fatal Fury Special (U).smc",
+    "cover": "Capas/e42c17228051.jpg",
+    "region": "EUA",
+    "category": "Luta",
+    "letter": "F",
+    "sizeKB": 4096
+  },
+  {
+    "id": "8d5819ae1249",
+    "title": "FIFA 97 - Gold Edition",
+    "file": "FIFA 97 - Gold Edition (U) [!].smc",
+    "cover": "Capas/8d5819ae1249.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "F",
+    "sizeKB": 2048
+  },
+  {
+    "id": "7992cd6bddf5",
+    "title": "FIFA International Soccer",
+    "file": "FIFA International Soccer (U) [!].smc",
+    "cover": "Capas/7992cd6bddf5.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "F",
+    "sizeKB": 1024
+  },
+  {
+    "id": "6917b966587d",
+    "title": "FIFA Soccer 96",
+    "file": "FIFA Soccer 96 (U) [!].smc",
+    "cover": "Capas/6917b966587d.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "F",
+    "sizeKB": 1536
+  },
+  {
+    "id": "4424887ea1a1",
+    "title": "Fighter's History",
+    "file": "Fighter's History (U).smc",
+    "cover": "Capas/4424887ea1a1.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "F",
+    "sizeKB": 2560
+  },
+  {
+    "id": "8d8d24541117",
+    "title": "Final Fantasy - Mystic Quest",
+    "file": "Final Fantasy - Mystic Quest (U) (V1.0) [!].smc",
+    "cover": "Capas/8d8d24541117.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "F",
+    "sizeKB": 512
+  },
+  {
+    "id": "3567e60ef574",
+    "title": "Final Fantasy II",
+    "file": "Final Fantasy II (U) (V1.0) [!].smc",
+    "cover": "Capas/3567e60ef574.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "F",
+    "sizeKB": 1024
+  },
+  {
+    "id": "c3e9d04afa32",
+    "title": "Final Fantasy III",
+    "file": "Final Fantasy III (U) (V1.1) [!].smc",
+    "cover": "Capas/c3e9d04afa32.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "F",
+    "sizeKB": 3072
+  },
+  {
+    "id": "74788b0494d7",
+    "title": "Final Fight",
+    "file": "Final Fight (U).smc",
+    "cover": "Capas/74788b0494d7.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "F",
+    "sizeKB": 1024
+  },
+  {
+    "id": "6d55fd2251c9",
+    "title": "Final Fight 2",
+    "file": "Final Fight 2 (U).smc",
+    "cover": "Capas/6d55fd2251c9.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "F",
+    "sizeKB": 1280
+  },
+  {
+    "id": "65d55f8c8522",
+    "title": "Final Fight 3",
+    "file": "Final Fight 3 (U).smc",
+    "cover": "Capas/65d55f8c8522.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "F",
+    "sizeKB": 3072
+  },
+  {
+    "id": "7b2dddd67e7e",
+    "title": "Final Fight Guy",
+    "file": "Final Fight Guy (U).smc",
+    "cover": "Capas/7b2dddd67e7e.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "F",
+    "sizeKB": 1024
+  },
+  {
+    "id": "02385a2d97fc",
+    "title": "Fire Pro Joshi - All Star Dream Slam",
+    "file": "Fire Pro Joshi - All Star Dream Slam (J).smc",
+    "cover": "Capas/02385a2d97fc.jpg",
+    "region": "Japão",
+    "category": "Clássicos",
+    "letter": "F",
+    "sizeKB": 2048
+  },
+  {
+    "id": "2f596dc4e68d",
+    "title": "Fire Striker",
+    "file": "Fire Striker (U).smc",
+    "cover": "Capas/2f596dc4e68d.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "F",
+    "sizeKB": 1024
+  },
+  {
+    "id": "e5c4de82438f",
+    "title": "Firepower 2000",
+    "file": "Firepower 2000 (U).smc",
+    "cover": "Capas/e5c4de82438f.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "F",
+    "sizeKB": 1024
+  },
+  {
+    "id": "d744b7ba454e",
+    "title": "First Samurai",
+    "file": "First Samurai (U).smc",
+    "cover": "Capas/d744b7ba454e.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "F",
+    "sizeKB": 512
+  },
+  {
+    "id": "e17406238905",
+    "title": "Flashback - The Quest for Identity",
+    "file": "Flashback - The Quest for Identity (U) [!].smc",
+    "cover": "Capas/e17406238905.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "F",
+    "sizeKB": 2048
+  },
+  {
+    "id": "6edd40a67344",
+    "title": "Flintstones, The - The Treasure of Sierra Madrock",
+    "file": "Flintstones, The - The Treasure of Sierra Madrock (U).smc",
+    "cover": "Capas/6edd40a67344.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "F",
+    "sizeKB": 1024
+  },
+  {
+    "id": "f17a7bba7c61",
+    "title": "Football Fury",
+    "file": "Football Fury (U).smc",
+    "cover": "Capas/f17a7bba7c61.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "F",
+    "sizeKB": 1024
+  },
+  {
+    "id": "866758dfef1a",
+    "title": "Foreman For Real",
+    "file": "Foreman For Real (U) [!].smc",
+    "cover": "Capas/866758dfef1a.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "F",
+    "sizeKB": 3072
+  },
+  {
+    "id": "da8d59dff192",
+    "title": "Frank Thomas' Big Hurt Baseball",
+    "file": "Frank Thomas' Big Hurt Baseball (U) [!].smc",
+    "cover": "Capas/da8d59dff192.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "F",
+    "sizeKB": 3072
+  },
+  {
+    "id": "f6b6e8343464",
+    "title": "Frantic Flea",
+    "file": "Frantic Flea (U) [!].smc",
+    "cover": "Capas/f6b6e8343464.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "F",
+    "sizeKB": 2048
+  },
+  {
+    "id": "fafe30c061c7",
+    "title": "Frogger",
+    "file": "Frogger (U).smc",
+    "cover": "Capas/fafe30c061c7.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "F",
+    "sizeKB": 512
+  },
+  {
+    "id": "fcb731cf5966",
+    "title": "Full Throttle Racing",
+    "file": "Full Throttle Racing (U).smc",
+    "cover": "Capas/fcb731cf5966.jpg",
+    "region": "EUA",
+    "category": "Corrida",
+    "letter": "F",
+    "sizeKB": 2048
+  },
+  {
+    "id": "71ae76bc88b8",
+    "title": "Fun 'N Games",
+    "file": "Fun 'N Games (U).smc",
+    "cover": "Capas/71ae76bc88b8.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "F",
+    "sizeKB": 1024
+  },
+  {
+    "id": "f216694da307",
+    "title": "Gemfire",
+    "file": "Gemfire (U).smc",
+    "cover": "Capas/f216694da307.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "G",
+    "sizeKB": 1024
+  },
+  {
+    "id": "8959ab5efa54",
+    "title": "Genghis Khan II - Clan of the Gray Wolf",
+    "file": "Genghis Khan II - Clan of the Gray Wolf (U).smc",
+    "cover": "Capas/8959ab5efa54.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "G",
+    "sizeKB": 1024
+  },
+  {
+    "id": "5052c41612ba",
+    "title": "George Foreman's KO Boxing",
+    "file": "George Foreman's KO Boxing (U) (V1.0) [!].smc",
+    "cover": "Capas/5052c41612ba.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "G",
+    "sizeKB": 1024
+  },
+  {
+    "id": "68dd5adc50bb",
+    "title": "Ghoul Patrol",
+    "file": "Ghoul Patrol (U).smc",
+    "cover": "Capas/68dd5adc50bb.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "G",
+    "sizeKB": 1024
+  },
+  {
+    "id": "6986ddccd02b",
+    "title": "Gods",
+    "file": "Gods (U).smc",
+    "cover": "Capas/6986ddccd02b.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "G",
+    "sizeKB": 1024
+  },
+  {
+    "id": "68ea2a2c089c",
+    "title": "Goof Troop",
+    "file": "Goof Troop (U) [!].smc",
+    "cover": "Capas/68ea2a2c089c.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "G",
+    "sizeKB": 512
+  },
+  {
+    "id": "c5bf29b3ed86",
+    "title": "GP-1",
+    "file": "GP-1 (U).smc",
+    "cover": "Capas/c5bf29b3ed86.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "G",
+    "sizeKB": 1024
+  },
+  {
+    "id": "25d0ade21956",
+    "title": "GP-1 Part II",
+    "file": "GP-1 Part II (U).smc",
+    "cover": "Capas/25d0ade21956.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "G",
+    "sizeKB": 1536
+  },
+  {
+    "id": "ad2d70c0fb52",
+    "title": "Gradius III",
+    "file": "Gradius III (U) [!].smc",
+    "cover": "Capas/ad2d70c0fb52.jpg",
+    "region": "EUA",
+    "category": "Nave & Tiro",
+    "letter": "G",
+    "sizeKB": 512
+  },
+  {
+    "id": "75d9f065beb2",
+    "title": "Gunforce - Battle Fire Engulfed Terror Island",
+    "file": "Gunforce - Battle Fire Engulfed Terror Island (U).smc",
+    "cover": "Capas/75d9f065beb2.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "G",
+    "sizeKB": 512
+  },
+  {
+    "id": "e13d4071fce5",
+    "title": "Hagane",
+    "file": "Hagane (U).smc",
+    "cover": "Capas/e13d4071fce5.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "H",
+    "sizeKB": 2048
+  },
+  {
+    "id": "c5d7d762d3be",
+    "title": "HAL's Hole in One Golf",
+    "file": "HAL's Hole in One Golf (U) [!].smc",
+    "cover": "Capas/c5d7d762d3be.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "H",
+    "sizeKB": 1024
+  },
+  {
+    "id": "6f4a7b2a7d0d",
+    "title": "Hammerlock Wrestling",
+    "file": "Hammerlock Wrestling (U).smc",
+    "cover": "Capas/6f4a7b2a7d0d.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "H",
+    "sizeKB": 2048
+  },
+  {
+    "id": "56351cf016af",
+    "title": "Hardball III",
+    "file": "Hardball III (U).smc",
+    "cover": "Capas/56351cf016af.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "H",
+    "sizeKB": 2048
+  },
+  {
+    "id": "6d8239398357",
+    "title": "Harley's Humongous Adventure",
+    "file": "Harley's Humongous Adventure (U).smc",
+    "cover": "Capas/6d8239398357.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "H",
+    "sizeKB": 512
+  },
+  {
+    "id": "7420728f37d6",
+    "title": "Harvest Moon",
+    "file": "Harvest Moon (U).smc",
+    "cover": "Capas/7420728f37d6.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "H",
+    "sizeKB": 2048
+  },
+  {
+    "id": "c0c2a5b8fc84",
+    "title": "Head-On Soccer",
+    "file": "Head-On Soccer (U).smc",
+    "cover": "Capas/c0c2a5b8fc84.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "H",
+    "sizeKB": 2048
+  },
+  {
+    "id": "3edee0495c94",
+    "title": "Hit the Ice",
+    "file": "Hit the Ice (U).smc",
+    "cover": "Capas/3edee0495c94.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "H",
+    "sizeKB": 512
+  },
+  {
+    "id": "8ab0b2920e8f",
+    "title": "Home Alone",
+    "file": "Home Alone (U).smc",
+    "cover": "Capas/8ab0b2920e8f.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "H",
+    "sizeKB": 512
+  },
+  {
+    "id": "3a35008a41cb",
+    "title": "Home Alone 2 - Lost in New York",
+    "file": "Home Alone 2 - Lost in New York (U).smc",
+    "cover": "Capas/3a35008a41cb.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "H",
+    "sizeKB": 512
+  },
+  {
+    "id": "a1cc18f766b1",
+    "title": "Home Improvement",
+    "file": "Home Improvement (U) [!].smc",
+    "cover": "Capas/a1cc18f766b1.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "H",
+    "sizeKB": 1536
+  },
+  {
+    "id": "8f59a6e45715",
+    "title": "Hook",
+    "file": "Hook (U) (2648).smc",
+    "cover": "Capas/8f59a6e45715.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "H",
+    "sizeKB": 1024
+  },
+  {
+    "id": "f77ee41ca26a",
+    "title": "Hyper V-Ball",
+    "file": "Hyper V-Ball (U).smc",
+    "cover": "Capas/f77ee41ca26a.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "H",
+    "sizeKB": 1024
+  },
+  {
+    "id": "9db836eef289",
+    "title": "HyperZone",
+    "file": "HyperZone (U) [!].smc",
+    "cover": "Capas/9db836eef289.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "H",
+    "sizeKB": 512
+  },
+  {
+    "id": "4c7443c66601",
+    "title": "Illusion of Gaia",
+    "file": "Illusion of Gaia (U) [!].smc",
+    "cover": "Capas/4c7443c66601.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "I",
+    "sizeKB": 2048
+  },
+  {
+    "id": "a57e648017c4",
+    "title": "Imperium",
+    "file": "Imperium (U).smc",
+    "cover": "Capas/a57e648017c4.jpg",
+    "region": "EUA",
+    "category": "Nave & Tiro",
+    "letter": "I",
+    "sizeKB": 1024
+  },
+  {
+    "id": "bcafa252a58d",
+    "title": "Incantation",
+    "file": "Incantation (U).smc",
+    "cover": "Capas/bcafa252a58d.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "I",
+    "sizeKB": 512
+  },
+  {
+    "id": "75af7b501948",
+    "title": "Indiana Jones' Greatest Adventures",
+    "file": "Indiana Jones' Greatest Adventures (U).smc",
+    "cover": "Capas/75af7b501948.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "I",
+    "sizeKB": 2048
+  },
+  {
+    "id": "0e048c717de2",
+    "title": "Inindo - Way of the Ninja",
+    "file": "Inindo - Way of the Ninja (U).smc",
+    "cover": "Capas/0e048c717de2.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "I",
+    "sizeKB": 1024
+  },
+  {
+    "id": "1b2c1a0832de",
+    "title": "Inspector Gadget",
+    "file": "Inspector Gadget (U).smc",
+    "cover": "Capas/1b2c1a0832de.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "I",
+    "sizeKB": 1024
+  },
+  {
+    "id": "7b750642452d",
+    "title": "International Superstar Soccer",
+    "file": "International Superstar Soccer (U) [!].smc",
+    "cover": "Capas/7b750642452d.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "I",
+    "sizeKB": 1024
+  },
+  {
+    "id": "5e5a43266b6f",
+    "title": "International Superstar Soccer Deluxe",
+    "file": "International Superstar Soccer Deluxe (U).smc",
+    "cover": "Capas/5e5a43266b6f.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "I",
+    "sizeKB": 2048
+  },
+  {
+    "id": "8c179c81f8bc",
+    "title": "International Tennis Tour",
+    "file": "International Tennis Tour (U).smc",
+    "cover": "Capas/8c179c81f8bc.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "I",
+    "sizeKB": 1024
+  },
+  {
+    "id": "432ddb0a436d",
+    "title": "Izzy's Quest for the Olympic Rings",
+    "file": "Izzy's Quest for the Olympic Rings (U) [!].smc",
+    "cover": "Capas/432ddb0a436d.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "I",
+    "sizeKB": 2048
+  },
+  {
+    "id": "fd8463898b78",
+    "title": "Jack Nicklaus Golf",
+    "file": "Jack Nicklaus Golf (U).smc",
+    "cover": "Capas/fd8463898b78.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "J",
+    "sizeKB": 512
+  },
+  {
+    "id": "25e1cf4e2e40",
+    "title": "James Bond Jr",
+    "file": "James Bond Jr (U).smc",
+    "cover": "Capas/25e1cf4e2e40.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "J",
+    "sizeKB": 512
+  },
+  {
+    "id": "0a52f5df8f52",
+    "title": "Jammit",
+    "file": "Jammit (U).smc",
+    "cover": "Capas/0a52f5df8f52.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "J",
+    "sizeKB": 2048
+  },
+  {
+    "id": "0490de2641de",
+    "title": "Jeopardy!",
+    "file": "Jeopardy! (U).smc",
+    "cover": "Capas/0490de2641de.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "J",
+    "sizeKB": 512
+  },
+  {
+    "id": "271af8274f76",
+    "title": "Jeopardy! Deluxe Edition",
+    "file": "Jeopardy! Deluxe Edition (U).smc",
+    "cover": "Capas/271af8274f76.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "J",
+    "sizeKB": 512
+  },
+  {
+    "id": "f7720268a77a",
+    "title": "Jeopardy! Sports Edition",
+    "file": "Jeopardy! Sports Edition (U).smc",
+    "cover": "Capas/f7720268a77a.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "J",
+    "sizeKB": 512
+  },
+  {
+    "id": "bb3e03f60e8e",
+    "title": "Jetsons, The - Invasion of the Planet Pirates",
+    "file": "Jetsons, The - Invasion of the Planet Pirates (U).smc",
+    "cover": "Capas/bb3e03f60e8e.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "J",
+    "sizeKB": 1024
+  },
+  {
+    "id": "52e4712566bf",
+    "title": "Jim Lee's WildC.A.T.S",
+    "file": "Jim Lee's WildC.A.T.S (U).smc",
+    "cover": "Capas/52e4712566bf.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "J",
+    "sizeKB": 2048
+  },
+  {
+    "id": "9325eddd2384",
+    "title": "Jim Power - The Lost Dimension in 3D",
+    "file": "Jim Power - The Lost Dimension in 3D (U) [!].smc",
+    "cover": "Capas/9325eddd2384.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "J",
+    "sizeKB": 1024
+  },
+  {
+    "id": "f08cf7126660",
+    "title": "Jimmy Connors Pro Tennis Tour",
+    "file": "Jimmy Connors Pro Tennis Tour (U).smc",
+    "cover": "Capas/f08cf7126660.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "J",
+    "sizeKB": 512
+  },
+  {
+    "id": "2d27530bb953",
+    "title": "Jimmy Houston's Bass Tournament U.S.A.",
+    "file": "Jimmy Houston's Bass Tournament U.S.A. (U).smc",
+    "cover": "Capas/2d27530bb953.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "J",
+    "sizeKB": 1536
+  },
+  {
+    "id": "8e46c4c45051",
+    "title": "Joe & Mac",
+    "file": "Joe & Mac (U) [!].smc",
+    "cover": "Capas/8e46c4c45051.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "J",
+    "sizeKB": 1024
+  },
+  {
+    "id": "c6213f1fb1bf",
+    "title": "Joe & Mac 2 - Lost in the Tropics",
+    "file": "Joe & Mac 2 - Lost in the Tropics (U) (35468).smc",
+    "cover": "Capas/c6213f1fb1bf.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "J",
+    "sizeKB": 1024
+  },
+  {
+    "id": "a3a4ba03cd87",
+    "title": "John Madden Football",
+    "file": "John Madden Football (U).smc",
+    "cover": "Capas/a3a4ba03cd87.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "J",
+    "sizeKB": 512
+  },
+  {
+    "id": "8affd150ec99",
+    "title": "John Madden Football '93",
+    "file": "John Madden Football '93 (U).smc",
+    "cover": "Capas/8affd150ec99.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "J",
+    "sizeKB": 1024
+  },
+  {
+    "id": "733494cc96c7",
+    "title": "JRR Tolkien's The Lord of the Rings - Volume 1",
+    "file": "JRR Tolkien's The Lord of the Rings - Volume 1 (U).smc",
+    "cover": "Capas/733494cc96c7.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "J",
+    "sizeKB": 1024
+  },
+  {
+    "id": "f23456aa01bc",
+    "title": "Judge Dredd",
+    "file": "Judge Dredd (U) [!].smc",
+    "cover": "Capas/f23456aa01bc.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "J",
+    "sizeKB": 2048
+  },
+  {
+    "id": "775e21354789",
+    "title": "Jungle Strike",
+    "file": "Jungle Strike (U) [!].smc",
+    "cover": "Capas/775e21354789.jpg",
+    "region": "EUA",
+    "category": "Nave & Tiro",
+    "letter": "J",
+    "sizeKB": 2048
+  },
+  {
+    "id": "3604e22aa009",
+    "title": "Jurassic Park",
+    "file": "Jurassic Park (U) (V1.1).smc",
+    "cover": "Capas/3604e22aa009.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "J",
+    "sizeKB": 2048
+  },
+  {
+    "id": "a87fa0606f44",
+    "title": "Jurassic Park Part 2 - The Chaos Continues",
+    "file": "Jurassic Park Part 2 - The Chaos Continues (U).smc",
+    "cover": "Capas/a87fa0606f44.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "J",
+    "sizeKB": 2048
+  },
+  {
+    "id": "e5166c96e723",
+    "title": "Justice League Task Force",
+    "file": "Justice League Task Force (U).smc",
+    "cover": "Capas/e5166c96e723.jpg",
+    "region": "EUA",
+    "category": "Luta",
+    "letter": "J",
+    "sizeKB": 2560
+  },
+  {
+    "id": "157d2ab0ce35",
+    "title": "Kablooey",
+    "file": "Kablooey (U).smc",
+    "cover": "Capas/157d2ab0ce35.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "K",
+    "sizeKB": 512
+  },
+  {
+    "id": "c390dc9d9088",
+    "title": "Kawasaki Carribean Challenge",
+    "file": "Kawasaki Carribean Challenge (U).smc",
+    "cover": "Capas/c390dc9d9088.jpg",
+    "region": "EUA",
+    "category": "Corrida",
+    "letter": "K",
+    "sizeKB": 1536
+  },
+  {
+    "id": "c03d222f8847",
+    "title": "Kawasaki Superbike Challenge",
+    "file": "Kawasaki Superbike Challenge (U).smc",
+    "cover": "Capas/c03d222f8847.jpg",
+    "region": "EUA",
+    "category": "Corrida",
+    "letter": "K",
+    "sizeKB": 1024
+  },
+  {
+    "id": "a8d5ac6a591e",
+    "title": "Ken Griffey Jr. Presents Major League Baseball",
+    "file": "Ken Griffey Jr. Presents Major League Baseball (U).smc",
+    "cover": "Capas/a8d5ac6a591e.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "K",
+    "sizeKB": 2048
+  },
+  {
+    "id": "2ec053dc7aca",
+    "title": "Ken Griffey Jr.'s Winning Run",
+    "file": "Ken Griffey Jr.'s Winning Run (U) [!].smc",
+    "cover": "Capas/2ec053dc7aca.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "K",
+    "sizeKB": 4096
+  },
+  {
+    "id": "387b79200def",
+    "title": "Kendo Rage",
+    "file": "Kendo Rage (U).smc",
+    "cover": "Capas/387b79200def.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "K",
+    "sizeKB": 1024
+  },
+  {
+    "id": "acf415ca8f31",
+    "title": "Kid Klown in Crazy Chase",
+    "file": "Kid Klown in Crazy Chase (U).smc",
+    "cover": "Capas/acf415ca8f31.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "K",
+    "sizeKB": 1024
+  },
+  {
+    "id": "72a0c6249c34",
+    "title": "Killer Instinct",
+    "file": "Killer Instinct (U) (V1.1) [!].smc",
+    "cover": "Capas/72a0c6249c34.jpg",
+    "region": "EUA",
+    "category": "Luta",
+    "letter": "K",
+    "sizeKB": 4096
+  },
+  {
+    "id": "042b84ccd7a8",
+    "title": "King Arthur & The Knights of Justice",
+    "file": "King Arthur & The Knights of Justice (U) [!].smc",
+    "cover": "Capas/042b84ccd7a8.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "K",
+    "sizeKB": 2560
+  },
+  {
+    "id": "d696ac8d2874",
+    "title": "King Arthur's World",
+    "file": "King Arthur's World (U).smc",
+    "cover": "Capas/d696ac8d2874.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "K",
+    "sizeKB": 512
+  },
+  {
+    "id": "316943d9abc4",
+    "title": "King of the Monsters",
+    "file": "King of the Monsters (U).smc",
+    "cover": "Capas/316943d9abc4.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "K",
+    "sizeKB": 1024
+  },
+  {
+    "id": "dbc1dc2fb6b3",
+    "title": "King of the Monsters 2",
+    "file": "King of the Monsters 2 (U).smc",
+    "cover": "Capas/dbc1dc2fb6b3.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "K",
+    "sizeKB": 2048
+  },
+  {
+    "id": "ddb219dda871",
+    "title": "Kirby Super Star",
+    "file": "Kirby Super Star (U) [!].smc",
+    "cover": "Capas/ddb219dda871.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "K",
+    "sizeKB": 4096
+  },
+  {
+    "id": "20cdcb58636b",
+    "title": "Kirby's Avalanche",
+    "file": "Kirby's Avalanche (U) [!].smc",
+    "cover": "Capas/20cdcb58636b.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "K",
+    "sizeKB": 1024
+  },
+  {
+    "id": "83968fb650e3",
+    "title": "Kirby's Dream Course",
+    "file": "Kirby's Dream Course (U) [!].smc",
+    "cover": "Capas/83968fb650e3.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "K",
+    "sizeKB": 1024
+  },
+  {
+    "id": "3b3422a6881a",
+    "title": "Kirby's Dream Land 3",
+    "file": "Kirby's Dream Land 3 (U).smc",
+    "cover": "Capas/3b3422a6881a.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "K",
+    "sizeKB": 4096
+  },
+  {
+    "id": "9154d9095cb7",
+    "title": "Knights of the Round",
+    "file": "Knights of the Round (U).smc",
+    "cover": "Capas/9154d9095cb7.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "K",
+    "sizeKB": 1536
+  },
+  {
+    "id": "1fa208287e67",
+    "title": "Krusty's Super Fun House",
+    "file": "Krusty's Super Fun House (U) (V1.1).smc",
+    "cover": "Capas/1fa208287e67.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "K",
+    "sizeKB": 512
+  },
+  {
+    "id": "3eb2b34cea3e",
+    "title": "Kyle Petty's No Fear Racing",
+    "file": "Kyle Petty's No Fear Racing (U).smc",
+    "cover": "Capas/3eb2b34cea3e.jpg",
+    "region": "EUA",
+    "category": "Corrida",
+    "letter": "K",
+    "sizeKB": 3072
+  },
+  {
+    "id": "e502f8f64a6a",
+    "title": "Lagoon",
+    "file": "Lagoon (U).smc",
+    "cover": "Capas/e502f8f64a6a.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "L",
+    "sizeKB": 1024
+  },
+  {
+    "id": "74cbaa5670bd",
+    "title": "Lamborghini - American Challenge",
+    "file": "Lamborghini - American Challenge (U).smc",
+    "cover": "Capas/74cbaa5670bd.jpg",
+    "region": "EUA",
+    "category": "Corrida",
+    "letter": "L",
+    "sizeKB": 512
+  },
+  {
+    "id": "34100037d09f",
+    "title": "Last Action Hero",
+    "file": "Last Action Hero (U).smc",
+    "cover": "Capas/34100037d09f.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "L",
+    "sizeKB": 1024
+  },
+  {
+    "id": "67db11919e14",
+    "title": "Legend",
+    "file": "Legend (U) (16725).smc",
+    "cover": "Capas/67db11919e14.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "L",
+    "sizeKB": 1024
+  },
+  {
+    "id": "1f4fd3dcf173",
+    "title": "Legend of Zelda, The - A Link to the Past",
+    "file": "Legend of Zelda, The - A Link to the Past (U) [!].smc",
+    "cover": "Capas/1f4fd3dcf173.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "L",
+    "sizeKB": 1024
+  },
+  {
+    "id": "33a1414f61e6",
+    "title": "Lemmings",
+    "file": "Lemmings (U) (V1.1) [!].smc",
+    "cover": "Capas/33a1414f61e6.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "L",
+    "sizeKB": 1024
+  },
+  {
+    "id": "f40c402de266",
+    "title": "Lemmings 2 - The Tribes",
+    "file": "Lemmings 2 - The Tribes (U).smc",
+    "cover": "Capas/f40c402de266.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "L",
+    "sizeKB": 2048
+  },
+  {
+    "id": "1b28a5d37691",
+    "title": "Lester the Unlikely",
+    "file": "Lester the Unlikely (U).smc",
+    "cover": "Capas/1b28a5d37691.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "L",
+    "sizeKB": 1024
+  },
+  {
+    "id": "1030a4b8262f",
+    "title": "Lethal Enforcers",
+    "file": "Lethal Enforcers (U).smc",
+    "cover": "Capas/1030a4b8262f.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "L",
+    "sizeKB": 2048
+  },
+  {
+    "id": "557f36354aa7",
+    "title": "Lethal Weapon",
+    "file": "Lethal Weapon (U) [!].smc",
+    "cover": "Capas/557f36354aa7.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "L",
+    "sizeKB": 1024
+  },
+  {
+    "id": "09b3f23a021f",
+    "title": "Liberty or Death",
+    "file": "Liberty or Death (U).smc",
+    "cover": "Capas/09b3f23a021f.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "L",
+    "sizeKB": 1280
+  },
+  {
+    "id": "820e3efad3ba",
+    "title": "Lock On",
+    "file": "Lock On (U).smc",
+    "cover": "Capas/820e3efad3ba.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "L",
+    "sizeKB": 512
+  },
+  {
+    "id": "8889cc56c5d9",
+    "title": "Looney Tunes B-Ball",
+    "file": "Looney Tunes B-Ball (U).smc",
+    "cover": "Capas/8889cc56c5d9.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "L",
+    "sizeKB": 2048
+  },
+  {
+    "id": "808657452ba8",
+    "title": "Lufia & The Fortress of Doom",
+    "file": "Lufia & The Fortress of Doom (U).smc",
+    "cover": "Capas/808657452ba8.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "L",
+    "sizeKB": 1024
+  },
+  {
+    "id": "9467ba1444c2",
+    "title": "Lufia II - Rise of the Sinistrals",
+    "file": "Lufia II - Rise of the Sinistrals (U).smc",
+    "cover": "Capas/9467ba1444c2.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "L",
+    "sizeKB": 2560
+  },
+  {
+    "id": "383176d61ac8",
+    "title": "M.A.C.S. Basic Rifle Simulator",
+    "file": "M.A.C.S. Basic Rifle Simulator (U) [!].smc",
+    "cover": "Capas/383176d61ac8.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "M",
+    "sizeKB": 512
+  },
+  {
+    "id": "10ffa990471d",
+    "title": "Madden NFL '94",
+    "file": "Madden NFL '94 (U).smc",
+    "cover": "Capas/10ffa990471d.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "M",
+    "sizeKB": 1024
+  },
+  {
+    "id": "1332438bb4dd",
+    "title": "Madden NFL '95",
+    "file": "Madden NFL '95 (U) [!].smc",
+    "cover": "Capas/1332438bb4dd.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "M",
+    "sizeKB": 1024
+  },
+  {
+    "id": "77e439899fdf",
+    "title": "Madden NFL '96",
+    "file": "Madden NFL '96 (U).smc",
+    "cover": "Capas/77e439899fdf.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "M",
+    "sizeKB": 1536
+  },
+  {
+    "id": "fb74a6a3a314",
+    "title": "Madden NFL '96 - Reviewer Version",
+    "file": "Madden NFL '96 - Reviewer Version (U).smc",
+    "cover": "Capas/fb74a6a3a314.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "M",
+    "sizeKB": 1536
+  },
+  {
+    "id": "bf9439df57df",
+    "title": "Madden NFL '97",
+    "file": "Madden NFL '97 (U).smc",
+    "cover": "Capas/bf9439df57df.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "M",
+    "sizeKB": 1536
+  },
+  {
+    "id": "a20602014052",
+    "title": "Madden NFL '98",
+    "file": "Madden NFL '98 (U).smc",
+    "cover": "Capas/a20602014052.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "M",
+    "sizeKB": 2048
+  },
+  {
+    "id": "18411fdd653f",
+    "title": "Magic Boy",
+    "file": "Magic Boy (U) [!].smc",
+    "cover": "Capas/18411fdd653f.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "M",
+    "sizeKB": 512
+  },
+  {
+    "id": "dce223f1d3f4",
+    "title": "Magic Johnson's Super Slam Dunk",
+    "file": "Magic Johnson's Super Slam Dunk (U).smc",
+    "cover": "Capas/dce223f1d3f4.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "M",
+    "sizeKB": 1024
+  },
+  {
+    "id": "38737c02bcdf",
+    "title": "Magic Sword",
+    "file": "Magic Sword (U).smc",
+    "cover": "Capas/38737c02bcdf.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "M",
+    "sizeKB": 1024
+  },
+  {
+    "id": "aea84b90b2cc",
+    "title": "Mario is Missing!",
+    "file": "Mario is Missing! (U).smc",
+    "cover": "Capas/aea84b90b2cc.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "M",
+    "sizeKB": 1024
+  },
+  {
+    "id": "7298e7f57c6c",
+    "title": "Mario's Early Years - Fun With Letters",
+    "file": "Mario's Early Years - Fun With Letters (U).smc",
+    "cover": "Capas/7298e7f57c6c.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "M",
+    "sizeKB": 1024
+  },
+  {
+    "id": "ac551b988fab",
+    "title": "Mario's Early Years - Fun With Numbers",
+    "file": "Mario's Early Years - Fun With Numbers (U).smc",
+    "cover": "Capas/ac551b988fab.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "M",
+    "sizeKB": 1024
+  },
+  {
+    "id": "09024a239361",
+    "title": "Mario's Early Years - Preschool Fun",
+    "file": "Mario's Early Years - Preschool Fun (U).smc",
+    "cover": "Capas/09024a239361.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "M",
+    "sizeKB": 1024
+  },
+  {
+    "id": "515c86867910",
+    "title": "Mario's Time Machine",
+    "file": "Mario's Time Machine (U).smc",
+    "cover": "Capas/515c86867910.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "M",
+    "sizeKB": 1024
+  },
+  {
+    "id": "8bc4c5f21712",
+    "title": "Mark Davis' The Fishing Master",
+    "file": "Mark Davis' The Fishing Master (U).smc",
+    "cover": "Capas/8bc4c5f21712.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "M",
+    "sizeKB": 2048
+  },
+  {
+    "id": "280129b5761f",
+    "title": "Marvel Super Heroes - War of the Gems",
+    "file": "Marvel Super Heroes - War of the Gems (U).smc",
+    "cover": "Capas/280129b5761f.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "M",
+    "sizeKB": 2048
+  },
+  {
+    "id": "971d610b2333",
+    "title": "Mary Shelley's Frankenstein",
+    "file": "Mary Shelley's Frankenstein (U).smc",
+    "cover": "Capas/971d610b2333.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "M",
+    "sizeKB": 2048
+  },
+  {
+    "id": "9c3693d15b95",
+    "title": "Math Blaster - Episode 1",
+    "file": "Math Blaster - Episode 1 (U).smc",
+    "cover": "Capas/9c3693d15b95.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "M",
+    "sizeKB": 1024
+  },
+  {
+    "id": "96408489edb0",
+    "title": "Maui Mallard in Cold Shadow",
+    "file": "Maui Mallard in Cold Shadow (U).smc",
+    "cover": "Capas/96408489edb0.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "M",
+    "sizeKB": 3072
+  },
+  {
+    "id": "61ef82f0192e",
+    "title": "Mecarobot Golf",
+    "file": "Mecarobot Golf (U).smc",
+    "cover": "Capas/61ef82f0192e.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "M",
+    "sizeKB": 1024
+  },
+  {
+    "id": "0fa0bff0e842",
+    "title": "Mechwarrior",
+    "file": "Mechwarrior (U).smc",
+    "cover": "Capas/0fa0bff0e842.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "M",
+    "sizeKB": 1024
+  },
+  {
+    "id": "9778d9ebf938",
+    "title": "Mechwarrior 3050",
+    "file": "Mechwarrior 3050 (U).smc",
+    "cover": "Capas/9778d9ebf938.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "M",
+    "sizeKB": 1536
+  },
+  {
+    "id": "112e943d2351",
+    "title": "Mega Man VII",
+    "file": "Mega Man VII (U).smc",
+    "cover": "Capas/112e943d2351.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "M",
+    "sizeKB": 2048
+  },
+  {
+    "id": "1adea971c4f2",
+    "title": "Mega Man X",
+    "file": "Mega Man X (U) (V1.0) [!].smc",
+    "cover": "Capas/1adea971c4f2.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "M",
+    "sizeKB": 1536
+  },
+  {
+    "id": "4a565c2c8db0",
+    "title": "Mega Man X 2",
+    "file": "Mega Man X 2 (U).smc",
+    "cover": "Capas/4a565c2c8db0.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "M",
+    "sizeKB": 1536
+  },
+  {
+    "id": "98837047b9df",
+    "title": "Mega Man X 3",
+    "file": "Mega Man X 3 (U).smc",
+    "cover": "Capas/98837047b9df.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "M",
+    "sizeKB": 2048
+  },
+  {
+    "id": "44edc6cc6c61",
+    "title": "Mega Man's Soccer",
+    "file": "Mega Man's Soccer (U) [!].smc",
+    "cover": "Capas/44edc6cc6c61.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "M",
+    "sizeKB": 1280
+  },
+  {
+    "id": "841ac2afa37a",
+    "title": "Metal Combat - Falcon's Revenge",
+    "file": "Metal Combat - Falcon's Revenge (U) [!].smc",
+    "cover": "Capas/841ac2afa37a.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "M",
+    "sizeKB": 2048
+  },
+  {
+    "id": "c47ee6062fc4",
+    "title": "Metal Marines",
+    "file": "Metal Marines (U).smc",
+    "cover": "Capas/c47ee6062fc4.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "M",
+    "sizeKB": 1536
+  },
+  {
+    "id": "dc0acefaa82d",
+    "title": "Metal Morph",
+    "file": "Metal Morph (U).smc",
+    "cover": "Capas/dc0acefaa82d.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "M",
+    "sizeKB": 1536
+  },
+  {
+    "id": "a69c8732aca2",
+    "title": "Metal Warriors",
+    "file": "Metal Warriors (U).smc",
+    "cover": "Capas/a69c8732aca2.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "M",
+    "sizeKB": 2048
+  },
+  {
+    "id": "a04b4a0d8c7e",
+    "title": "Michael Andretti's Indy Car Challenge",
+    "file": "Michael Andretti's Indy Car Challenge (U).smc",
+    "cover": "Capas/a04b4a0d8c7e.jpg",
+    "region": "EUA",
+    "category": "Corrida",
+    "letter": "M",
+    "sizeKB": 1024
+  },
+  {
+    "id": "81b77274e70d",
+    "title": "Michael Jordan - Chaos in the Windy City",
+    "file": "Michael Jordan - Chaos in the Windy City (U) [!].smc",
+    "cover": "Capas/81b77274e70d.jpg",
+    "region": "EUA",
+    "category": "Corrida",
+    "letter": "M",
+    "sizeKB": 1280
+  },
+  {
+    "id": "eea8ea78599a",
+    "title": "Mickey Mania",
+    "file": "Mickey Mania (U) [!].smc",
+    "cover": "Capas/eea8ea78599a.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "M",
+    "sizeKB": 2048
+  },
+  {
+    "id": "4092df278237",
+    "title": "Mickey's Playtown Adventure - A Day Of Discovery!",
+    "file": "Mickey's Playtown Adventure - A Day Of Discovery! (U).smc",
+    "cover": "Capas/4092df278237.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "M",
+    "sizeKB": 1024
+  },
+  {
+    "id": "b84ef705c6aa",
+    "title": "Mickey's Ultimate Challenge",
+    "file": "Mickey's Ultimate Challenge (U).smc",
+    "cover": "Capas/b84ef705c6aa.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "M",
+    "sizeKB": 1024
+  },
+  {
+    "id": "46c28cfa9085",
+    "title": "Micro Machines",
+    "file": "Micro Machines (U).smc",
+    "cover": "Capas/46c28cfa9085.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "M",
+    "sizeKB": 512
+  },
+  {
+    "id": "d8719152b8a0",
+    "title": "Might and Magic III - Isles of Terra",
+    "file": "Might and Magic III - Isles of Terra (U).smc",
+    "cover": "Capas/d8719152b8a0.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "M",
+    "sizeKB": 1536
+  },
+  {
+    "id": "3138a871dbf9",
+    "title": "Mighty Max",
+    "file": "Mighty Max (U).smc",
+    "cover": "Capas/3138a871dbf9.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "M",
+    "sizeKB": 1024
+  },
+  {
+    "id": "68a92fe4d9f4",
+    "title": "Mighty Morphin Power Rangers",
+    "file": "Mighty Morphin Power Rangers (U).smc",
+    "cover": "Capas/68a92fe4d9f4.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "M",
+    "sizeKB": 2048
+  },
+  {
+    "id": "d813de23910f",
+    "title": "Mighty Morphin Power Rangers - The Fighting Edition",
+    "file": "Mighty Morphin Power Rangers - The Fighting Edition (U).smc",
+    "cover": "Capas/d813de23910f.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "M",
+    "sizeKB": 1536
+  },
+  {
+    "id": "fbbafcfeaf6d",
+    "title": "Mighty Morphin Power Rangers - The Movie",
+    "file": "Mighty Morphin Power Rangers - The Movie (U).smc",
+    "cover": "Capas/fbbafcfeaf6d.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "M",
+    "sizeKB": 1536
+  },
+  {
+    "id": "1ade14e7e2c0",
+    "title": "MLBPA Baseball",
+    "file": "MLBPA Baseball (U) [!].smc",
+    "cover": "Capas/1ade14e7e2c0.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "M",
+    "sizeKB": 1024
+  },
+  {
+    "id": "63b33bc83c35",
+    "title": "Mo Hawk & Headphone Jack",
+    "file": "Mo Hawk & Headphone Jack (U).smc",
+    "cover": "Capas/63b33bc83c35.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "M",
+    "sizeKB": 2048
+  },
+  {
+    "id": "26a824520d7c",
+    "title": "Monopoly",
+    "file": "Monopoly (U) (V1.1).smc",
+    "cover": "Capas/26a824520d7c.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "M",
+    "sizeKB": 512
+  },
+  {
+    "id": "67778b7a0241",
+    "title": "Mortal Kombat",
+    "file": "Mortal Kombat (U).smc",
+    "cover": "Capas/67778b7a0241.jpg",
+    "region": "EUA",
+    "category": "Luta",
+    "letter": "M",
+    "sizeKB": 2048
+  },
+  {
+    "id": "d1c855f038e7",
+    "title": "Mortal Kombat 3",
+    "file": "Mortal Kombat 3 (U) [!].smc",
+    "cover": "Capas/d1c855f038e7.jpg",
+    "region": "EUA",
+    "category": "Luta",
+    "letter": "M",
+    "sizeKB": 4096
+  },
+  {
+    "id": "efbf741be381",
+    "title": "Mortal Kombat II",
+    "file": "Mortal Kombat II (U) (V1.1).smc",
+    "cover": "Capas/efbf741be381.jpg",
+    "region": "EUA",
+    "category": "Luta",
+    "letter": "M",
+    "sizeKB": 3072
+  },
+  {
+    "id": "89196585a9e2",
+    "title": "Mountain Bike Rally",
+    "file": "Mountain Bike Rally (U) [!].smc",
+    "cover": "Capas/89196585a9e2.jpg",
+    "region": "EUA",
+    "category": "Corrida",
+    "letter": "M",
+    "sizeKB": 2048
+  },
+  {
+    "id": "43b409309338",
+    "title": "Mr. Do!",
+    "file": "Mr. Do! (U).smc",
+    "cover": "Capas/43b409309338.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "M",
+    "sizeKB": 256
+  },
+  {
+    "id": "3e965c5b8025",
+    "title": "Mr. Nutz",
+    "file": "Mr. Nutz (U).smc",
+    "cover": "Capas/3e965c5b8025.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "M",
+    "sizeKB": 1024
+  },
+  {
+    "id": "4f17da741f22",
+    "title": "Ms. Pac-Man",
+    "file": "Ms. Pac-Man (U).smc",
+    "cover": "Capas/4f17da741f22.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "M",
+    "sizeKB": 256
+  },
+  {
+    "id": "0503431d9094",
+    "title": "Musya",
+    "file": "Musya (U) [!].smc",
+    "cover": "Capas/0503431d9094.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "M",
+    "sizeKB": 1024
+  },
+  {
+    "id": "fd6584b99604",
+    "title": "Mutant Chronicles - Doom Troopers",
+    "file": "Mutant Chronicles - Doom Troopers (U) [!].smc",
+    "cover": "Capas/fd6584b99604.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "M",
+    "sizeKB": 2048
+  },
+  {
+    "id": "ca0c4de1fb4c",
+    "title": "Natsume Championship Wrestling",
+    "file": "Natsume Championship Wrestling (U).smc",
+    "cover": "Capas/ca0c4de1fb4c.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "N",
+    "sizeKB": 2048
+  },
+  {
+    "id": "6d1d0ca8be5c",
+    "title": "NBA All-Star Challenge",
+    "file": "NBA All-Star Challenge (U).smc",
+    "cover": "Capas/6d1d0ca8be5c.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "N",
+    "sizeKB": 1024
+  },
+  {
+    "id": "0283fd9cb7fe",
+    "title": "NBA Give 'N Go",
+    "file": "NBA Give 'N Go (U).smc",
+    "cover": "Capas/0283fd9cb7fe.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "N",
+    "sizeKB": 2048
+  },
+  {
+    "id": "02788b7c8a29",
+    "title": "NBA Hang Time",
+    "file": "NBA Hang Time (U).smc",
+    "cover": "Capas/02788b7c8a29.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "N",
+    "sizeKB": 3072
+  },
+  {
+    "id": "b0bc834cee26",
+    "title": "NBA Jam",
+    "file": "NBA Jam (U) (V1.1).smc",
+    "cover": "Capas/b0bc834cee26.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "N",
+    "sizeKB": 2048
+  },
+  {
+    "id": "c30e22a6e313",
+    "title": "NBA Jam - Tournament Edition",
+    "file": "NBA Jam - Tournament Edition (U).smc",
+    "cover": "Capas/c30e22a6e313.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "N",
+    "sizeKB": 3072
+  },
+  {
+    "id": "fded0c6d9ba4",
+    "title": "NBA Live '95",
+    "file": "NBA Live '95 (U) [!].smc",
+    "cover": "Capas/fded0c6d9ba4.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "N",
+    "sizeKB": 1536
+  },
+  {
+    "id": "1cf7fa2c4499",
+    "title": "NBA Live '96",
+    "file": "NBA Live '96 (U) [!].smc",
+    "cover": "Capas/1cf7fa2c4499.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "N",
+    "sizeKB": 1536
+  },
+  {
+    "id": "3c3458550530",
+    "title": "NBA Live '97",
+    "file": "NBA Live '97 (U) [!].smc",
+    "cover": "Capas/3c3458550530.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "N",
+    "sizeKB": 2048
+  },
+  {
+    "id": "68fcaf90032f",
+    "title": "NBA Live '98",
+    "file": "NBA Live '98 (U) [!].smc",
+    "cover": "Capas/68fcaf90032f.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "N",
+    "sizeKB": 2048
+  },
+  {
+    "id": "825864e8b3ae",
+    "title": "NBA Showdown",
+    "file": "NBA Showdown (U).smc",
+    "cover": "Capas/825864e8b3ae.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "N",
+    "sizeKB": 1024
+  },
+  {
+    "id": "3911a12b736b",
+    "title": "NCAA Basketball",
+    "file": "NCAA Basketball (U) (V1.1) [!].smc",
+    "cover": "Capas/3911a12b736b.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "N",
+    "sizeKB": 1024
+  },
+  {
+    "id": "a5a1a5a96006",
+    "title": "NCAA Final Four Basketball",
+    "file": "NCAA Final Four Basketball (U).smc",
+    "cover": "Capas/a5a1a5a96006.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "N",
+    "sizeKB": 1536
+  },
+  {
+    "id": "c66ea51e74e8",
+    "title": "NCAA Football",
+    "file": "NCAA Football (U).smc",
+    "cover": "Capas/c66ea51e74e8.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "N",
+    "sizeKB": 1024
+  },
+  {
+    "id": "10f0107b3ed4",
+    "title": "Newman-Hass Indy Car Featuring Nigel Mansell",
+    "file": "Newman-Hass Indy Car Featuring Nigel Mansell (U).smc",
+    "cover": "Capas/10f0107b3ed4.jpg",
+    "region": "EUA",
+    "category": "Corrida",
+    "letter": "N",
+    "sizeKB": 2048
+  },
+  {
+    "id": "cc1160af7ebc",
+    "title": "NFL Football",
+    "file": "NFL Football (U).smc",
+    "cover": "Capas/cc1160af7ebc.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "N",
+    "sizeKB": 1024
+  },
+  {
+    "id": "14d816816e78",
+    "title": "NFL Quarterback Club",
+    "file": "NFL Quarterback Club (U).smc",
+    "cover": "Capas/14d816816e78.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "N",
+    "sizeKB": 3072
+  },
+  {
+    "id": "7adb3e999e9f",
+    "title": "NFL Quarterback Club '96",
+    "file": "NFL Quarterback Club '96 (U) [!].smc",
+    "cover": "Capas/7adb3e999e9f.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "N",
+    "sizeKB": 3072
+  },
+  {
+    "id": "62f278169127",
+    "title": "NHL '94",
+    "file": "NHL '94 (U) [!].smc",
+    "cover": "Capas/62f278169127.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "N",
+    "sizeKB": 1024
+  },
+  {
+    "id": "8c9921324b50",
+    "title": "NHL '95",
+    "file": "NHL '95 (U).smc",
+    "cover": "Capas/8c9921324b50.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "N",
+    "sizeKB": 1024
+  },
+  {
+    "id": "465bcd4b2190",
+    "title": "NHL '96",
+    "file": "NHL '96 (U).smc",
+    "cover": "Capas/465bcd4b2190.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "N",
+    "sizeKB": 1536
+  },
+  {
+    "id": "987e908ba6f0",
+    "title": "NHL '97",
+    "file": "NHL '97 (U).smc",
+    "cover": "Capas/987e908ba6f0.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "N",
+    "sizeKB": 1536
+  },
+  {
+    "id": "bf6eb76c3663",
+    "title": "NHL '98",
+    "file": "NHL '98 (U).smc",
+    "cover": "Capas/bf6eb76c3663.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "N",
+    "sizeKB": 2048
+  },
+  {
+    "id": "750094ca25cd",
+    "title": "NHL Stanley Cup",
+    "file": "NHL Stanley Cup (U) [!].smc",
+    "cover": "Capas/750094ca25cd.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "N",
+    "sizeKB": 1024
+  },
+  {
+    "id": "c9e6eb82fd31",
+    "title": "NHLPA Hockey '93",
+    "file": "NHLPA Hockey '93 (U) [!].smc",
+    "cover": "Capas/c9e6eb82fd31.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "N",
+    "sizeKB": 512
+  },
+  {
+    "id": "04b58b00ca1c",
+    "title": "Nickelodeon GUTS",
+    "file": "Nickelodeon GUTS (U).smc",
+    "cover": "Capas/04b58b00ca1c.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "N",
+    "sizeKB": 1536
+  },
+  {
+    "id": "44be3f6bc854",
+    "title": "Nigel Mansell's World Championship Racing",
+    "file": "Nigel Mansell's World Championship Racing (U).smc",
+    "cover": "Capas/44be3f6bc854.jpg",
+    "region": "EUA",
+    "category": "Corrida",
+    "letter": "N",
+    "sizeKB": 1024
+  },
+  {
+    "id": "592fd2e479f1",
+    "title": "Ninja Gaiden Trilogy",
+    "file": "Ninja Gaiden Trilogy (U) [!].smc",
+    "cover": "Capas/592fd2e479f1.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "N",
+    "sizeKB": 1536
+  },
+  {
+    "id": "dd10ab54d054",
+    "title": "No Escape",
+    "file": "No Escape (U).smc",
+    "cover": "Capas/dd10ab54d054.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "N",
+    "sizeKB": 2048
+  },
+  {
+    "id": "4469def976a3",
+    "title": "Nobunaga's Ambition",
+    "file": "Nobunaga's Ambition (U).smc",
+    "cover": "Capas/4469def976a3.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "N",
+    "sizeKB": 512
+  },
+  {
+    "id": "52c6167c2ab4",
+    "title": "Nobunaga's Ambition - Lord of Darkness",
+    "file": "Nobunaga's Ambition - Lord of Darkness (U).smc",
+    "cover": "Capas/52c6167c2ab4.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "N",
+    "sizeKB": 1024
+  },
+  {
+    "id": "8f27c27123c3",
+    "title": "Nolan Ryan's Baseball",
+    "file": "Nolan Ryan's Baseball (U).smc",
+    "cover": "Capas/8f27c27123c3.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "N",
+    "sizeKB": 512
+  },
+  {
+    "id": "61ad1d5cf8a5",
+    "title": "Nosferatu",
+    "file": "Nosferatu (U).smc",
+    "cover": "Capas/61ad1d5cf8a5.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "N",
+    "sizeKB": 2048
+  },
+  {
+    "id": "a32c7e7c5f9e",
+    "title": "Obitus",
+    "file": "Obitus (U) [!].smc",
+    "cover": "Capas/a32c7e7c5f9e.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "O",
+    "sizeKB": 1024
+  },
+  {
+    "id": "ffcd822a20cf",
+    "title": "Ogre Battle - The March of the Black Queen",
+    "file": "Ogre Battle - The March of the Black Queen (U) [!].smc",
+    "cover": "Capas/ffcd822a20cf.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "O",
+    "sizeKB": 1536
+  },
+  {
+    "id": "a5d2e04e331c",
+    "title": "Olympic Summer Games 96",
+    "file": "Olympic Summer Games 96 (U).smc",
+    "cover": "Capas/a5d2e04e331c.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "O",
+    "sizeKB": 2048
+  },
+  {
+    "id": "90c7c99624de",
+    "title": "On the Ball",
+    "file": "On the Ball (U) [!].smc",
+    "cover": "Capas/90c7c99624de.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "O",
+    "sizeKB": 1024
+  },
+  {
+    "id": "06ad73667acc",
+    "title": "Operation Europe - Path to Victory 1939-45",
+    "file": "Operation Europe - Path to Victory 1939-45 (U).smc",
+    "cover": "Capas/06ad73667acc.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "O",
+    "sizeKB": 1280
+  },
+  {
+    "id": "51e4c94ebd26",
+    "title": "Operation Logic Bomb",
+    "file": "Operation Logic Bomb (U) [!].smc",
+    "cover": "Capas/51e4c94ebd26.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "O",
+    "sizeKB": 1024
+  },
+  {
+    "id": "8cf3f3499876",
+    "title": "Operation Thunderbolt",
+    "file": "Operation Thunderbolt (U).smc",
+    "cover": "Capas/8cf3f3499876.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "O",
+    "sizeKB": 1280
+  },
+  {
+    "id": "d9088ab19164",
+    "title": "Oscar",
+    "file": "Oscar (U).smc",
+    "cover": "Capas/d9088ab19164.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "O",
+    "sizeKB": 512
+  },
+  {
+    "id": "140fc7b4e51d",
+    "title": "Out of This World",
+    "file": "Out of This World (U) [!].smc",
+    "cover": "Capas/140fc7b4e51d.jpg",
+    "region": "EUA",
+    "category": "Corrida",
+    "letter": "O",
+    "sizeKB": 1024
+  },
+  {
+    "id": "a87b74d6e1c0",
+    "title": "Out to Lunch",
+    "file": "Out to Lunch (U).smc",
+    "cover": "Capas/a87b74d6e1c0.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "O",
+    "sizeKB": 1024
+  },
+  {
+    "id": "daf6ff3f077f",
+    "title": "Outlander",
+    "file": "Outlander (U).smc",
+    "cover": "Capas/daf6ff3f077f.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "O",
+    "sizeKB": 1024
+  },
+  {
+    "id": "0f16a88d5941",
+    "title": "Pac-Attack",
+    "file": "Pac-Attack (U).smc",
+    "cover": "Capas/0f16a88d5941.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "P",
+    "sizeKB": 512
+  },
+  {
+    "id": "7887c85181ba",
+    "title": "Pac-in-Time",
+    "file": "Pac-in-Time (U).smc",
+    "cover": "Capas/7887c85181ba.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "P",
+    "sizeKB": 1024
+  },
+  {
+    "id": "2e4f47ead815",
+    "title": "Pac-Man 2 - The New Adventures",
+    "file": "Pac-Man 2 - The New Adventures (U) [!].smc",
+    "cover": "Capas/2e4f47ead815.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "P",
+    "sizeKB": 1536
+  },
+  {
+    "id": "67cd8bd1fad8",
+    "title": "Pacific Theater of Operations",
+    "file": "Pacific Theater of Operations (U) [!].smc",
+    "cover": "Capas/67cd8bd1fad8.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "P",
+    "sizeKB": 1280
+  },
+  {
+    "id": "f3eb3ba4e377",
+    "title": "Pacific Theater of Operations II",
+    "file": "Pacific Theater of Operations II (U).smc",
+    "cover": "Capas/f3eb3ba4e377.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "P",
+    "sizeKB": 3072
+  },
+  {
+    "id": "9473c85ac54d",
+    "title": "Packy & Marlon",
+    "file": "Packy & Marlon (U).smc",
+    "cover": "Capas/9473c85ac54d.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "P",
+    "sizeKB": 1024
+  },
+  {
+    "id": "b29a2418d486",
+    "title": "Paladin's Quest",
+    "file": "Paladin's Quest (U).smc",
+    "cover": "Capas/b29a2418d486.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "P",
+    "sizeKB": 1536
+  },
+  {
+    "id": "c5827c4d5810",
+    "title": "Paperboy 2",
+    "file": "Paperboy 2 (U) [!].smc",
+    "cover": "Capas/c5827c4d5810.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "P",
+    "sizeKB": 512
+  },
+  {
+    "id": "4fa8a0579378",
+    "title": "Pebble Beach Golf Links",
+    "file": "Pebble Beach Golf Links (U).smc",
+    "cover": "Capas/4fa8a0579378.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "P",
+    "sizeKB": 1024
+  },
+  {
+    "id": "2996d5147be5",
+    "title": "PGA European Tour",
+    "file": "PGA European Tour (U).smc",
+    "cover": "Capas/2996d5147be5.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "P",
+    "sizeKB": 1024
+  },
+  {
+    "id": "4692bdc310ea",
+    "title": "PGA Tour 96",
+    "file": "PGA Tour 96 (U) [!].smc",
+    "cover": "Capas/4692bdc310ea.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "P",
+    "sizeKB": 2048
+  },
+  {
+    "id": "32ea709864e2",
+    "title": "PGA Tour Golf",
+    "file": "PGA Tour Golf (U).smc",
+    "cover": "Capas/32ea709864e2.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "P",
+    "sizeKB": 512
+  },
+  {
+    "id": "004248acfc43",
+    "title": "Phalanx - The Enforce Fighter A-144",
+    "file": "Phalanx - The Enforce Fighter A-144 (U) [!].smc",
+    "cover": "Capas/004248acfc43.jpg",
+    "region": "EUA",
+    "category": "Nave & Tiro",
+    "letter": "P",
+    "sizeKB": 1024
+  },
+  {
+    "id": "144a8e6d3667",
+    "title": "Phantom 2040",
+    "file": "Phantom 2040 (U).smc",
+    "cover": "Capas/144a8e6d3667.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "P",
+    "sizeKB": 2048
+  },
+  {
+    "id": "ace35ba3c320",
+    "title": "Pieces",
+    "file": "Pieces (U).smc",
+    "cover": "Capas/ace35ba3c320.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "P",
+    "sizeKB": 1024
+  },
+  {
+    "id": "ad80fe6747a9",
+    "title": "Pilotwings",
+    "file": "Pilotwings (U) [!].smc",
+    "cover": "Capas/ad80fe6747a9.jpg",
+    "region": "EUA",
+    "category": "Nave & Tiro",
+    "letter": "P",
+    "sizeKB": 512
+  },
+  {
+    "id": "9edcad57e9d1",
+    "title": "Pinball Dreams",
+    "file": "Pinball Dreams (U).smc",
+    "cover": "Capas/9edcad57e9d1.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "P",
+    "sizeKB": 1024
+  },
+  {
+    "id": "81d36637e128",
+    "title": "Pinball Fantasies",
+    "file": "Pinball Fantasies (U).smc",
+    "cover": "Capas/81d36637e128.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "P",
+    "sizeKB": 1024
+  },
+  {
+    "id": "6685b9fb17e1",
+    "title": "Pink Panther in Pink Goes to Hollywood",
+    "file": "Pink Panther in Pink Goes to Hollywood (U).smc",
+    "cover": "Capas/6685b9fb17e1.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "P",
+    "sizeKB": 1024
+  },
+  {
+    "id": "4b5fb0bdf22d",
+    "title": "Pinocchio",
+    "file": "Pinocchio (U).smc",
+    "cover": "Capas/4b5fb0bdf22d.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "P",
+    "sizeKB": 3072
+  },
+  {
+    "id": "1839e2cd9ef9",
+    "title": "Pit Fighter",
+    "file": "Pit Fighter (U).smc",
+    "cover": "Capas/1839e2cd9ef9.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "P",
+    "sizeKB": 512
+  },
+  {
+    "id": "2ec6dc9417d5",
+    "title": "Pitfall - The Mayan Adventure",
+    "file": "Pitfall - The Mayan Adventure (U).smc",
+    "cover": "Capas/2ec6dc9417d5.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "P",
+    "sizeKB": 2048
+  },
+  {
+    "id": "ecc15f88c13d",
+    "title": "Plok!",
+    "file": "Plok! (U) [!].smc",
+    "cover": "Capas/ecc15f88c13d.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "P",
+    "sizeKB": 1024
+  },
+  {
+    "id": "85ffb7e8182b",
+    "title": "Pocky & Rocky",
+    "file": "Pocky & Rocky (U) [!].smc",
+    "cover": "Capas/85ffb7e8182b.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "P",
+    "sizeKB": 1024
+  },
+  {
+    "id": "7a903a6d30b0",
+    "title": "Pocky & Rocky 2",
+    "file": "Pocky & Rocky 2 (U) [!].smc",
+    "cover": "Capas/7a903a6d30b0.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "P",
+    "sizeKB": 1536
+  },
+  {
+    "id": "0d429df81f20",
+    "title": "Populous",
+    "file": "Populous (U) [!].smc",
+    "cover": "Capas/0d429df81f20.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "P",
+    "sizeKB": 512
+  },
+  {
+    "id": "3578aa344663",
+    "title": "Porky Pig's Haunted Holiday",
+    "file": "Porky Pig's Haunted Holiday (U) (Acclaim).smc",
+    "cover": "Capas/3578aa344663.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "P",
+    "sizeKB": 2048
+  },
+  {
+    "id": "3df7121df64a",
+    "title": "Power Instinct",
+    "file": "Power Instinct (U).smc",
+    "cover": "Capas/3df7121df64a.jpg",
+    "region": "EUA",
+    "category": "Luta",
+    "letter": "P",
+    "sizeKB": 2560
+  },
+  {
+    "id": "6bb6ce4e7cf8",
+    "title": "Power Moves",
+    "file": "Power Moves (U).smc",
+    "cover": "Capas/6bb6ce4e7cf8.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "P",
+    "sizeKB": 1024
+  },
+  {
+    "id": "45a7c326d697",
+    "title": "Power Piggs of the Dark Age",
+    "file": "Power Piggs of the Dark Age (U) [!].smc",
+    "cover": "Capas/45a7c326d697.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "P",
+    "sizeKB": 1024
+  },
+  {
+    "id": "11696a1466a0",
+    "title": "Power Rangers Zeo - Battle Racers",
+    "file": "Power Rangers Zeo - Battle Racers (U).smc",
+    "cover": "Capas/11696a1466a0.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "P",
+    "sizeKB": 1024
+  },
+  {
+    "id": "2332f68d0c92",
+    "title": "Prehistorik Man",
+    "file": "Prehistorik Man (U).smc",
+    "cover": "Capas/2332f68d0c92.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "P",
+    "sizeKB": 1024
+  },
+  {
+    "id": "b49efdebfd89",
+    "title": "Primal Rage",
+    "file": "Primal Rage (U) [!].smc",
+    "cover": "Capas/b49efdebfd89.jpg",
+    "region": "EUA",
+    "category": "Luta",
+    "letter": "P",
+    "sizeKB": 3072
+  },
+  {
+    "id": "7c131862ec04",
+    "title": "Prince of Persia",
+    "file": "Prince of Persia (U).smc",
+    "cover": "Capas/7c131862ec04.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "P",
+    "sizeKB": 1024
+  },
+  {
+    "id": "b1947a3caf27",
+    "title": "Prince of Persia 2 - The Shadow & The Flame",
+    "file": "Prince of Persia 2 - The Shadow & The Flame (U).smc",
+    "cover": "Capas/b1947a3caf27.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "P",
+    "sizeKB": 2048
+  },
+  {
+    "id": "2cc1823393c9",
+    "title": "Pro Quarterback",
+    "file": "Pro Quarterback (U).smc",
+    "cover": "Capas/2cc1823393c9.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "P",
+    "sizeKB": 1024
+  },
+  {
+    "id": "99d8c55a2515",
+    "title": "Pro Sport Hockey",
+    "file": "Pro Sport Hockey (U).smc",
+    "cover": "Capas/99d8c55a2515.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "P",
+    "sizeKB": 1024
+  },
+  {
+    "id": "8fb296a994e5",
+    "title": "Push-Over",
+    "file": "Push-Over (U).smc",
+    "cover": "Capas/8fb296a994e5.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "P",
+    "sizeKB": 512
+  },
+  {
+    "id": "8cf0a40abc73",
+    "title": "Q-bert 3",
+    "file": "Q-bert 3 (U) [!].smc",
+    "cover": "Capas/8cf0a40abc73.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "Q",
+    "sizeKB": 512
+  },
+  {
+    "id": "6839feafabb9",
+    "title": "R-Type III - The Third Lightning",
+    "file": "R-Type III - The Third Lightning (U).smc",
+    "cover": "Capas/6839feafabb9.jpg",
+    "region": "EUA",
+    "category": "Nave & Tiro",
+    "letter": "R",
+    "sizeKB": 2048
+  },
+  {
+    "id": "d7460d59df21",
+    "title": "Race Drivin'",
+    "file": "Race Drivin' (U) [!].smc",
+    "cover": "Capas/d7460d59df21.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "R",
+    "sizeKB": 512
+  },
+  {
+    "id": "5251aa46f1b0",
+    "title": "Radical Rex",
+    "file": "Radical Rex (U).smc",
+    "cover": "Capas/5251aa46f1b0.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "R",
+    "sizeKB": 1024
+  },
+  {
+    "id": "aac7c1a7a6f4",
+    "title": "Raiden Trad",
+    "file": "Raiden Trad (U).smc",
+    "cover": "Capas/aac7c1a7a6f4.jpg",
+    "region": "EUA",
+    "category": "Nave & Tiro",
+    "letter": "R",
+    "sizeKB": 1024
+  },
+  {
+    "id": "8d155a5ac5df",
+    "title": "Rampart",
+    "file": "Rampart (U).smc",
+    "cover": "Capas/8d155a5ac5df.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "R",
+    "sizeKB": 512
+  },
+  {
+    "id": "8f28ee773fed",
+    "title": "Ranma Nibunnoichi - Hard Battle",
+    "file": "Ranma Nibunnoichi - Hard Battle (U) [!].smc",
+    "cover": "Capas/8f28ee773fed.jpg",
+    "region": "EUA",
+    "category": "Luta",
+    "letter": "R",
+    "sizeKB": 1536
+  },
+  {
+    "id": "39e67bd7c32e",
+    "title": "Rap Jam - Volume One",
+    "file": "Rap Jam - Volume One (U) [!].smc",
+    "cover": "Capas/39e67bd7c32e.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "R",
+    "sizeKB": 2048
+  },
+  {
+    "id": "74b37f93e740",
+    "title": "Realm",
+    "file": "Realm (U).smc",
+    "cover": "Capas/74b37f93e740.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "R",
+    "sizeKB": 1024
+  },
+  {
+    "id": "7feacd0136bd",
+    "title": "Redline F-1 Racer",
+    "file": "Redline F-1 Racer (U).smc",
+    "cover": "Capas/7feacd0136bd.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "R",
+    "sizeKB": 1024
+  },
+  {
+    "id": "1115bd95cdc6",
+    "title": "Relief Pitcher",
+    "file": "Relief Pitcher (U).smc",
+    "cover": "Capas/1115bd95cdc6.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "R",
+    "sizeKB": 2048
+  },
+  {
+    "id": "5ae761c779d6",
+    "title": "Ren & Stimpy Show, The - Buckeroos!",
+    "file": "Ren & Stimpy Show, The - Buckeroos! (U).smc",
+    "cover": "Capas/5ae761c779d6.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "R",
+    "sizeKB": 1024
+  },
+  {
+    "id": "c21c46029e77",
+    "title": "Ren & Stimpy Show, The - Fire Dogs",
+    "file": "Ren & Stimpy Show, The - Fire Dogs (U).smc",
+    "cover": "Capas/c21c46029e77.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "R",
+    "sizeKB": 512
+  },
+  {
+    "id": "3131965f05f4",
+    "title": "Ren & Stimpy Show, The - Time Warp",
+    "file": "Ren & Stimpy Show, The - Time Warp (U).smc",
+    "cover": "Capas/3131965f05f4.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "R",
+    "sizeKB": 1280
+  },
+  {
+    "id": "97fe9477de3d",
+    "title": "Ren & Stimpy Show, The - Veediots!",
+    "file": "Ren & Stimpy Show, The - Veediots! (U).smc",
+    "cover": "Capas/97fe9477de3d.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "R",
+    "sizeKB": 1024
+  },
+  {
+    "id": "58dde5c5c323",
+    "title": "Revolution X",
+    "file": "Revolution X (U).smc",
+    "cover": "Capas/58dde5c5c323.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "R",
+    "sizeKB": 2048
+  },
+  {
+    "id": "0084beb43a14",
+    "title": "Rex Ronan - Experimental Surgeon",
+    "file": "Rex Ronan - Experimental Surgeon (U).smc",
+    "cover": "Capas/0084beb43a14.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "R",
+    "sizeKB": 512
+  },
+  {
+    "id": "84b62b89556b",
+    "title": "Riddick Bowe Boxing",
+    "file": "Riddick Bowe Boxing (U).smc",
+    "cover": "Capas/84b62b89556b.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "R",
+    "sizeKB": 512
+  },
+  {
+    "id": "38086c7b098c",
+    "title": "Rise of the Phoenix",
+    "file": "Rise of the Phoenix (U).smc",
+    "cover": "Capas/38086c7b098c.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "R",
+    "sizeKB": 1536
+  },
+  {
+    "id": "3371f18d09e6",
+    "title": "Rise of the Robots",
+    "file": "Rise of the Robots (U).smc",
+    "cover": "Capas/3371f18d09e6.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "R",
+    "sizeKB": 4096
+  },
+  {
+    "id": "873df24eb874",
+    "title": "Rival Turf",
+    "file": "Rival Turf (U).smc",
+    "cover": "Capas/873df24eb874.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "R",
+    "sizeKB": 1024
+  },
+  {
+    "id": "ca3d9ee73c7e",
+    "title": "Road Riot 4WD",
+    "file": "Road Riot 4WD (U) (3850).smc",
+    "cover": "Capas/ca3d9ee73c7e.jpg",
+    "region": "EUA",
+    "category": "Corrida",
+    "letter": "R",
+    "sizeKB": 512
+  },
+  {
+    "id": "2d9e375e5258",
+    "title": "Road Runner's Death Valley Rally",
+    "file": "Road Runner's Death Valley Rally (U) [!].smc",
+    "cover": "Capas/2d9e375e5258.jpg",
+    "region": "EUA",
+    "category": "Corrida",
+    "letter": "R",
+    "sizeKB": 1024
+  },
+  {
+    "id": "0f4bff0255a2",
+    "title": "Robocop 3",
+    "file": "Robocop 3 (U).smc",
+    "cover": "Capas/0f4bff0255a2.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "R",
+    "sizeKB": 1024
+  },
+  {
+    "id": "dc8d9f99211d",
+    "title": "Robocop Versus The Terminator",
+    "file": "Robocop Versus The Terminator (U).smc",
+    "cover": "Capas/dc8d9f99211d.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "R",
+    "sizeKB": 1024
+  },
+  {
+    "id": "e5395183c8b0",
+    "title": "Robotrek",
+    "file": "Robotrek (U).smc",
+    "cover": "Capas/e5395183c8b0.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "R",
+    "sizeKB": 1536
+  },
+  {
+    "id": "10aad83fd9d9",
+    "title": "Rock N' Roll Racing",
+    "file": "Rock N' Roll Racing (U).smc",
+    "cover": "Capas/10aad83fd9d9.jpg",
+    "region": "EUA",
+    "category": "Corrida",
+    "letter": "R",
+    "sizeKB": 1024
+  },
+  {
+    "id": "ccb012c6757e",
+    "title": "Rocko's Modern Life - Spunky's Dangerous Day",
+    "file": "Rocko's Modern Life - Spunky's Dangerous Day (U).smc",
+    "cover": "Capas/ccb012c6757e.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "R",
+    "sizeKB": 1536
+  },
+  {
+    "id": "30ef559b9741",
+    "title": "Rocky Rodent",
+    "file": "Rocky Rodent (U).smc",
+    "cover": "Capas/30ef559b9741.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "R",
+    "sizeKB": 1024
+  },
+  {
+    "id": "e406ef51cbdc",
+    "title": "Roger Clemens' MVP Baseball",
+    "file": "Roger Clemens' MVP Baseball (U).smc",
+    "cover": "Capas/e406ef51cbdc.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "R",
+    "sizeKB": 1024
+  },
+  {
+    "id": "187bf63cf439",
+    "title": "Romance of the Three Kingdoms II",
+    "file": "Romance of the Three Kingdoms II (U).smc",
+    "cover": "Capas/187bf63cf439.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "R",
+    "sizeKB": 1024
+  },
+  {
+    "id": "97aa712f854b",
+    "title": "Romance of the Three Kingdoms III - Dragon of Destiny",
+    "file": "Romance of the Three Kingdoms III - Dragon of Destiny (U).smc",
+    "cover": "Capas/97aa712f854b.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "R",
+    "sizeKB": 1536
+  },
+  {
+    "id": "eed9a0752e80",
+    "title": "Romance of the Three Kingdoms IV - Wall of Fire",
+    "file": "Romance of the Three Kingdoms IV - Wall of Fire (U).smc",
+    "cover": "Capas/eed9a0752e80.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "R",
+    "sizeKB": 3072
+  },
+  {
+    "id": "9dbbbf720545",
+    "title": "RPM Racing",
+    "file": "RPM Racing (U).smc",
+    "cover": "Capas/9dbbbf720545.jpg",
+    "region": "EUA",
+    "category": "Corrida",
+    "letter": "R",
+    "sizeKB": 512
+  },
+  {
+    "id": "a450b5f255fe",
+    "title": "Run Saber",
+    "file": "Run Saber (U) [!].smc",
+    "cover": "Capas/a450b5f255fe.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "R",
+    "sizeKB": 1024
+  },
+  {
+    "id": "e7427454ef0d",
+    "title": "Samurai Shodown",
+    "file": "Samurai Shodown (U).smc",
+    "cover": "Capas/e7427454ef0d.jpg",
+    "region": "EUA",
+    "category": "Luta",
+    "letter": "S",
+    "sizeKB": 4096
+  },
+  {
+    "id": "fee53a987918",
+    "title": "Saturday Night Slam Masters",
+    "file": "Saturday Night Slam Masters (U).smc",
+    "cover": "Capas/fee53a987918.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 3072
+  },
+  {
+    "id": "2388196b874d",
+    "title": "Scooby-Doo",
+    "file": "Scooby-Doo (U).smc",
+    "cover": "Capas/2388196b874d.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 2048
+  },
+  {
+    "id": "3d6ed88d6ae2",
+    "title": "SeaQuest DSV",
+    "file": "SeaQuest DSV (U).smc",
+    "cover": "Capas/3d6ed88d6ae2.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 2048
+  },
+  {
+    "id": "63143805fca5",
+    "title": "Secret of Evermore",
+    "file": "Secret of Evermore (U).smc",
+    "cover": "Capas/63143805fca5.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "S",
+    "sizeKB": 3072
+  },
+  {
+    "id": "bc490e7e4120",
+    "title": "Secret of Mana",
+    "file": "Secret of Mana (U) [!].smc",
+    "cover": "Capas/bc490e7e4120.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "S",
+    "sizeKB": 2048
+  },
+  {
+    "id": "2b2cc98c9a0c",
+    "title": "Secret of the Stars",
+    "file": "Secret of the Stars (U).smc",
+    "cover": "Capas/2b2cc98c9a0c.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1536
+  },
+  {
+    "id": "2969d9d196c2",
+    "title": "Shadowrun",
+    "file": "Shadowrun (U) [!].smc",
+    "cover": "Capas/2969d9d196c2.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "47570843604c",
+    "title": "Shanghai II - Dragon's Eye",
+    "file": "Shanghai II - Dragon's Eye (U) [!].smc",
+    "cover": "Capas/47570843604c.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "04add2028ed1",
+    "title": "Shaq Fu",
+    "file": "Shaq Fu (U) [!].smc",
+    "cover": "Capas/04add2028ed1.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 2048
+  },
+  {
+    "id": "e796b7268dea",
+    "title": "Shien's Revenge",
+    "file": "Shien's Revenge (U).smc",
+    "cover": "Capas/e796b7268dea.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 2048
+  },
+  {
+    "id": "73b39f022e7a",
+    "title": "Side Pocket",
+    "file": "Side Pocket (U).smc",
+    "cover": "Capas/73b39f022e7a.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "d26cdf3a64ed",
+    "title": "Sim Ant",
+    "file": "Sim Ant (U) (37113).smc",
+    "cover": "Capas/d26cdf3a64ed.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "fe825be9b781",
+    "title": "Sim City",
+    "file": "Sim City (U) [!].smc",
+    "cover": "Capas/fe825be9b781.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "S",
+    "sizeKB": 512
+  },
+  {
+    "id": "1038e7b1c37f",
+    "title": "Sim City 2000",
+    "file": "Sim City 2000 (U).smc",
+    "cover": "Capas/1038e7b1c37f.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "S",
+    "sizeKB": 2048
+  },
+  {
+    "id": "0c40ba290091",
+    "title": "Sim Earth - The Living Planet",
+    "file": "Sim Earth - The Living Planet (U).smc",
+    "cover": "Capas/0c40ba290091.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "25925b4df12b",
+    "title": "Simpsons, The - Bart's Nightmare",
+    "file": "Simpsons, The - Bart's Nightmare (U) [!].smc",
+    "cover": "Capas/25925b4df12b.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "9355b93e0b43",
+    "title": "Sink or Swim",
+    "file": "Sink or Swim (U).smc",
+    "cover": "Capas/9355b93e0b43.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 512
+  },
+  {
+    "id": "09b19c349259",
+    "title": "Skuljagger - Revolt of the Westicans",
+    "file": "Skuljagger - Revolt of the Westicans (U).smc",
+    "cover": "Capas/09b19c349259.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 512
+  },
+  {
+    "id": "568bc729e242",
+    "title": "Sky Blazer",
+    "file": "Sky Blazer (U) (12134).smc",
+    "cover": "Capas/568bc729e242.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "adcc2d850107",
+    "title": "Smart Ball",
+    "file": "Smart Ball (U).smc",
+    "cover": "Capas/adcc2d850107.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "b236454f345b",
+    "title": "SNES Test Program",
+    "file": "SNES Test Program (U).smc",
+    "cover": "Capas/b236454f345b.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "4e370e9a37a9",
+    "title": "Snow White in Happily Ever After",
+    "file": "Snow White in Happily Ever After (U).smc",
+    "cover": "Capas/4e370e9a37a9.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "3c8115cc2b7d",
+    "title": "Soldiers of Fortune",
+    "file": "Soldiers of Fortune (U) [!].smc",
+    "cover": "Capas/3c8115cc2b7d.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1536
+  },
+  {
+    "id": "8aa913a5eefe",
+    "title": "Sonic Blast Man",
+    "file": "Sonic Blast Man (U) [!].smc",
+    "cover": "Capas/8aa913a5eefe.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "923979b433f3",
+    "title": "Sonic Blast Man II",
+    "file": "Sonic Blast Man II (U).smc",
+    "cover": "Capas/923979b433f3.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "S",
+    "sizeKB": 1536
+  },
+  {
+    "id": "18d4a372d43c",
+    "title": "SOS",
+    "file": "SOS (U) [!].smc",
+    "cover": "Capas/18d4a372d43c.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "a8491a7a53f4",
+    "title": "Soul Blazer",
+    "file": "Soul Blazer (U) [!].smc",
+    "cover": "Capas/a8491a7a53f4.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "9e3f2b81dbeb",
+    "title": "Space Ace",
+    "file": "Space Ace (U).smc",
+    "cover": "Capas/9e3f2b81dbeb.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "1c08a7f569a6",
+    "title": "Space Football - One on One",
+    "file": "Space Football - One on One (U).smc",
+    "cover": "Capas/1c08a7f569a6.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "S",
+    "sizeKB": 512
+  },
+  {
+    "id": "5d1bb9217326",
+    "title": "Space Invaders",
+    "file": "Space Invaders (U) [!].smc",
+    "cover": "Capas/5d1bb9217326.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 256
+  },
+  {
+    "id": "1709b6b82387",
+    "title": "Space Megaforce",
+    "file": "Space Megaforce (U) [!].smc",
+    "cover": "Capas/1709b6b82387.jpg",
+    "region": "EUA",
+    "category": "Nave & Tiro",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "f06d36663ecb",
+    "title": "Spanky's Quest",
+    "file": "Spanky's Quest (U).smc",
+    "cover": "Capas/f06d36663ecb.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 512
+  },
+  {
+    "id": "a79e52e1cfe6",
+    "title": "Sparkster",
+    "file": "Sparkster (U).smc",
+    "cover": "Capas/a79e52e1cfe6.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "3ec5af0fcb4f",
+    "title": "Spawn",
+    "file": "Spawn (U).smc",
+    "cover": "Capas/3ec5af0fcb4f.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "S",
+    "sizeKB": 3072
+  },
+  {
+    "id": "968617ebc863",
+    "title": "Spectre",
+    "file": "Spectre (U).smc",
+    "cover": "Capas/968617ebc863.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "33b5bdeab5f0",
+    "title": "Speed Racer in My Most Dangerous Adventures",
+    "file": "Speed Racer in My Most Dangerous Adventures (U).smc",
+    "cover": "Capas/33b5bdeab5f0.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 2048
+  },
+  {
+    "id": "e23a59957b1e",
+    "title": "Speedy Gonzales - Los Gatos Bandidos",
+    "file": "Speedy Gonzales - Los Gatos Bandidos (U) (V1.1).smc",
+    "cover": "Capas/e23a59957b1e.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "c164099f5ad2",
+    "title": "Spell Craft",
+    "file": "Spell Craft (U).smc",
+    "cover": "Capas/c164099f5ad2.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "3b02d9076a1b",
+    "title": "Spider-Man",
+    "file": "Spider-Man (U).smc",
+    "cover": "Capas/3b02d9076a1b.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "S",
+    "sizeKB": 2048
+  },
+  {
+    "id": "43ae40f597cb",
+    "title": "Spider-Man & Venom - Maximum Carnage",
+    "file": "Spider-Man & Venom - Maximum Carnage (U).smc",
+    "cover": "Capas/43ae40f597cb.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "S",
+    "sizeKB": 2048
+  },
+  {
+    "id": "db558069e2f0",
+    "title": "Spider-Man & Venom - Separation Anxiety",
+    "file": "Spider-Man & Venom - Separation Anxiety (U).smc",
+    "cover": "Capas/db558069e2f0.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "S",
+    "sizeKB": 3072
+  },
+  {
+    "id": "3ee8314c6e66",
+    "title": "Spider-Man and the X-Men in Arcade's Revenge",
+    "file": "Spider-Man and the X-Men in Arcade's Revenge (U).smc",
+    "cover": "Capas/3ee8314c6e66.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "77fd997191c9",
+    "title": "Spindizzy Worlds",
+    "file": "Spindizzy Worlds (U).smc",
+    "cover": "Capas/77fd997191c9.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "398c558a087c",
+    "title": "Sports Illustrated Championship Football & Baseball",
+    "file": "Sports Illustrated Championship Football & Baseball (U).smc",
+    "cover": "Capas/398c558a087c.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "S",
+    "sizeKB": 2048
+  },
+  {
+    "id": "36e29dc59f8b",
+    "title": "Star Fox",
+    "file": "Star Fox (U) (V1.2) [!].smc",
+    "cover": "Capas/36e29dc59f8b.jpg",
+    "region": "EUA",
+    "category": "Nave & Tiro",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "f4ee7fa205b4",
+    "title": "Star Fox Super Weekend Competition",
+    "file": "Star Fox Super Weekend Competition (U).smc",
+    "cover": "Capas/f4ee7fa205b4.jpg",
+    "region": "EUA",
+    "category": "Nave & Tiro",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "5cd78fe1786d",
+    "title": "Star Trek - Deep Space Nine - Crossroads of Time",
+    "file": "Star Trek - Deep Space Nine - Crossroads of Time (U).smc",
+    "cover": "Capas/5cd78fe1786d.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "d2748b030fc3",
+    "title": "Star Trek - Starfleet Academy Starship Bridge Simulator",
+    "file": "Star Trek - Starfleet Academy Starship Bridge Simulator (U).smc",
+    "cover": "Capas/d2748b030fc3.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "9a4b71915d25",
+    "title": "Star Trek - The Next Generation - Future's Past",
+    "file": "Star Trek - The Next Generation - Future's Past (U) [!].smc",
+    "cover": "Capas/9a4b71915d25.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 2048
+  },
+  {
+    "id": "9167ca999213",
+    "title": "Stargate",
+    "file": "Stargate (U).smc",
+    "cover": "Capas/9167ca999213.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 2048
+  },
+  {
+    "id": "6ece042dc534",
+    "title": "Steel Talons",
+    "file": "Steel Talons (U).smc",
+    "cover": "Capas/6ece042dc534.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 512
+  },
+  {
+    "id": "d0be0db783ff",
+    "title": "Sterling Sharpe - End 2 End",
+    "file": "Sterling Sharpe - End 2 End (U).smc",
+    "cover": "Capas/d0be0db783ff.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "9d9af8bcccfc",
+    "title": "Stone Protectors",
+    "file": "Stone Protectors (U).smc",
+    "cover": "Capas/9d9af8bcccfc.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 2048
+  },
+  {
+    "id": "8ef4d9abf2d5",
+    "title": "Street Combat",
+    "file": "Street Combat (U).smc",
+    "cover": "Capas/8ef4d9abf2d5.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "096a114e0d8b",
+    "title": "Street Fighter Alpha 2",
+    "file": "Street Fighter Alpha 2 (U) [!].smc",
+    "cover": "Capas/096a114e0d8b.jpg",
+    "region": "EUA",
+    "category": "Luta",
+    "letter": "S",
+    "sizeKB": 4096
+  },
+  {
+    "id": "1527a4e39830",
+    "title": "Street Fighter II - The World Warrior",
+    "file": "Street Fighter II - The World Warrior (U) [!].smc",
+    "cover": "Capas/1527a4e39830.jpg",
+    "region": "EUA",
+    "category": "Luta",
+    "letter": "S",
+    "sizeKB": 2048
+  },
+  {
+    "id": "492647f7ead0",
+    "title": "Street Fighter II Turbo",
+    "file": "Street Fighter II Turbo (U).smc",
+    "cover": "Capas/492647f7ead0.jpg",
+    "region": "EUA",
+    "category": "Luta",
+    "letter": "S",
+    "sizeKB": 2560
+  },
+  {
+    "id": "a67342684c22",
+    "title": "Street Hockey '95",
+    "file": "Street Hockey '95 (U) (47875).smc",
+    "cover": "Capas/a67342684c22.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "S",
+    "sizeKB": 3072
+  },
+  {
+    "id": "3305a44c0470",
+    "title": "Street Racer",
+    "file": "Street Racer (U).smc",
+    "cover": "Capas/3305a44c0470.jpg",
+    "region": "EUA",
+    "category": "Corrida",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "d19bd65b27f8",
+    "title": "Strike Gunner",
+    "file": "Strike Gunner (U) [!].smc",
+    "cover": "Capas/d19bd65b27f8.jpg",
+    "region": "EUA",
+    "category": "Nave & Tiro",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "d36b6d977b9f",
+    "title": "Stunt Race FX",
+    "file": "Stunt Race FX (U) [!].smc",
+    "cover": "Capas/d36b6d977b9f.jpg",
+    "region": "EUA",
+    "category": "Corrida",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "e432a8def929",
+    "title": "Sunset Riders",
+    "file": "Sunset Riders (U).smc",
+    "cover": "Capas/e432a8def929.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "a08898b174ff",
+    "title": "Super Adventure Island",
+    "file": "Super Adventure Island (U) [!].smc",
+    "cover": "Capas/a08898b174ff.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "8d9efb6720d6",
+    "title": "Super Adventure Island II",
+    "file": "Super Adventure Island II (U).smc",
+    "cover": "Capas/8d9efb6720d6.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1536
+  },
+  {
+    "id": "628a82df6aa4",
+    "title": "Super Air Diver",
+    "file": "Super Air Diver (E) [!].smc",
+    "cover": "Capas/628a82df6aa4.jpg",
+    "region": "Europa",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 512
+  },
+  {
+    "id": "b342d33fe527",
+    "title": "Super Alfred Chicken",
+    "file": "Super Alfred Chicken (U) [!].smc",
+    "cover": "Capas/b342d33fe527.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "9bc75276423b",
+    "title": "Super Baseball Simulator 1.000",
+    "file": "Super Baseball Simulator 1.000 (U) [!].smc",
+    "cover": "Capas/9bc75276423b.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "S",
+    "sizeKB": 512
+  },
+  {
+    "id": "6ef7df0f6a33",
+    "title": "Super Bases Loaded",
+    "file": "Super Bases Loaded (U) [!].smc",
+    "cover": "Capas/6ef7df0f6a33.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "e70fc7b90f47",
+    "title": "Super Bases Loaded 2",
+    "file": "Super Bases Loaded 2 (U).smc",
+    "cover": "Capas/e70fc7b90f47.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1536
+  },
+  {
+    "id": "520a5c33cbad",
+    "title": "Super Bases Loaded 3 - License to Steal",
+    "file": "Super Bases Loaded 3 - License to Steal (U) (V1.0) [!].smc",
+    "cover": "Capas/520a5c33cbad.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 2048
+  },
+  {
+    "id": "39780691242c",
+    "title": "Super Batter Up",
+    "file": "Super Batter Up (U).smc",
+    "cover": "Capas/39780691242c.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "b25f55a90755",
+    "title": "Super Battleship",
+    "file": "Super Battleship (U).smc",
+    "cover": "Capas/b25f55a90755.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 512
+  },
+  {
+    "id": "b4ec5633aed3",
+    "title": "Super Battletank - War in the Gulf",
+    "file": "Super Battletank - War in the Gulf (U) (V1.1) [!].smc",
+    "cover": "Capas/b4ec5633aed3.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 512
+  },
+  {
+    "id": "522327356844",
+    "title": "Super Battletank 2",
+    "file": "Super Battletank 2 (U).smc",
+    "cover": "Capas/522327356844.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 2048
+  },
+  {
+    "id": "eaba3c3f7c0e",
+    "title": "Super Black Bass",
+    "file": "Super Black Bass (U) [!].smc",
+    "cover": "Capas/eaba3c3f7c0e.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "864abf4a4dbf",
+    "title": "Super Bomberman",
+    "file": "Super Bomberman (U).smc",
+    "cover": "Capas/864abf4a4dbf.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "S",
+    "sizeKB": 512
+  },
+  {
+    "id": "b9eaf87aed22",
+    "title": "Super Bomberman 2",
+    "file": "Super Bomberman 2 (U).smc",
+    "cover": "Capas/b9eaf87aed22.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "ff74bd612a02",
+    "title": "Super Bonk",
+    "file": "Super Bonk (U).smc",
+    "cover": "Capas/ff74bd612a02.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1536
+  },
+  {
+    "id": "7f52d1341df6",
+    "title": "Super Bowling",
+    "file": "Super Bowling (U).smc",
+    "cover": "Capas/7f52d1341df6.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 512
+  },
+  {
+    "id": "4d947987ac21",
+    "title": "Super Buster Bros.",
+    "file": "Super Buster Bros. (U) (V1.0) [!].smc",
+    "cover": "Capas/4d947987ac21.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 512
+  },
+  {
+    "id": "7409eb5ecc39",
+    "title": "Super Caesars Palace",
+    "file": "Super Caesars Palace (U) [!].smc",
+    "cover": "Capas/7409eb5ecc39.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "S",
+    "sizeKB": 512
+  },
+  {
+    "id": "df4c5ac1de3b",
+    "title": "Super Castlevania IV",
+    "file": "Super Castlevania IV (U) [!].smc",
+    "cover": "Capas/df4c5ac1de3b.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "93b2fcce3deb",
+    "title": "Super Chase H.Q.",
+    "file": "Super Chase H.Q. (U).smc",
+    "cover": "Capas/93b2fcce3deb.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "f097984b28ad",
+    "title": "Super Conflict - The Mideast",
+    "file": "Super Conflict - The Mideast (U) [!].smc",
+    "cover": "Capas/f097984b28ad.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "1bcbcc6234f0",
+    "title": "Super Dogfight",
+    "file": "Super Dogfight (J).smc",
+    "cover": "Capas/1bcbcc6234f0.jpg",
+    "region": "Japão",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 2048
+  },
+  {
+    "id": "bcb5c2860497",
+    "title": "Super Double Dragon",
+    "file": "Super Double Dragon (U).smc",
+    "cover": "Capas/bcb5c2860497.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "624ce9f6144d",
+    "title": "Super Earth Defense Force",
+    "file": "Super Earth Defense Force (U).smc",
+    "cover": "Capas/624ce9f6144d.jpg",
+    "region": "EUA",
+    "category": "Nave & Tiro",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "732f2df6d002",
+    "title": "Super Fire Pro Wrestling",
+    "file": "Super Fire Pro Wrestling (J).smc",
+    "cover": "Capas/732f2df6d002.jpg",
+    "region": "Japão",
+    "category": "Esportes",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "d9a5c5ffb8ff",
+    "title": "Super Fire Pro Wrestling - Queen's Special",
+    "file": "Super Fire Pro Wrestling - Queen's Special (J).smc",
+    "cover": "Capas/d9a5c5ffb8ff.jpg",
+    "region": "Japão",
+    "category": "Esportes",
+    "letter": "S",
+    "sizeKB": 3072
+  },
+  {
+    "id": "c898e1058e50",
+    "title": "Super Fire Pro Wrestling 2",
+    "file": "Super Fire Pro Wrestling 2 (J).smc",
+    "cover": "Capas/c898e1058e50.jpg",
+    "region": "Japão",
+    "category": "Esportes",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "f07a13c483fa",
+    "title": "Super Fire Pro Wrestling III - Easy Type",
+    "file": "Super Fire Pro Wrestling III - Easy Type (J).smc",
+    "cover": "Capas/f07a13c483fa.jpg",
+    "region": "Japão",
+    "category": "Esportes",
+    "letter": "S",
+    "sizeKB": 1536
+  },
+  {
+    "id": "eaec8110b5f3",
+    "title": "Super Fire Pro Wrestling III - Final Bout",
+    "file": "Super Fire Pro Wrestling III - Final Bout (J).smc",
+    "cover": "Capas/eaec8110b5f3.jpg",
+    "region": "Japão",
+    "category": "Esportes",
+    "letter": "S",
+    "sizeKB": 1536
+  },
+  {
+    "id": "f4d5cc11669c",
+    "title": "Super Fire Pro Wrestling Special",
+    "file": "Super Fire Pro Wrestling Special (J).smc",
+    "cover": "Capas/f4d5cc11669c.jpg",
+    "region": "Japão",
+    "category": "Esportes",
+    "letter": "S",
+    "sizeKB": 4096
+  },
+  {
+    "id": "3b21723ff41d",
+    "title": "Super Fire Pro Wrestling X",
+    "file": "Super Fire Pro Wrestling X (J).smc",
+    "cover": "Capas/3b21723ff41d.jpg",
+    "region": "Japão",
+    "category": "Esportes",
+    "letter": "S",
+    "sizeKB": 4096
+  },
+  {
+    "id": "8af129babfdf",
+    "title": "Super Fire Pro Wrestling X Premium",
+    "file": "Super Fire Pro Wrestling X Premium (J) [T+EngR7_Sydra].smc",
+    "cover": "Capas/8af129babfdf.jpg",
+    "region": "JP (Trad. EN)",
+    "category": "Esportes",
+    "letter": "S",
+    "sizeKB": 4096
+  },
+  {
+    "id": "cb4508038a41",
+    "title": "Super Ghouls 'N Ghosts",
+    "file": "Super Ghouls 'N Ghosts (U) [!].smc",
+    "cover": "Capas/cb4508038a41.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "34d417a45d0f",
+    "title": "Super Goal!",
+    "file": "Super Goal! (U).smc",
+    "cover": "Capas/34d417a45d0f.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "75d23f253746",
+    "title": "Super Goal! 2",
+    "file": "Super Goal! 2 (U).smc",
+    "cover": "Capas/75d23f253746.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 512
+  },
+  {
+    "id": "661477c372f5",
+    "title": "Super Godzilla",
+    "file": "Super Godzilla (U).smc",
+    "cover": "Capas/661477c372f5.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1536
+  },
+  {
+    "id": "cdd15fa886b0",
+    "title": "Super High Impact",
+    "file": "Super High Impact (U).smc",
+    "cover": "Capas/cdd15fa886b0.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "6d5401658f1b",
+    "title": "Super James Pond",
+    "file": "Super James Pond (U).smc",
+    "cover": "Capas/6d5401658f1b.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 512
+  },
+  {
+    "id": "8fdf2f105757",
+    "title": "Super Mario All-Stars",
+    "file": "Super Mario All-Stars (U) [!].smc",
+    "cover": "Capas/8fdf2f105757.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "S",
+    "sizeKB": 2048
+  },
+  {
+    "id": "66c8107cd4de",
+    "title": "Super Mario All-Stars + Super Mario World",
+    "file": "Super Mario All-Stars + Super Mario World (U) [!].smc",
+    "cover": "Capas/66c8107cd4de.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "S",
+    "sizeKB": 2560
+  },
+  {
+    "id": "4aa2182225c4",
+    "title": "Super Mario Kart",
+    "file": "Super Mario Kart (U) [!].smc",
+    "cover": "Capas/4aa2182225c4.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "S",
+    "sizeKB": 512
+  },
+  {
+    "id": "b35186cf4038",
+    "title": "Super Mario RPG - Legend of the Seven Stars",
+    "file": "Super Mario RPG - Legend of the Seven Stars (U) [!].smc",
+    "cover": "Capas/b35186cf4038.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "S",
+    "sizeKB": 4096
+  },
+  {
+    "id": "086ca9325ea8",
+    "title": "Super Mario World",
+    "file": "Super Mario World (U) [!].smc",
+    "cover": "Capas/086ca9325ea8.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "S",
+    "sizeKB": 512
+  },
+  {
+    "id": "1e7ea63023da",
+    "title": "Super Mario World 2 - Yoshi's Island",
+    "file": "Super Mario World 2 - Yoshi's Island (U) (V1.0) [!].smc",
+    "cover": "Capas/1e7ea63023da.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "S",
+    "sizeKB": 2048
+  },
+  {
+    "id": "f54c65c04060",
+    "title": "Super NES Super Scope 6",
+    "file": "Super NES Super Scope 6 (U) [!].smc",
+    "cover": "Capas/f54c65c04060.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "c49a97c38f81",
+    "title": "Super Ninja Boy",
+    "file": "Super Ninja Boy (U).smc",
+    "cover": "Capas/c49a97c38f81.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "21805bc932be",
+    "title": "Super Noah's Ark 3D",
+    "file": "Super Noah's Ark 3D (U) [!].smc",
+    "cover": "Capas/21805bc932be.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "053453dd6557",
+    "title": "Super Nova",
+    "file": "Super Nova (U).smc",
+    "cover": "Capas/053453dd6557.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "983f614944c3",
+    "title": "Super Off Road",
+    "file": "Super Off Road (U) [!].smc",
+    "cover": "Capas/983f614944c3.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 512
+  },
+  {
+    "id": "dab0439e937e",
+    "title": "Super Off Road - The Baja",
+    "file": "Super Off Road - The Baja (U).smc",
+    "cover": "Capas/dab0439e937e.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "8e92fd15908c",
+    "title": "Super Pinball - Behind the Mask",
+    "file": "Super Pinball - Behind the Mask (U) [!].smc",
+    "cover": "Capas/8e92fd15908c.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "f80128e87a9d",
+    "title": "Super Play Action Football",
+    "file": "Super Play Action Football (U).smc",
+    "cover": "Capas/f80128e87a9d.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "b9dfb4f7dfa5",
+    "title": "Super Punch-Out!!",
+    "file": "Super Punch-Out!! (U).smc",
+    "cover": "Capas/b9dfb4f7dfa5.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "S",
+    "sizeKB": 2048
+  },
+  {
+    "id": "cf8378e5b7ef",
+    "title": "Super Putty",
+    "file": "Super Putty (U).smc",
+    "cover": "Capas/cf8378e5b7ef.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "739c2050d7b3",
+    "title": "Super R-Type",
+    "file": "Super R-Type (U) [!].smc",
+    "cover": "Capas/739c2050d7b3.jpg",
+    "region": "EUA",
+    "category": "Nave & Tiro",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "6b90a34a2c19",
+    "title": "Super R.B.I. Baseball",
+    "file": "Super R.B.I. Baseball (U).smc",
+    "cover": "Capas/6b90a34a2c19.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "147b95c6af6e",
+    "title": "Super Shadow of the Beast",
+    "file": "Super Shadow of the Beast (U).smc",
+    "cover": "Capas/147b95c6af6e.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "f21d8529fbfe",
+    "title": "Super Slapshot",
+    "file": "Super Slapshot (U).smc",
+    "cover": "Capas/f21d8529fbfe.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 512
+  },
+  {
+    "id": "48966cff3d87",
+    "title": "Super Smash T.V.",
+    "file": "Super Smash T.V. (U).smc",
+    "cover": "Capas/48966cff3d87.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 512
+  },
+  {
+    "id": "6ea2c60ae8fd",
+    "title": "Super Soccer",
+    "file": "Super Soccer (U).smc",
+    "cover": "Capas/6ea2c60ae8fd.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "S",
+    "sizeKB": 512
+  },
+  {
+    "id": "4d1c891d6055",
+    "title": "Super Soccer Champ",
+    "file": "Super Soccer Champ (U).smc",
+    "cover": "Capas/4d1c891d6055.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "S",
+    "sizeKB": 512
+  },
+  {
+    "id": "cc9cb6c0f6da",
+    "title": "Super Solitaire",
+    "file": "Super Solitaire (U).smc",
+    "cover": "Capas/cc9cb6c0f6da.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 512
+  },
+  {
+    "id": "615be0d5fdd0",
+    "title": "Super Star Wars",
+    "file": "Super Star Wars (U) (22563).smc",
+    "cover": "Capas/615be0d5fdd0.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "6aae2c2d2f57",
+    "title": "Super Star Wars - Return of the Jedi",
+    "file": "Super Star Wars - Return of the Jedi (U) (V1.1) [!].smc",
+    "cover": "Capas/6aae2c2d2f57.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 2048
+  },
+  {
+    "id": "e29793c43492",
+    "title": "Super Star Wars - The Empire Strikes Back",
+    "file": "Super Star Wars - The Empire Strikes Back (U) (V1.0) [!].smc",
+    "cover": "Capas/e29793c43492.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1536
+  },
+  {
+    "id": "a67d755e0f7d",
+    "title": "Super Street Fighter II - The New Challengers",
+    "file": "Super Street Fighter II - The New Challengers (U).smc",
+    "cover": "Capas/a67d755e0f7d.jpg",
+    "region": "EUA",
+    "category": "Luta",
+    "letter": "S",
+    "sizeKB": 4096
+  },
+  {
+    "id": "37852d86879d",
+    "title": "Super Strike Eagle",
+    "file": "Super Strike Eagle (U).smc",
+    "cover": "Capas/37852d86879d.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "07db121a4ef7",
+    "title": "Super Tennis",
+    "file": "Super Tennis (U) [!].smc",
+    "cover": "Capas/07db121a4ef7.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "S",
+    "sizeKB": 512
+  },
+  {
+    "id": "e7cc9b86f463",
+    "title": "Super Troll Islands",
+    "file": "Super Troll Islands (U).smc",
+    "cover": "Capas/e7cc9b86f463.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 512
+  },
+  {
+    "id": "7309b36e479c",
+    "title": "Super Turrican",
+    "file": "Super Turrican (U).smc",
+    "cover": "Capas/7309b36e479c.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "S",
+    "sizeKB": 512
+  },
+  {
+    "id": "4ac1b7593c1b",
+    "title": "Super Turrican 2",
+    "file": "Super Turrican 2 (U) [!].smc",
+    "cover": "Capas/4ac1b7593c1b.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "S",
+    "sizeKB": 2048
+  },
+  {
+    "id": "62bba452bf9a",
+    "title": "Super Valis IV",
+    "file": "Super Valis IV (U).smc",
+    "cover": "Capas/62bba452bf9a.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "f9bd35d48c8d",
+    "title": "Super Widget",
+    "file": "Super Widget (U).smc",
+    "cover": "Capas/f9bd35d48c8d.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "42ad7da1f665",
+    "title": "Suzuka 8 Hours",
+    "file": "Suzuka 8 Hours (U).smc",
+    "cover": "Capas/42ad7da1f665.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "5609fe32fbfe",
+    "title": "SWAT Kats - The Radical Squadron",
+    "file": "SWAT Kats - The Radical Squadron (U) [!].smc",
+    "cover": "Capas/5609fe32fbfe.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "S",
+    "sizeKB": 2048
+  },
+  {
+    "id": "dd807e6bee3d",
+    "title": "Syndicate",
+    "file": "Syndicate (U).smc",
+    "cover": "Capas/dd807e6bee3d.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "S",
+    "sizeKB": 1024
+  },
+  {
+    "id": "6d282ea91962",
+    "title": "T2 - The Arcade Game",
+    "file": "T2 - The Arcade Game (U).smc",
+    "cover": "Capas/6d282ea91962.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "9d21a1c47926",
+    "title": "Taz-Mania",
+    "file": "Taz-Mania (U).smc",
+    "cover": "Capas/9d21a1c47926.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "dcded3c88ec5",
+    "title": "Tecmo Super Baseball",
+    "file": "Tecmo Super Baseball (U).smc",
+    "cover": "Capas/dcded3c88ec5.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "T",
+    "sizeKB": 1536
+  },
+  {
+    "id": "e88044060426",
+    "title": "Tecmo Super Bowl",
+    "file": "Tecmo Super Bowl (U) [!].smc",
+    "cover": "Capas/e88044060426.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "T",
+    "sizeKB": 1536
+  },
+  {
+    "id": "6c18ece0021a",
+    "title": "Tecmo Super Bowl II - Special Edition",
+    "file": "Tecmo Super Bowl II - Special Edition (U).smc",
+    "cover": "Capas/6c18ece0021a.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "T",
+    "sizeKB": 2048
+  },
+  {
+    "id": "f556f9c79f6b",
+    "title": "Tecmo Super Bowl III - Final Edition",
+    "file": "Tecmo Super Bowl III - Final Edition (U) [!].smc",
+    "cover": "Capas/f556f9c79f6b.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "T",
+    "sizeKB": 2048
+  },
+  {
+    "id": "9310f17d412d",
+    "title": "Tecmo Super NBA Basketball",
+    "file": "Tecmo Super NBA Basketball (U).smc",
+    "cover": "Capas/9310f17d412d.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "82783ecc3c09",
+    "title": "Teenage Mutant Ninja Turtles - Mutant Warriors",
+    "file": "Teenage Mutant Ninja Turtles - Mutant Warriors (J).smc",
+    "cover": "Capas/82783ecc3c09.jpg",
+    "region": "Japão",
+    "category": "Ação & Aventura",
+    "letter": "T",
+    "sizeKB": 2048
+  },
+  {
+    "id": "d8060d104846",
+    "title": "Teenage Mutant Ninja Turtles - Tournament Fighters",
+    "file": "Teenage Mutant Ninja Turtles - Tournament Fighters (U).smc",
+    "cover": "Capas/d8060d104846.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "T",
+    "sizeKB": 2048
+  },
+  {
+    "id": "feb6615b155d",
+    "title": "Teenage Mutant Ninja Turtles IV - Turtles in Time",
+    "file": "Teenage Mutant Ninja Turtles IV - Turtles in Time (U) [!].smc",
+    "cover": "Capas/feb6615b155d.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "f982f4be6af8",
+    "title": "Terminator 2 - Judgment Day",
+    "file": "Terminator 2 - Judgment Day (U).smc",
+    "cover": "Capas/f982f4be6af8.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "f2d097240c35",
+    "title": "Test Drive II - The Duel",
+    "file": "Test Drive II - The Duel (U) (20429).smc",
+    "cover": "Capas/f2d097240c35.jpg",
+    "region": "EUA",
+    "category": "Corrida",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "5ea39d99c455",
+    "title": "Tetris & Dr. Mario",
+    "file": "Tetris & Dr. Mario (U) [!].smc",
+    "cover": "Capas/5ea39d99c455.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "bd92d1c5eb34",
+    "title": "Tetris 2",
+    "file": "Tetris 2 (U) (V1.1) [!].smc",
+    "cover": "Capas/bd92d1c5eb34.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "9accd1002894",
+    "title": "Tetris Attack",
+    "file": "Tetris Attack (U) [!].smc",
+    "cover": "Capas/9accd1002894.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "7eebaaeec2b8",
+    "title": "The 7th Saga",
+    "file": "7th Saga, The (U) [!].smc",
+    "cover": "Capas/7eebaaeec2b8.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "T",
+    "sizeKB": 1536
+  },
+  {
+    "id": "3fe4fef581c5",
+    "title": "The Addams Family",
+    "file": "Addams Family, The (U).smc",
+    "cover": "Capas/3fe4fef581c5.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "b2f67ec10ee1",
+    "title": "The Adventures of Batman & Robin",
+    "file": "Adventures of Batman & Robin, The (U).smc",
+    "cover": "Capas/b2f67ec10ee1.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "T",
+    "sizeKB": 2048
+  },
+  {
+    "id": "be90eb9350ce",
+    "title": "The Adventures of Dr. Franken",
+    "file": "Adventures of Dr. Franken, The (U).smc",
+    "cover": "Capas/be90eb9350ce.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "3ccc1bcaf1f6",
+    "title": "The Adventures of Kid Kleets",
+    "file": "Adventures of Kid Kleets, The (U) [!].smc",
+    "cover": "Capas/3ccc1bcaf1f6.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1280
+  },
+  {
+    "id": "aad7ca2b34e0",
+    "title": "The Adventures of Rocky and Bullwinkle and Friends",
+    "file": "Adventures of Rocky and Bullwinkle and Friends, The (U).smc",
+    "cover": "Capas/aad7ca2b34e0.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "7b8f62621843",
+    "title": "The Blues Brothers",
+    "file": "Blues Brothers, The (U) [!].smc",
+    "cover": "Capas/7b8f62621843.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 512
+  },
+  {
+    "id": "33aae8ffed0c",
+    "title": "The Brainies",
+    "file": "Brainies, The (U).smc",
+    "cover": "Capas/33aae8ffed0c.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 512
+  },
+  {
+    "id": "5d22638bb071",
+    "title": "The Chessmaster",
+    "file": "Chessmaster, The (U).smc",
+    "cover": "Capas/5d22638bb071.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "T",
+    "sizeKB": 512
+  },
+  {
+    "id": "463a465778fe",
+    "title": "The Combatribes",
+    "file": "Combatribes, The (U).smc",
+    "cover": "Capas/463a465778fe.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1536
+  },
+  {
+    "id": "ffc8d401bbea",
+    "title": "The Death and Return of Superman",
+    "file": "Death and Return of Superman, The (U).smc",
+    "cover": "Capas/ffc8d401bbea.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 2048
+  },
+  {
+    "id": "f896754f2f9d",
+    "title": "The Flintstones",
+    "file": "Flintstones, The (U).smc",
+    "cover": "Capas/f896754f2f9d.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 2048
+  },
+  {
+    "id": "6df99e00c7fb",
+    "title": "The Great Circus Mystery Starring Mickey & Minnie",
+    "file": "Great Circus Mystery Starring Mickey & Minnie, The (U).smc",
+    "cover": "Capas/6df99e00c7fb.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1536
+  },
+  {
+    "id": "908e140118b2",
+    "title": "The Great Waldo Search",
+    "file": "Great Waldo Search, The (U).smc",
+    "cover": "Capas/908e140118b2.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 512
+  },
+  {
+    "id": "1f4c3fbdf459",
+    "title": "The Hunt for Red October",
+    "file": "Hunt for Red October, The (U).smc",
+    "cover": "Capas/1f4c3fbdf459.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 512
+  },
+  {
+    "id": "9ca28fd7b778",
+    "title": "The Hurricanes",
+    "file": "Hurricanes, The (U).smc",
+    "cover": "Capas/9ca28fd7b778.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "fae42517facc",
+    "title": "The Ignition Factor",
+    "file": "Ignition Factor, The (U).smc",
+    "cover": "Capas/fae42517facc.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "469a757839f7",
+    "title": "The Incredible Crash Dummies",
+    "file": "Incredible Crash Dummies, The (U).smc",
+    "cover": "Capas/469a757839f7.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "58a8fbb3106d",
+    "title": "The Incredible Hulk",
+    "file": "Incredible Hulk, The (U).smc",
+    "cover": "Capas/58a8fbb3106d.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 2048
+  },
+  {
+    "id": "1b255fde6998",
+    "title": "The Irem Skins Game",
+    "file": "Irem Skins Game, The (U).smc",
+    "cover": "Capas/1b255fde6998.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "024f9ca8f795",
+    "title": "The Itchy & Scratchy Game",
+    "file": "Itchy & Scratchy Game, The (U).smc",
+    "cover": "Capas/024f9ca8f795.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "aac7a19dce00",
+    "title": "The Jungle Book",
+    "file": "Jungle Book, The (U).smc",
+    "cover": "Capas/aac7a19dce00.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 2048
+  },
+  {
+    "id": "7cd80cadf908",
+    "title": "The King of Dragons",
+    "file": "King of Dragons, The (U).smc",
+    "cover": "Capas/7cd80cadf908.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 2048
+  },
+  {
+    "id": "e6f7c4bc7a5e",
+    "title": "The Lawnmower Man",
+    "file": "Lawnmower Man, The (U).smc",
+    "cover": "Capas/e6f7c4bc7a5e.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "76c2a11bbfdb",
+    "title": "The Legend of The Mystical Ninja",
+    "file": "Legend of The Mystical Ninja, The (U) [!].smc",
+    "cover": "Capas/76c2a11bbfdb.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "3d30a4c6b6be",
+    "title": "The Lion King",
+    "file": "Lion King, The (U).smc",
+    "cover": "Capas/3d30a4c6b6be.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "T",
+    "sizeKB": 3072
+  },
+  {
+    "id": "81ab077a517f",
+    "title": "The Lost Vikings",
+    "file": "Lost Vikings, The (U) [!].smc",
+    "cover": "Capas/81ab077a517f.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "6f6a6845418d",
+    "title": "The Lost Vikings II",
+    "file": "Lost Vikings II, The (U).smc",
+    "cover": "Capas/6f6a6845418d.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "6bfb800c6fae",
+    "title": "The Magical Quest Starring Mickey Mouse",
+    "file": "Magical Quest Starring Mickey Mouse, The (U) [!].smc",
+    "cover": "Capas/6bfb800c6fae.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "fa51094c909a",
+    "title": "The Mask",
+    "file": "Mask, The (U).smc",
+    "cover": "Capas/fa51094c909a.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 2048
+  },
+  {
+    "id": "8a9627e50a64",
+    "title": "The Ninja Warriors",
+    "file": "Ninja Warriors, The (U).smc",
+    "cover": "Capas/8a9627e50a64.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "T",
+    "sizeKB": 1536
+  },
+  {
+    "id": "369ad1b9290a",
+    "title": "The Pagemaster",
+    "file": "Pagemaster, The (U).smc",
+    "cover": "Capas/369ad1b9290a.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 2048
+  },
+  {
+    "id": "5e6dbb1e2a64",
+    "title": "The Peace Keepers",
+    "file": "Peace Keepers, The (U) [!].smc",
+    "cover": "Capas/5e6dbb1e2a64.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 2048
+  },
+  {
+    "id": "612184c6915a",
+    "title": "The Pirates of Dark Water",
+    "file": "Pirates of Dark Water, The (U).smc",
+    "cover": "Capas/612184c6915a.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "249514d9419a",
+    "title": "The Rocketeer",
+    "file": "Rocketeer, The (U).smc",
+    "cover": "Capas/249514d9419a.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "34e5abad0afa",
+    "title": "The Shadow",
+    "file": "Shadow, The (U).smc",
+    "cover": "Capas/34e5abad0afa.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 2048
+  },
+  {
+    "id": "b1c9aa73fa77",
+    "title": "The Sporting News Power Baseball",
+    "file": "Sporting News Power Baseball, The (U).smc",
+    "cover": "Capas/b1c9aa73fa77.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "d458a16a4eb1",
+    "title": "The Super Aquatic Games",
+    "file": "Super Aquatic Games, The (U).smc",
+    "cover": "Capas/d458a16a4eb1.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 512
+  },
+  {
+    "id": "979e51c79089",
+    "title": "The Terminator",
+    "file": "Terminator, The (U).smc",
+    "cover": "Capas/979e51c79089.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "a55082312e01",
+    "title": "The Tick",
+    "file": "Tick, The (U) [!].smc",
+    "cover": "Capas/a55082312e01.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 2048
+  },
+  {
+    "id": "843f83946aae",
+    "title": "The Twisted Tales of Spike McFang",
+    "file": "Twisted Tales of Spike McFang, The (U).smc",
+    "cover": "Capas/843f83946aae.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "653935075dce",
+    "title": "The Untouchables",
+    "file": "Untouchables, The (U).smc",
+    "cover": "Capas/653935075dce.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "b9b8c929bf56",
+    "title": "The Wizard of Oz",
+    "file": "Wizard of Oz, The (U) [!].smc",
+    "cover": "Capas/b9b8c929bf56.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "7b433a6f3f87",
+    "title": "Thomas the Tank Engine and Friends",
+    "file": "Thomas the Tank Engine and Friends (U).smc",
+    "cover": "Capas/7b433a6f3f87.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "a3b5803ab010",
+    "title": "Thunder Spirits",
+    "file": "Thunder Spirits (U).smc",
+    "cover": "Capas/a3b5803ab010.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "27d1e5d2963a",
+    "title": "Time Trax",
+    "file": "Time Trax (U).smc",
+    "cover": "Capas/27d1e5d2963a.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "a2c532545827",
+    "title": "Timecop",
+    "file": "Timecop (U).smc",
+    "cover": "Capas/a2c532545827.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 2048
+  },
+  {
+    "id": "1b0b957aaf25",
+    "title": "TimeSlip",
+    "file": "TimeSlip (U) [!].smc",
+    "cover": "Capas/1b0b957aaf25.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "9ce3f582b279",
+    "title": "Timon & Pumbaa's Jungle Games",
+    "file": "Timon & Pumbaa's Jungle Games (U).smc",
+    "cover": "Capas/9ce3f582b279.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1536
+  },
+  {
+    "id": "99d5b4e711a3",
+    "title": "Tin Star",
+    "file": "Tin Star (U) [!].smc",
+    "cover": "Capas/99d5b4e711a3.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 2048
+  },
+  {
+    "id": "68e56c64c816",
+    "title": "Tiny Toon Adventures - Buster Busts Loose!",
+    "file": "Tiny Toon Adventures - Buster Busts Loose! (U) [!].smc",
+    "cover": "Capas/68e56c64c816.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "547614784854",
+    "title": "Tiny Toon Adventures - Wacky Sports Challenge",
+    "file": "Tiny Toon Adventures - Wacky Sports Challenge (U).smc",
+    "cover": "Capas/547614784854.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "32abafe20ea6",
+    "title": "TKO Super Championship Boxing",
+    "file": "TKO Super Championship Boxing (U).smc",
+    "cover": "Capas/32abafe20ea6.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "T",
+    "sizeKB": 512
+  },
+  {
+    "id": "072b8192daf7",
+    "title": "TNN Bass Tournament of Champions",
+    "file": "TNN Bass Tournament of Champions (U).smc",
+    "cover": "Capas/072b8192daf7.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "T",
+    "sizeKB": 1536
+  },
+  {
+    "id": "a2707799f692",
+    "title": "Tom & Jerry",
+    "file": "Tom & Jerry (U).smc",
+    "cover": "Capas/a2707799f692.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 512
+  },
+  {
+    "id": "eede1db6988a",
+    "title": "Tony Meola's Sidekicks Soccer",
+    "file": "Tony Meola's Sidekicks Soccer (U).smc",
+    "cover": "Capas/eede1db6988a.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "89b8229fbb2c",
+    "title": "Top Gear",
+    "file": "Top Gear (U) [!].smc",
+    "cover": "Capas/89b8229fbb2c.jpg",
+    "region": "EUA",
+    "category": "Corrida",
+    "letter": "T",
+    "sizeKB": 512
+  },
+  {
+    "id": "170ce30c05a4",
+    "title": "Top Gear 2",
+    "file": "Top Gear 2 (U) [!].smc",
+    "cover": "Capas/170ce30c05a4.jpg",
+    "region": "EUA",
+    "category": "Corrida",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "05b7234cfe30",
+    "title": "Top Gear 3000",
+    "file": "Top Gear 3000 (U) [!].smc",
+    "cover": "Capas/05b7234cfe30.jpg",
+    "region": "EUA",
+    "category": "Corrida",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "5dc9018f87d9",
+    "title": "Total Carnage",
+    "file": "Total Carnage (U) [!].smc",
+    "cover": "Capas/5dc9018f87d9.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "251fc4af81ed",
+    "title": "Toy Story",
+    "file": "Toy Story (U) [!].smc",
+    "cover": "Capas/251fc4af81ed.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 4096
+  },
+  {
+    "id": "4d2318e0994c",
+    "title": "Toys",
+    "file": "Toys (U).smc",
+    "cover": "Capas/4d2318e0994c.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 1024
+  },
+  {
+    "id": "81f4baaed1fc",
+    "title": "Troddlers",
+    "file": "Troddlers (U).smc",
+    "cover": "Capas/81f4baaed1fc.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 512
+  },
+  {
+    "id": "23c84846499a",
+    "title": "Troy Aikman NFL Football",
+    "file": "Troy Aikman NFL Football (U) [!].smc",
+    "cover": "Capas/23c84846499a.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "T",
+    "sizeKB": 1536
+  },
+  {
+    "id": "9bc0489ae0d4",
+    "title": "True Lies",
+    "file": "True Lies (U).smc",
+    "cover": "Capas/9bc0489ae0d4.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 2048
+  },
+  {
+    "id": "c20cb8e2b5a4",
+    "title": "Tuff E Nuff",
+    "file": "Tuff E Nuff (U) [!].smc",
+    "cover": "Capas/c20cb8e2b5a4.jpg",
+    "region": "EUA",
+    "category": "Luta",
+    "letter": "T",
+    "sizeKB": 2048
+  },
+  {
+    "id": "decb1718b8b6",
+    "title": "Turn and Burn - No-Fly Zone",
+    "file": "Turn and Burn - No-Fly Zone (U).smc",
+    "cover": "Capas/decb1718b8b6.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "T",
+    "sizeKB": 2048
+  },
+  {
+    "id": "149811bda71d",
+    "title": "U.N. Squadron",
+    "file": "U.N. Squadron (U) [!].smc",
+    "cover": "Capas/149811bda71d.jpg",
+    "region": "EUA",
+    "category": "Nave & Tiro",
+    "letter": "U",
+    "sizeKB": 1024
+  },
+  {
+    "id": "d167b521bda4",
+    "title": "Ultima - Runes of Virtue II",
+    "file": "Ultima - Runes of Virtue II (U).smc",
+    "cover": "Capas/d167b521bda4.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "U",
+    "sizeKB": 1024
+  },
+  {
+    "id": "947c91da53b0",
+    "title": "Ultima VI - The False Prophet",
+    "file": "Ultima VI - The False Prophet (U).smc",
+    "cover": "Capas/947c91da53b0.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "U",
+    "sizeKB": 1024
+  },
+  {
+    "id": "dec4d0019938",
+    "title": "Ultima VII - The Black Gate",
+    "file": "Ultima VII - The Black Gate (U).smc",
+    "cover": "Capas/dec4d0019938.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "U",
+    "sizeKB": 1024
+  },
+  {
+    "id": "07aa32c3a683",
+    "title": "Ultimate Fighter",
+    "file": "Ultimate Fighter (U).smc",
+    "cover": "Capas/07aa32c3a683.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "U",
+    "sizeKB": 1536
+  },
+  {
+    "id": "955e10cfd0c0",
+    "title": "Ultimate Mortal Kombat 3",
+    "file": "Ultimate Mortal Kombat 3 (U).smc",
+    "cover": "Capas/955e10cfd0c0.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "U",
+    "sizeKB": 4096
+  },
+  {
+    "id": "d04231f97af8",
+    "title": "Ultraman - Towards the Future",
+    "file": "Ultraman - Towards the Future (U) [!].smc",
+    "cover": "Capas/d04231f97af8.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "U",
+    "sizeKB": 512
+  },
+  {
+    "id": "2ee9459d6eea",
+    "title": "Uncharted Waters",
+    "file": "Uncharted Waters (U).smc",
+    "cover": "Capas/2ee9459d6eea.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "U",
+    "sizeKB": 1024
+  },
+  {
+    "id": "e4224e6c7c43",
+    "title": "Uncharted Waters - New Horizons",
+    "file": "Uncharted Waters - New Horizons (U).smc",
+    "cover": "Capas/e4224e6c7c43.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "U",
+    "sizeKB": 2048
+  },
+  {
+    "id": "01e5e55a47f8",
+    "title": "Uniracers",
+    "file": "Uniracers (U) [!].smc",
+    "cover": "Capas/01e5e55a47f8.jpg",
+    "region": "EUA",
+    "category": "Corrida",
+    "letter": "U",
+    "sizeKB": 2048
+  },
+  {
+    "id": "7188330484c4",
+    "title": "Universal Soldier",
+    "file": "Universal Soldier (U).smc",
+    "cover": "Capas/7188330484c4.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "U",
+    "sizeKB": 512
+  },
+  {
+    "id": "1d744d6205ed",
+    "title": "Urban Strike",
+    "file": "Urban Strike (U) [!].smc",
+    "cover": "Capas/1d744d6205ed.jpg",
+    "region": "EUA",
+    "category": "Nave & Tiro",
+    "letter": "U",
+    "sizeKB": 2048
+  },
+  {
+    "id": "a35d4de6ef0a",
+    "title": "Utopia - The Creation of a Nation",
+    "file": "Utopia - The Creation of a Nation (U).smc",
+    "cover": "Capas/a35d4de6ef0a.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "U",
+    "sizeKB": 512
+  },
+  {
+    "id": "2e785478622d",
+    "title": "Vegas Stakes",
+    "file": "Vegas Stakes (U).smc",
+    "cover": "Capas/2e785478622d.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "V",
+    "sizeKB": 1024
+  },
+  {
+    "id": "8af03e1acfb4",
+    "title": "Virtual Bart",
+    "file": "Virtual Bart (U) [!].smc",
+    "cover": "Capas/8af03e1acfb4.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "V",
+    "sizeKB": 2048
+  },
+  {
+    "id": "be493551fe98",
+    "title": "Vortex",
+    "file": "Vortex (U) [!].smc",
+    "cover": "Capas/be493551fe98.jpg",
+    "region": "EUA",
+    "category": "Nave & Tiro",
+    "letter": "V",
+    "sizeKB": 512
+  },
+  {
+    "id": "241978cb322b",
+    "title": "Waialae Country Club",
+    "file": "Waialae Country Club (U).smc",
+    "cover": "Capas/241978cb322b.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "W",
+    "sizeKB": 1024
+  },
+  {
+    "id": "4ea2f39ac8b6",
+    "title": "War 2410",
+    "file": "War 2410 (U).smc",
+    "cover": "Capas/4ea2f39ac8b6.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "W",
+    "sizeKB": 2048
+  },
+  {
+    "id": "6266bb0bd5dc",
+    "title": "War 3010 - The Revolution",
+    "file": "War 3010 - The Revolution (U).smc",
+    "cover": "Capas/6266bb0bd5dc.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "W",
+    "sizeKB": 1024
+  },
+  {
+    "id": "a72deead4648",
+    "title": "Wario's Woods",
+    "file": "Wario's Woods (U) [!].smc",
+    "cover": "Capas/a72deead4648.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "W",
+    "sizeKB": 1024
+  },
+  {
+    "id": "3b4ba428c792",
+    "title": "Warlock",
+    "file": "Warlock (U) [!].smc",
+    "cover": "Capas/3b4ba428c792.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "W",
+    "sizeKB": 2048
+  },
+  {
+    "id": "b63777f0b7a0",
+    "title": "WarpSpeed",
+    "file": "WarpSpeed (U).smc",
+    "cover": "Capas/b63777f0b7a0.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "W",
+    "sizeKB": 1024
+  },
+  {
+    "id": "8f7c30b941cb",
+    "title": "Wayne Gretzky and the NHLPA All-Stars",
+    "file": "Wayne Gretzky and the NHLPA All-Stars (U) [!].smc",
+    "cover": "Capas/8f7c30b941cb.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "W",
+    "sizeKB": 1536
+  },
+  {
+    "id": "74ca51c7fec2",
+    "title": "Wayne's World",
+    "file": "Wayne's World (U) [!].smc",
+    "cover": "Capas/74ca51c7fec2.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "W",
+    "sizeKB": 1024
+  },
+  {
+    "id": "3a1264a2404b",
+    "title": "WCW Super Brawl Wrestling",
+    "file": "WCW Super Brawl Wrestling (U).smc",
+    "cover": "Capas/3a1264a2404b.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "W",
+    "sizeKB": 1536
+  },
+  {
+    "id": "2fad030e2cf1",
+    "title": "We're Back! A Dinosaur's Story",
+    "file": "We're Back! A Dinosaur's Story (U).smc",
+    "cover": "Capas/2fad030e2cf1.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "W",
+    "sizeKB": 1024
+  },
+  {
+    "id": "3195b1c2ea93",
+    "title": "Weapon Lord",
+    "file": "Weapon Lord (U).smc",
+    "cover": "Capas/3195b1c2ea93.jpg",
+    "region": "EUA",
+    "category": "Luta",
+    "letter": "W",
+    "sizeKB": 3072
+  },
+  {
+    "id": "f147544c603c",
+    "title": "Wheel of Fortune",
+    "file": "Wheel of Fortune (U).smc",
+    "cover": "Capas/f147544c603c.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "W",
+    "sizeKB": 512
+  },
+  {
+    "id": "5d306c34a2e0",
+    "title": "Wheel of Fortune - Deluxe Edition",
+    "file": "Wheel of Fortune - Deluxe Edition (U).smc",
+    "cover": "Capas/5d306c34a2e0.jpg",
+    "region": "EUA",
+    "category": "Estratégia & Puzzle",
+    "letter": "W",
+    "sizeKB": 512
+  },
+  {
+    "id": "e856fc3762e6",
+    "title": "Where in the World is Carmen Sandiego",
+    "file": "Where in the World is Carmen Sandiego (U).smc",
+    "cover": "Capas/e856fc3762e6.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "W",
+    "sizeKB": 1024
+  },
+  {
+    "id": "7839cb021086",
+    "title": "Where in Time is Carmen Sandiego",
+    "file": "Where in Time is Carmen Sandiego (U) [!].smc",
+    "cover": "Capas/7839cb021086.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "W",
+    "sizeKB": 1024
+  },
+  {
+    "id": "07d24169d7ef",
+    "title": "Whizz",
+    "file": "Whizz (U) [!].smc",
+    "cover": "Capas/07d24169d7ef.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "W",
+    "sizeKB": 1024
+  },
+  {
+    "id": "96315e1c2265",
+    "title": "Wicked 18 Golf",
+    "file": "Wicked 18 Golf (U).smc",
+    "cover": "Capas/96315e1c2265.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "W",
+    "sizeKB": 1024
+  },
+  {
+    "id": "99379433dbb4",
+    "title": "Wild Guns",
+    "file": "Wild Guns (U).smc",
+    "cover": "Capas/99379433dbb4.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "W",
+    "sizeKB": 1024
+  },
+  {
+    "id": "df14988cb660",
+    "title": "Wild Snake",
+    "file": "Wild Snake (U).smc",
+    "cover": "Capas/df14988cb660.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "W",
+    "sizeKB": 512
+  },
+  {
+    "id": "966a04d50b45",
+    "title": "Wing Commander",
+    "file": "Wing Commander (U) [!].smc",
+    "cover": "Capas/966a04d50b45.jpg",
+    "region": "EUA",
+    "category": "Nave & Tiro",
+    "letter": "W",
+    "sizeKB": 1024
+  },
+  {
+    "id": "b1783155d599",
+    "title": "Wing Commander - The Secret Missions",
+    "file": "Wing Commander - The Secret Missions (U).smc",
+    "cover": "Capas/b1783155d599.jpg",
+    "region": "EUA",
+    "category": "Nave & Tiro",
+    "letter": "W",
+    "sizeKB": 1024
+  },
+  {
+    "id": "b555de2f913f",
+    "title": "Wings 2 - Aces High",
+    "file": "Wings 2 - Aces High (U).smc",
+    "cover": "Capas/b555de2f913f.jpg",
+    "region": "EUA",
+    "category": "Nave & Tiro",
+    "letter": "W",
+    "sizeKB": 512
+  },
+  {
+    "id": "86ab15ce02c6",
+    "title": "Winter Extreme Skiing and Snowboarding",
+    "file": "Winter Extreme Skiing and Snowboarding (U) [!].smc",
+    "cover": "Capas/86ab15ce02c6.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "W",
+    "sizeKB": 1024
+  },
+  {
+    "id": "58ea32af4867",
+    "title": "Winter Olympic Games - Lillehammer '94",
+    "file": "Winter Olympic Games - Lillehammer '94 (U).smc",
+    "cover": "Capas/58ea32af4867.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "W",
+    "sizeKB": 2048
+  },
+  {
+    "id": "b611771b001e",
+    "title": "Wizardry V - Heart of the Maelstrom",
+    "file": "Wizardry V - Heart of the Maelstrom (U) [!].smc",
+    "cover": "Capas/b611771b001e.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "W",
+    "sizeKB": 1024
+  },
+  {
+    "id": "8c6008770739",
+    "title": "Wolf Child",
+    "file": "Wolf Child (U) [!].smc",
+    "cover": "Capas/8c6008770739.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "W",
+    "sizeKB": 1024
+  },
+  {
+    "id": "dc666d3fd16d",
+    "title": "Wolfenstein 3D",
+    "file": "Wolfenstein 3D (U).smc",
+    "cover": "Capas/dc666d3fd16d.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "W",
+    "sizeKB": 1024
+  },
+  {
+    "id": "47709ba0171c",
+    "title": "Wolverine - Adamantium Rage",
+    "file": "Wolverine - Adamantium Rage (U).smc",
+    "cover": "Capas/47709ba0171c.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "W",
+    "sizeKB": 2048
+  },
+  {
+    "id": "28448eb3080b",
+    "title": "Wordtris",
+    "file": "Wordtris (U).smc",
+    "cover": "Capas/28448eb3080b.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "W",
+    "sizeKB": 512
+  },
+  {
+    "id": "4f7085703cf3",
+    "title": "World Cup USA 94",
+    "file": "World Cup USA 94 (U).smc",
+    "cover": "Capas/4f7085703cf3.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "W",
+    "sizeKB": 1536
+  },
+  {
+    "id": "a7f10bcfb2d4",
+    "title": "World Heroes",
+    "file": "World Heroes (U) [!].smc",
+    "cover": "Capas/a7f10bcfb2d4.jpg",
+    "region": "EUA",
+    "category": "Luta",
+    "letter": "W",
+    "sizeKB": 2048
+  },
+  {
+    "id": "b1340f521f52",
+    "title": "World Heroes 2",
+    "file": "World Heroes 2 (U) [!].smc",
+    "cover": "Capas/b1340f521f52.jpg",
+    "region": "EUA",
+    "category": "Luta",
+    "letter": "W",
+    "sizeKB": 3072
+  },
+  {
+    "id": "a285cafb6185",
+    "title": "World League Soccer",
+    "file": "World League Soccer (U) [!].smc",
+    "cover": "Capas/a285cafb6185.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "W",
+    "sizeKB": 512
+  },
+  {
+    "id": "a8f644ec5d98",
+    "title": "World Soccer 94 - Road to Glory",
+    "file": "World Soccer 94 - Road to Glory (U).smc",
+    "cover": "Capas/a8f644ec5d98.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "W",
+    "sizeKB": 512
+  },
+  {
+    "id": "9b3767574153",
+    "title": "WWF Raw",
+    "file": "WWF Raw (U).smc",
+    "cover": "Capas/9b3767574153.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "W",
+    "sizeKB": 3072
+  },
+  {
+    "id": "f2df99b4d336",
+    "title": "WWF Royal Rumble",
+    "file": "WWF Royal Rumble (U).smc",
+    "cover": "Capas/f2df99b4d336.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "W",
+    "sizeKB": 2048
+  },
+  {
+    "id": "ed81b83bb61c",
+    "title": "WWF Super Wrestlemania",
+    "file": "WWF Super Wrestlemania (U) [!].smc",
+    "cover": "Capas/ed81b83bb61c.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "W",
+    "sizeKB": 1024
+  },
+  {
+    "id": "896b15e812e1",
+    "title": "WWF Wrestlemania - The Arcade Game",
+    "file": "WWF Wrestlemania - The Arcade Game (U) [!].smc",
+    "cover": "Capas/896b15e812e1.jpg",
+    "region": "EUA",
+    "category": "Esportes",
+    "letter": "W",
+    "sizeKB": 3072
+  },
+  {
+    "id": "d67ba206382d",
+    "title": "X Zone",
+    "file": "X Zone (U).smc",
+    "cover": "Capas/d67ba206382d.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "X",
+    "sizeKB": 512
+  },
+  {
+    "id": "c6ff9391d1a3",
+    "title": "X-Kaliber 2097",
+    "file": "X-Kaliber 2097 (U).smc",
+    "cover": "Capas/c6ff9391d1a3.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "X",
+    "sizeKB": 1024
+  },
+  {
+    "id": "367b7ccdb9bb",
+    "title": "X-Men - Mutant Apocalypse",
+    "file": "X-Men - Mutant Apocalypse (U).smc",
+    "cover": "Capas/367b7ccdb9bb.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "X",
+    "sizeKB": 2048
+  },
+  {
+    "id": "4416958d54d0",
+    "title": "Xardion",
+    "file": "Xardion (U) [!].smc",
+    "cover": "Capas/4416958d54d0.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "X",
+    "sizeKB": 1024
+  },
+  {
+    "id": "241f09b77793",
+    "title": "Yogi Bear",
+    "file": "Yogi Bear (U).smc",
+    "cover": "Capas/241f09b77793.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "Y",
+    "sizeKB": 1024
+  },
+  {
+    "id": "70c0cf98d98d",
+    "title": "Yoshi's Cookie",
+    "file": "Yoshi's Cookie (U).smc",
+    "cover": "Capas/70c0cf98d98d.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "Y",
+    "sizeKB": 512
+  },
+  {
+    "id": "0c3cc3eb101e",
+    "title": "Yoshi's Safari",
+    "file": "Yoshi's Safari (U) [!].smc",
+    "cover": "Capas/0c3cc3eb101e.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "Y",
+    "sizeKB": 1024
+  },
+  {
+    "id": "b742391c5b0a",
+    "title": "Young Merlin",
+    "file": "Young Merlin (U).smc",
+    "cover": "Capas/b742391c5b0a.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "Y",
+    "sizeKB": 2048
+  },
+  {
+    "id": "266921191eac",
+    "title": "Ys III - Wanderers from Ys",
+    "file": "Ys III - Wanderers from Ys (U) [!].smc",
+    "cover": "Capas/266921191eac.jpg",
+    "region": "EUA",
+    "category": "RPG",
+    "letter": "Y",
+    "sizeKB": 1024
+  },
+  {
+    "id": "bbf263d1d17f",
+    "title": "Zero the Kamikaze Squirrel",
+    "file": "Zero the Kamikaze Squirrel (U).smc",
+    "cover": "Capas/bbf263d1d17f.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "Z",
+    "sizeKB": 2048
+  },
+  {
+    "id": "6403baf0ccd3",
+    "title": "Zombies Ate My Neighbors",
+    "file": "Zombies Ate My Neighbors (U) [!].smc",
+    "cover": "Capas/6403baf0ccd3.jpg",
+    "region": "EUA",
+    "category": "Ação & Aventura",
+    "letter": "Z",
+    "sizeKB": 1024
+  },
+  {
+    "id": "2ee3a0353b27",
+    "title": "Zool",
+    "file": "Zool (U).smc",
+    "cover": "Capas/2ee3a0353b27.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "Z",
+    "sizeKB": 1024
+  },
+  {
+    "id": "2116b84c74fc",
+    "title": "Zoop",
+    "file": "Zoop (U) [!].smc",
+    "cover": "Capas/2116b84c74fc.jpg",
+    "region": "EUA",
+    "category": "Clássicos",
+    "letter": "Z",
+    "sizeKB": 512
+  }
+]
