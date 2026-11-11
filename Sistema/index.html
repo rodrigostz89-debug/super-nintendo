@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Super Nintendo — Central de Jogos</title>
+<link rel="icon" type="image/png" href="/Sistema/snes.png">
+<style>
+  :root {
+    --bg-deep: #0b0a12;
+    --bg-panel: #141222;
+    --bg-card: #1b182e;
+    --bg-card-hover: #252140;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-active: #845ef7;
+    --accent: #7950f2;
+    --accent-glow: rgba(121, 80, 242, 0.45);
+    --text-main: #f3f4f8;
+    --text-muted: #9896b0;
+    --snes-red: #eb3444;
+    --snes-yellow: #f5c41c;
+    --snes-blue: #2a6ceb;
+    --snes-green: #20c05c;
+    --card-min: 215px;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+  }
+
+  body {
+    background: radial-gradient(circle at 18% 0%, #1d1738 0%, var(--bg-deep) 55%);
+    color: var(--text-main);
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.25); }
+  ::-webkit-scrollbar-thumb { background: #332e54; border-radius: 6px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+  /* Header */
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 14px 24px;
+    background: rgba(17, 15, 30, 0.88);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border-subtle);
+    z-index: 20;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: max-content;
+  }
+
+  .brand-logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 11px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.45);
+  }
+
+  .brand-title {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .brand-title h1 {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .snes-dots {
+    display: inline-flex;
+    gap: 4px;
+  }
+  .snes-dots span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .brand-sub {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  /* Search Box */
+  .search-wrap {
+    flex: 1;
+    max-width: 480px;
+    position: relative;
+  }
+
+  .search-wrap input {
+    width: 100%;
+    padding: 11px 38px 11px 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(10, 9, 18, 0.75);
+    color: var(--text-main);
+    font-size: 14px;
+    outline: none;
+    transition: all 0.18s ease;
+    user-select: text;
+  }
+
+  .search-wrap input:focus {
+    border-color: var(--border-active);
+    box-shadow: 0 0 0 3px rgba(132, 94, 247, 0.25);
+    background: #0d0b18;
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 15px;
+    pointer-events: none;
+  }
+
+  .search-clear {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 16px;
+    cursor: pointer;
+    display: none;
+    padding: 4px;
+  }
+  .search-clear:hover { color: #fff; }
+
+  /* Controls */
+  .top-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: max-content;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-card);
+    color: var(--text-main);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.16s ease;
+  }
+
+  .btn:hover {
+    background: var(--bg-card-hover);
+    border-color: rgba(255,255,255,0.2);
+    transform: translateY(-1px);
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #7950f2, #5f3dc4);
+    border-color: rgba(255,255,255,0.18);
+    box-shadow: 0 4px 14px rgba(121, 80, 242, 0.35);
+  }
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #845ef7, #6741d9);
+  }
+
+  .toggle-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 13px;
+    border-radius: 10px;
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-card);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    transition: all 0.16s ease;
+  }
+
+  .toggle-pill.active {
+    color: #fff;
+    border-color: var(--snes-green);
+    background: rgba(32, 192, 92, 0.14);
+  }
+
+  .toggle-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #55526e;
+    transition: background 0.16s ease;
+  }
+  .toggle-pill.active .toggle-dot {
+    background: var(--snes-green);
+    box-shadow: 0 0 8px var(--snes-green);
+  }
+
+  /* Layout Body */
+  .workspace {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    width: 225px;
+    background: rgba(16, 14, 28, 0.72);
+    border-right: 1px solid var(--border-subtle);
+    padding: 16px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    overflow-y: auto;
+    flex-shrink: 0;
+  }
+
+  .side-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #6d6a8a;
+    padding: 10px 10px 6px;
+  }
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 12px;
+    border-radius: 9px;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 13.5px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.14s ease;
+  }
+
+  .nav-item:hover {
+    background: rgba(255,255,255,0.05);
+    color: var(--text-main);
+  }
+
+  .nav-item.active {
+    background: rgba(121, 80, 242, 0.2);
+    color: #fff;
+    box-shadow: inset 3px 0 0 var(--accent);
+  }
+
+  .nav-count {
+    font-size: 11.5px;
+    background: rgba(255,255,255,0.07);
+    padding: 2px 7px;
+    border-radius: 99px;
+    color: #b8b6cc;
+  }
+  .nav-item.active .nav-count {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  .sidebar-hint {
+    margin-top: auto;
+    padding: 12px;
+    border-radius: 10px;
+    background: rgba(121, 80, 242, 0.09);
+    border: 1px solid rgba(121, 80, 242, 0.22);
+    font-size: 12px;
+    line-height: 1.45;
+    color: #c6c4db;
+  }
+  .sidebar-hint strong {
+    color: #fff;
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  /* Main Content */
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* A-Z Filter Bar */
+  .az-bar {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 10px 22px;
+    background: rgba(14, 12, 24, 0.65);
+    border-bottom: 1px solid var(--border-subtle);
+    overflow-x: auto;
+    flex-shrink: 0;
+  }
+
+  .az-btn {
+    min-width: 28px;
+    height: 28px;
+    padding: 0 7px;
+    border-radius: 7px;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.12s ease;
+  }
+  .az-btn:hover {
+    background: rgba(255,255,255,0.07);
+    color: #fff;
+  }
+  .az-btn.active {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 2px 8px var(--accent-glow);
+  }
+
+  .status-strip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 24px 4px;
+    font-size: 13px;
+    color: var(--text-muted);
+    flex-shrink: 0;
+  }
+
+  .size-controls {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .size-btn {
+    padding: 4px 9px;
+    border-radius: 6px;
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-card);
+    color: var(--text-muted);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .size-btn.active {
+    border-color: var(--accent);
+    color: #fff;
+    background: rgba(121, 80, 242, 0.22);
+  }
+
+  /* Game Grid */
+  .grid-scroll {
+    flex: 1;
+    overflow-y: auto;
+    padding: 14px 24px 36px;
+  }
+
+  .games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--card-min), 1fr));
+    gap: 18px;
+  }
+
+  .game-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 13px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.18s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.18s ease, box-shadow 0.18s ease;
+    content-visibility: auto;
+    contain-intrinsic-size: 240px;
+  }
+
+  .game-card:hover, .game-card.selected {
+    transform: translateY(-5px) scale(1.015);
+    border-color: var(--border-active);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(132, 94, 247, 0.45);
+    z-index: 2;
+  }
+
+  .game-card.launching {
+    border-color: var(--snes-green);
+    box-shadow: 0 0 25px rgba(32, 192, 92, 0.65);
+  }
+
+  .cover-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1.37 / 1;
+    background: #100e1c;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Blurred ambient backdrop so both horizontal US and vertical JP covers look full & uncropped */
+  .cover-bg {
+    position: absolute;
+    inset: -12px;
+    width: calc(100% + 24px);
+    height: calc(100% + 24px);
+    object-fit: cover;
+    filter: blur(14px) brightness(0.42) saturate(1.3);
+    transform: scale(1.08);
+    pointer-events: none;
+  }
+
+  .cover-img {
+    position: relative;
+    z-index: 1;
+    max-width: 96%;
+    max-height: 94%;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.65);
+    transition: transform 0.22s ease;
+  }
+
+  .game-card:hover .cover-img {
+    transform: scale(1.04);
+  }
+
+  /* Favorite star button */
+  .fav-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 4;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(12, 10, 22, 0.72);
+    color: rgba(255,255,255,0.55);
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.15s ease;
+    backdrop-filter: blur(4px);
+  }
+
+  .game-card:hover .fav-btn, .fav-btn.is-fav {
+    opacity: 1;
+  }
+  .fav-btn.is-fav {
+    color: var(--snes-yellow);
+    background: rgba(20, 18, 34, 0.88);
+  }
+  .fav-btn:hover {
+    transform: scale(1.15);
+    color: var(--snes-yellow);
+  }
+
+  /* Hover Play Overlay Hint */
+  .play-badge {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%) translateY(6px);
+    z-index: 3;
+    background: rgba(16, 14, 28, 0.9);
+    border: 1px solid rgba(132, 94, 247, 0.65);
+    color: #fff;
+    font-size: 11.5px;
+    font-weight: 700;
+    padding: 4px 11px;
+    border-radius: 99px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: all 0.16s ease;
+    pointer-events: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  }
+
+  .game-card:hover .play-badge, .game-card.selected .play-badge {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .card-info {
+    padding: 10px 12px 11px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+    justify-content: space-between;
+  }
+
+  .card-title {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .card-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  .tag {
+    padding: 2px 6px;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.06);
+    font-weight: 600;
+  }
+
+  /* Empty State */
+  .empty-state {
+    text-align: center;
+    padding: 70px 20px;
+    color: var(--text-muted);
+  }
+  .empty-state h3 {
+    font-size: 18px;
+    color: var(--text-main);
+    margin-bottom: 8px;
+  }
+
+  /* Toast Notification */
+  .toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: rgba(22, 19, 38, 0.96);
+    border: 1px solid var(--snes-green);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.65);
+    padding: 13px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 100;
+    transform: translateY(120%);
+    opacity: 0;
+    transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .toast.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .toast-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--snes-green);
+    box-shadow: 0 0 10px var(--snes-green);
+  }
+</style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand">
+      <img src="/Sistema/snes.png" alt="SNES" class="brand-logo">
+      <div class="brand-title">
+        <h1>
+          Super Nintendo
+          <span class="snes-dots">
+            <span style="background:var(--snes-blue)"></span>
+            <span style="background:var(--snes-green)"></span>
+            <span style="background:var(--snes-yellow)"></span>
+            <span style="background:var(--snes-red)"></span>
+          </span>
+        </h1>
+        <span class="brand-sub">Central de Jogos • Dê 2 cliques na capa para jogar</span>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="searchInput" placeholder="Pesquisar jogo... (ex: Mario, Donkey Kong, Top Gear, Zelda)" autocomplete="off">
+      <button class="search-clear" id="searchClear" title="Limpar busca">✕</button>
+    </div>
+
+    <div class="top-actions">
+      <div class="toggle-pill" id="fullscreenToggle" title="Iniciar jogos diretamente em Tela Cheia no Snes9x">
+        <span class="toggle-dot"></span>
+        <span>Tela Cheia</span>
+      </div>
+      <button class="btn btn-primary" id="randomBtn" title="Escolher um jogo aleatório">
+        🎲 Jogo Surpresa
+      </button>
+    </div>
+  </header>
+
+  <div class="workspace">
+    <aside class="sidebar" id="sidebar">
+      <div class="side-label">Biblioteca</div>
+      <button class="nav-item active" data-filter="all">
+        <span>🎮 Todos os Jogos</span>
+        <span class="nav-count" id="count-all">0</span>
+      </button>
+      <button class="nav-item" data-filter="fav">
+        <span>⭐ Favoritos</span>
+        <span class="nav-count" id="count-fav">0</span>
+      </button>
+      <button class="nav-item" data-filter="recent">
+        <span>🕒 Recentes</span>
+        <span class="nav-count" id="count-recent">0</span>
+      </button>
+
+      <div class="side-label" style="margin-top:8px;">Categorias</div>
+      <div id="categoryList" style="display:flex;flex-direction:column;gap:3px;"></div>
+
+      <div class="sidebar-hint">
+        <strong>💡 Como jogar</strong>
+        Dê <b>2 cliques</b> em qualquer capa (ou aperte <b>Enter</b>) para abrir o jogo direto no emulador!
+      </div>
+    </aside>
+
+    <main class="content">
+      <div class="az-bar" id="azBar"></div>
+
+      <div class="status-strip">
+        <div id="resultSummary">Carregando biblioteca...</div>
+        <div class="size-controls">
+          <span>Tamanho:</span>
+          <button class="size-btn" data-size="175">Pequeno</button>
+          <button class="size-btn active" data-size="220">Médio</button>
+          <button class="size-btn" data-size="285">Grande</button>
+        </div>
+      </div>
+
+      <div class="grid-scroll" id="gridScroll">
+        <div class="games-grid" id="gamesGrid"></div>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast">
+    <div class="toast-dot"></div>
+    <div id="toastText">Iniciando jogo...</div>
+  </div>
+
+<script>
+  let allGames = [];
+  let filteredGames = [];
+  let userData = { favorites: [], recent: [], fullscreen: false, cardSize: 220 };
+  let activeFilter = 'all';
+  let activeLetter = 'ALL';
+  let searchQuery = '';
+  let selectedIndex = -1;
+
+  const gridEl = document.getElementById('gamesGrid');
+  const scrollEl = document.getElementById('gridScroll');
+  const searchInput = document.getElementById('searchInput');
+  const searchClear = document.getElementById('searchClear');
+  const summaryEl = document.getElementById('resultSummary');
+  const fsToggle = document.getElementById('fullscreenToggle');
+
+  async function init() {
+    buildAzBar();
+
+    try {
+      const [gamesRes, userRes] = await Promise.all([
+        fetch('/Sistema/games.json'),
+        fetch('/api/userdata').catch(() => null)
+      ]);
+      allGames = await gamesRes.json();
+      if (userRes && userRes.ok) {
+        const loaded = await userRes.json();
+        userData = Object.assign(userData, loaded);
+      } else {
+        const local = localStorage.getItem('snes_userdata');
+        if (local) userData = Object.assign(userData, JSON.parse(local));
+      }
+    } catch (err) {
+      summaryEl.textContent = 'Erro ao carregar jogos: ' + err.message;
+      return;
+    }
+
+    applyPrefsUI();
+    buildCategories();
+    updateCounts();
+    applyFilters();
+
+    // Unthrottled Web Worker heartbeat so server stays alive even during long fullscreen gameplay
+    const workerBlob = new Blob([`
+      setInterval(() => {
+        fetch('${location.origin}/api/ping').catch(() => {});
+      }, 4000);
+    `], { type: 'application/javascript' });
+    const hbWorker = new Worker(URL.createObjectURL(workerBlob));
+    document.addEventListener('visibilitychange', () => {
+      fetch('/api/ping').catch(() => {});
+    });
+
+    window.addEventListener('pagehide', () => {
+      navigator.sendBeacon('/api/shutdown');
+    });
+  }
+
+  function saveUserData() {
+    localStorage.setItem('snes_userdata', JSON.stringify(userData));
+    fetch('/api/userdata', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(userData)
+    }).catch(() => {});
+  }
+
+  function applyPrefsUI() {
+    fsToggle.classList.toggle('active', !!userData.fullscreen);
+    const sz = userData.cardSize || 220;
+    document.documentElement.style.setProperty('--card-min', sz + 'px');
+    document.querySelectorAll('.size-btn').forEach(b => {
+      b.classList.toggle('active', Number(b.dataset.size) === Number(sz));
+    });
+  }
+
+  function buildAzBar() {
+    const bar = document.getElementById('azBar');
+    const letters = ['ALL', ...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split(''), '#'];
+    bar.innerHTML = letters.map(l =>
+      `<button class="az-btn ${l === 'ALL' ? 'active' : ''}" data-letter="${l}">${l === 'ALL' ? 'Todos' : l}</button>`
+    ).join('');
+    bar.addEventListener('click', e => {
+      const btn = e.target.closest('.az-btn');
+      if (!btn) return;
+      activeLetter = btn.dataset.letter;
+      bar.querySelectorAll('.az-btn').forEach(b => b.classList.toggle('active', b === btn));
+      scrollEl.scrollTop = 0;
+      applyFilters();
+    });
+  }
+
+  function buildCategories() {
+    const counts = {};
+    allGames.forEach(g => {
+      counts[g.category] = (counts[g.category] || 0) + 1;
+    });
+    const order = [
+      'Ação & Aventura', 'RPG', 'Luta', 'Corrida',
+      'Esportes', 'Nave & Tiro', 'Estratégia & Puzzle', 'Clássicos'
+    ];
+    const icons = {
+      'Ação & Aventura': '⚔️',
+      'RPG': '🛡️',
+      'Luta': '🥊',
+      'Corrida': '🏎️',
+      'Esportes': '⚽',
+      'Nave & Tiro': '🚀',
+      'Estratégia & Puzzle': '🧩',
+      'Clássicos': '🕹️'
+    };
+    const container = document.getElementById('categoryList');
+    container.innerHTML = order.filter(c => counts[c]).map(c => `
+      <button class="nav-item" data-filter="cat:${c}">
+        <span>${icons[c] || '🎮'} ${c}</span>
+        <span class="nav-count">${counts[c]}</span>
+      </button>
+    `).join('');
+  }
+
+  function updateCounts() {
+    document.getElementById('count-all').textContent = allGames.length;
+    document.getElementById('count-fav').textContent = userData.favorites.length;
+    document.getElementById('count-recent').textContent = userData.recent.length;
+  }
+
+  function applyFilters() {
+    const favSet = new Set(userData.favorites);
+    const q = searchQuery.trim().toLowerCase();
+
+    if (activeFilter === 'recent') {
+      const map = new Map(allGames.map(g => [g.id, g]));
+      filteredGames = userData.recent.map(id => map.get(id)).filter(Boolean);
+    } else {
+      filteredGames = allGames.filter(g => {
+        if (activeFilter === 'fav' && !favSet.has(g.id)) return false;
+        if (activeFilter.startsWith('cat:') && g.category !== activeFilter.slice(4)) return false;
+        return true;
+      });
+    }
+
+    if (activeLetter !== 'ALL') {
+      filteredGames = filteredGames.filter(g => g.letter === activeLetter);
+    }
+
+    if (q) {
+      filteredGames = filteredGames.filter(g =>
+        g.title.toLowerCase().includes(q) || g.file.toLowerCase().includes(q)
+      );
+    }
+
+    selectedIndex = filteredGames.length > 0 ? 0 : -1;
+    renderGrid();
+  }
+
+  function renderGrid() {
+    summaryEl.textContent = `Exibindo ${filteredGames.length} de ${allGames.length} jogos`;
+
+    if (filteredGames.length === 0) {
+      gridEl.innerHTML = `
+        <div class="empty-state" style="grid-column: 1 / -1;">
+          <h3>Nenhum jogo encontrado</h3>
+          <p>Tente outro termo na busca ou mude o filtro selecionado.</p>
+        </div>`;
+      return;
+    }
+
+    const favSet = new Set(userData.favorites);
+    gridEl.innerHTML = filteredGames.map((g, idx) => {
+      const isFav = favSet.has(g.id);
+      return `
+        <div class="game-card ${idx === selectedIndex ? 'selected' : ''}" data-idx="${idx}" data-id="${g.id}">
+          <div class="cover-wrap">
+            <img class="cover-bg" src="/${g.cover}" alt="" loading="lazy" decoding="async">
+            <img class="cover-img" src="/${g.cover}" alt="${escapeHtml(g.title)}" loading="lazy" decoding="async">
+            <button class="fav-btn ${isFav ? 'is-fav' : ''}" data-fav="${g.id}" title="Favoritar jogo">★</button>
+            <div class="play-badge">▶ 2 Cliques para Jogar</div>
+          </div>
+          <div class="card-info">
+            <div class="card-title" title="${escapeHtml(g.title)}">${escapeHtml(g.title)}</div>
+            <div class="card-meta">
+              <span class="tag">${escapeHtml(g.category)}</span>
+              <span>${escapeHtml(g.region)}</span>
+            </div>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  function escapeHtml(s) {
+    return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    document.getElementById('toastText').textContent = msg;
+    t.classList.add('show');
+    clearTimeout(window._toastTimer);
+    window._toastTimer = setTimeout(() => t.classList.remove('show'), 3200);
+  }
+
+  async function launchGame(game, cardEl) {
+    if (!game) return;
+    if (cardEl) {
+      cardEl.classList.add('launching');
+      setTimeout(() => cardEl.classList.remove('launching'), 1200);
+    }
+    showToast(`Iniciando ${game.title}...`);
+
+    // Update recent list (keep top 30)
+    userData.recent = [game.id, ...userData.recent.filter(id => id !== game.id)].slice(0, 30);
+    updateCounts();
+    saveUserData();
+
+    try {
+      const res = await fetch('/api/launch', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ file: game.file, fullscreen: !!userData.fullscreen })
+      });
+      if (!res.ok) {
+        const txt = await res.text();
+        showToast('Erro ao abrir jogo: ' + txt);
+      }
+    } catch (err) {
+      showToast('Erro ao comunicar com o Launcher.');
+    }
+  }
+
+  // Event Listeners
+  gridEl.addEventListener('click', e => {
+    const favBtn = e.target.closest('.fav-btn');
+    if (favBtn) {
+      e.stopPropagation();
+      const id = favBtn.dataset.fav;
+      const idx = userData.favorites.indexOf(id);
+      if (idx >= 0) {
+        userData.favorites.splice(idx, 1);
+        favBtn.classList.remove('is-fav');
+      } else {
+        userData.favorites.push(id);
+        favBtn.classList.add('is-fav');
+      }
+      updateCounts();
+      saveUserData();
+      if (activeFilter === 'fav') applyFilters();
+      return;
+    }
+
+    const card = e.target.closest('.game-card');
+    if (card) {
+      gridEl.querySelectorAll('.game-card.selected').forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+      selectedIndex = Number(card.dataset.idx);
+    }
+  });
+
+  gridEl.addEventListener('dblclick', e => {
+    if (e.target.closest('.fav-btn')) return;
+    const card = e.target.closest('.game-card');
+    if (!card) return;
+    const idx = Number(card.dataset.idx);
+    launchGame(filteredGames[idx], card);
+  });
+
+  document.getElementById('sidebar').addEventListener('click', e => {
+    const btn = e.target.closest('.nav-item');
+    if (!btn) return;
+    activeFilter = btn.dataset.filter;
+    document.querySelectorAll('.sidebar .nav-item').forEach(b => b.classList.toggle('active', b === btn));
+    scrollEl.scrollTop = 0;
+    applyFilters();
+  });
+
+  searchInput.addEventListener('input', () => {
+    searchQuery = searchInput.value;
+    searchClear.style.display = searchQuery ? 'block' : 'none';
+    scrollEl.scrollTop = 0;
+    applyFilters();
+  });
+
+  searchClear.addEventListener('click', () => {
+    searchInput.value = '';
+    searchQuery = '';
+    searchClear.style.display = 'none';
+    searchInput.focus();
+    applyFilters();
+  });
+
+  fsToggle.addEventListener('click', () => {
+    userData.fullscreen = !userData.fullscreen;
+    applyPrefsUI();
+    saveUserData();
+  });
+
+  document.querySelectorAll('.size-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      userData.cardSize = Number(btn.dataset.size);
+      applyPrefsUI();
+      saveUserData();
+    });
+  });
+
+  document.getElementById('randomBtn').addEventListener('click', () => {
+    const pool = filteredGames.length > 0 ? filteredGames : allGames;
+    if (!pool.length) return;
+    const rndIdx = Math.floor(Math.random() * pool.length);
+    selectedIndex = rndIdx;
+    gridEl.querySelectorAll('.game-card.selected').forEach(c => c.classList.remove('selected'));
+    const card = gridEl.querySelector(`.game-card[data-idx="${rndIdx}"]`);
+    if (card) {
+      card.classList.add('selected');
+      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      showToast(`🎲 Sorteado: ${pool[rndIdx].title}! Dê 2 cliques para jogar.`);
+    }
+  });
+
+  // Keyboard navigation (Arrows + Enter + / to search)
+  window.addEventListener('keydown', e => {
+    if (document.activeElement === searchInput) {
+      if (e.key === 'Escape') {
+        searchInput.blur();
+      } else if (e.key === 'Enter' && filteredGames.length > 0) {
+        searchInput.blur();
+        const card = gridEl.querySelector(`.game-card[data-idx="0"]`);
+        launchGame(filteredGames[0], card);
+      }
+      return;
+    }
+
+    if (e.key === '/') {
+      e.preventDefault();
+      searchInput.focus();
+      return;
+    }
+
+    if (!filteredGames.length) return;
+
+    if (e.key === 'Enter' && selectedIndex >= 0) {
+      e.preventDefault();
+      const card = gridEl.querySelector(`.game-card[data-idx="${selectedIndex}"]`);
+      launchGame(filteredGames[selectedIndex], card);
+      return;
+    }
+
+    if (['ArrowRight', 'ArrowLeft', 'ArrowDown', 'ArrowUp'].includes(e.key)) {
+      e.preventDefault();
+      const cards = Array.from(gridEl.querySelectorAll('.game-card'));
+      if (!cards.length) return;
+      let cols = 1;
+      if (cards.length > 1) {
+        const top0 = cards[0].offsetTop;
+        cols = cards.findIndex(c => c.offsetTop > top0);
+        if (cols === -1) cols = cards.length;
+      }
+      if (selectedIndex < 0) selectedIndex = 0;
+      else if (e.key === 'ArrowRight') selectedIndex = Math.min(filteredGames.length - 1, selectedIndex + 1);
+      else if (e.key === 'ArrowLeft') selectedIndex = Math.max(0, selectedIndex - 1);
+      else if (e.key === 'ArrowDown') selectedIndex = Math.min(filteredGames.length - 1, selectedIndex + cols);
+      else if (e.key === 'ArrowUp') selectedIndex = Math.max(0, selectedIndex - cols);
+
+      cards.forEach(c => c.classList.remove('selected'));
+      const activeCard = cards[selectedIndex];
+      if (activeCard) {
+        activeCard.classList.add('selected');
+        activeCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+  });
+
+  init();
+</script>
+</body>
+</html>

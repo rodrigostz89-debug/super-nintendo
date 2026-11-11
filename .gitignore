@@ -1,0 +1,6 @@
+*.rar
+*.lnk
+__pycache__/
+Sistema/selftest.txt
+Emulador/stdout.txt
+Emulador/stderr.txt
