@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Super Nintendo — Central de Jogos Online</title>
+<link rel="icon" type="image/png" href="Sistema/snes.png">
+<link rel="stylesheet" href="Sistema/styles.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand">
+      <img src="Sistema/snes.png" alt="SNES" class="brand-logo">
+      <div class="brand-title">
+        <h1>
+          Super Nintendo
+          <span class="snes-dots">
+            <span class="dot-blue"></span>
+            <span class="dot-green"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-red"></span>
+          </span>
+        </h1>
+        <span class="brand-sub">Jogue livremente sem conta ou faça login para salvar seu progresso na nuvem</span>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="searchInput" placeholder="Pesquisar jogo... (Mario, Donkey Kong, Top Gear...)" autocomplete="off">
+      <button class="search-clear" id="searchClear">✕</button>
+    </div>
+
+    <div class="top-actions">
+      <!-- Cloud Account Login / Status Bar -->
+      <div class="auth-bar" id="authLoggedOut">
+        <input type="text" class="auth-input" id="topUserInp" placeholder="👤 Usuário" autocomplete="username">
+        <input type="password" class="auth-input" id="topPassInp" placeholder="🔑 Senha" autocomplete="current-password">
+        <button class="btn btn-cloud" id="topLoginBtn" title="Entre na sua conta ou crie uma nova automaticamente para salvar na nuvem">☁️ Entrar / Criar</button>
+      </div>
+      <div class="auth-bar is-hidden" id="authLoggedIn">
+        <span class="user-badge" id="loggedUserBadge">☁️ Usuário</span>
+        <button class="btn" id="topLogoutBtn" title="Sair da conta">Sair</button>
+      </div>
+      <button class="btn btn-primary" id="randomBtn">🎲 Surpresa</button>
+    </div>
+  </header>
+
+  <div class="mobile-cats" id="mobileCats"></div>
+
+  <div class="workspace">
+    <aside class="sidebar" id="sidebar">
+      <div class="side-label">Biblioteca</div>
+      <button class="nav-item active" data-filter="all">
+        <span>🎮 Todos os Jogos</span>
+        <span class="nav-count" id="count-all">0</span>
+      </button>
+      <button class="nav-item" data-filter="saved">
+        <span>☁️ Salvos na Nuvem</span>
+        <span class="nav-count" id="count-saved">0</span>
+      </button>
+      <button class="nav-item" data-filter="fav">
+        <span>⭐ Favoritos</span>
+        <span class="nav-count" id="count-fav">0</span>
+      </button>
+      <button class="nav-item" data-filter="recent">
+        <span>🕒 Recentes</span>
+        <span class="nav-count" id="count-recent">0</span>
+      </button>
+
+      <div class="side-label side-label-spaced">Categorias</div>
+      <div id="categoryList" class="cat-list"></div>
+
+      <div class="sidebar-hint">
+        <b>☁️ Save na Nuvem:</b><br>
+        Você pode jogar sem conta! Se quiser salvar seu progresso para continuar em qualquer celular ou PC, basta entrar com um Usuário e Senha.
+      </div>
+    </aside>
+
+    <main class="content">
+      <div class="az-bar" id="azBar"></div>
+      <div class="status-strip">
+        <div id="resultSummary">Carregando 745 jogos...</div>
+      </div>
+      <div class="grid-scroll" id="gridScroll">
+        <div class="games-grid" id="gamesGrid"></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- In-Browser Emulator Modal (PC + Mobile Touch Gamepad) -->
+  <div class="emu-modal" id="emuModal">
+    <div class="emu-topbar">
+      <div class="emu-title" id="emuTitle">Jogando Super Nintendo</div>
+      <div class="emu-actions">
+        <button class="btn-save-emu" id="emuSaveBtn" title="Salvar o ponto exato do jogo na sua conta da nuvem">💾 Salvar na Nuvem</button>
+        <button class="btn-load-emu" id="emuLoadBtn" title="Carregar o progresso salvo na nuvem">📂 Carregar Save</button>
+        <button class="btn" id="emuFsBtn">⛶ Tela Cheia</button>
+        <button class="btn-close-emu" id="emuCloseBtn">✕ Sair (ESC)</button>
+      </div>
+    </div>
+    <iframe class="emu-frame" id="emuFrame" allow="autoplay; fullscreen; gamepad"></iframe>
+  </div>
+
+  <!-- Prompt Modal when clicking Save/Load while not logged in -->
+  <div class="login-modal-backdrop" id="loginModal">
+    <div class="login-modal-box">
+      <h3>☁️ Salvar Progresso na Nuvem</h3>
+      <p>Digite um <b>Usuário</b> e uma <b>Senha</b>. Se for sua primeira vez, sua conta será criada automaticamente na hora!</p>
+      <input type="text" id="modalUserInp" placeholder="Seu nome de usuário (ex: rodrigo)" autocomplete="username">
+      <input type="password" id="modalPassInp" placeholder="Sua senha" autocomplete="current-password">
+      <div class="modal-actions">
+        <button class="btn" id="modalCancelBtn">Continuar sem conta</button>
+        <button class="btn btn-cloud" id="modalConfirmBtn">☁️ Entrar e Continuar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-msg" id="toastMsg"></div>
+
+<script src="Sistema/app.js"></script>
+</body>
+</html>
