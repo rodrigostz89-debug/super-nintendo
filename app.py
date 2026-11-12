@@ -263,14 +263,44 @@ def render_browser_emulator(game):
 
           const touchBtns = new Set();
           const keyBtns = new Set();
+          const gpBtns = new Set();
           const heldCodes = new Set();
           const touchOrigins = new Map();
           const dpadTouches = new Map();
           const prevManaged = new Map();
           const externalHeld = new Set();
+          const hatAxes = new Set();
           let hasUsedTouch = false;
           let internalSimCall = false;
           let rawSim = null;
+          let controlsInitialized = false;
+          let popupWasOpen = false;
+          let popupLastKey = "";
+          let popupBaseline = null;
+          let popupWaitRelease = false;
+
+          const GP_BTN_LABELS = {{
+            0: "BUTTON_1",
+            1: "BUTTON_2",
+            2: "BUTTON_3",
+            3: "BUTTON_4",
+            4: "LEFT_TOP_SHOULDER",
+            5: "RIGHT_TOP_SHOULDER",
+            6: "LEFT_BOTTOM_SHOULDER",
+            7: "RIGHT_BOTTOM_SHOULDER",
+            8: "SELECT",
+            9: "START",
+            10: "LEFT_STICK",
+            11: "RIGHT_STICK",
+            12: "DPAD_UP",
+            13: "DPAD_DOWN",
+            14: "DPAD_LEFT",
+            15: "DPAD_RIGHT"
+          }};
+          const GP_BTN_INDEX = {{}};
+          for (const [k, v] of Object.entries(GP_BTN_LABELS)) {{
+            GP_BTN_INDEX[v] = Number(k);
+          }}
 
           const CODE_MAP = {{
             ArrowUp: [4], ArrowDown: [5], ArrowLeft: [6], ArrowRight: [7],
@@ -286,12 +316,104 @@ def render_browser_emulator(game):
           }};
 
           function isHeld(btnId) {{
-            return touchBtns.has(btnId) || keyBtns.has(btnId);
+            return touchBtns.has(btnId) || keyBtns.has(btnId) || gpBtns.has(btnId);
+          }}
+
+          function getStorage() {{
+            try {{
+              if (window.parent && window.parent.localStorage) return window.parent.localStorage;
+            }} catch (e) {{}}
+            try {{
+              return window.localStorage;
+            }} catch (e) {{}}
+            return null;
+          }}
+
+          function saveUsbControlsToStorage(controlsObj) {{
+            const st = getStorage();
+            if (!st || !controlsObj || !controlsObj[0]) return;
+            try {{
+              const map0 = {{}};
+              for (let b = 0; b <= 13; b++) {{
+                if (controlsObj[0][b]) {{
+                  map0[b] = {{
+                    value: controlsObj[0][b].value,
+                    value2: controlsObj[0][b].value2
+                  }};
+                }}
+              }}
+              st.setItem("snes_usb_controls_v1", JSON.stringify(map0));
+            }} catch (e) {{}}
+          }}
+
+          function initUsbControlsConfig(emu) {{
+            if (controlsInitialized || !emu || !emu.controls || !emu.controls[0]) return;
+            controlsInitialized = true;
+
+            emu.gamepadEvent = function() {{}};
+            if (emu.gamepad && emu.gamepad.listeners) {{
+              emu.gamepad.listeners.axischanged = function() {{}};
+              emu.gamepad.listeners.buttondown = function() {{}};
+              emu.gamepad.listeners.buttonup = function() {{}};
+            }}
+
+            const snesUsbDefaults = {{
+              0: "BUTTON_3",
+              1: "BUTTON_4",
+              2: "SELECT",
+              3: "START",
+              4: "DPAD_UP",
+              5: "DPAD_DOWN",
+              6: "DPAD_LEFT",
+              7: "DPAD_RIGHT",
+              8: "BUTTON_2",
+              9: "BUTTON_1",
+              10: "LEFT_TOP_SHOULDER",
+              11: "RIGHT_TOP_SHOULDER"
+            }};
+            if (emu.defaultControllers && emu.defaultControllers[0]) {{
+              for (const [b, v2] of Object.entries(snesUsbDefaults)) {{
+                if (emu.defaultControllers[0][b]) emu.defaultControllers[0][b].value2 = v2;
+              }}
+            }}
+            for (const [b, v2] of Object.entries(snesUsbDefaults)) {{
+              if (emu.controls[0][b]) emu.controls[0][b].value2 = v2;
+            }}
+
+            const st = getStorage();
+            if (st) {{
+              try {{
+                const raw = st.getItem("snes_usb_controls_v1");
+                if (raw) {{
+                  const saved0 = JSON.parse(raw);
+                  for (const [b, obj] of Object.entries(saved0)) {{
+                    if (emu.controls[0][b] && obj) {{
+                      if (obj.value !== undefined) emu.controls[0][b].value = obj.value;
+                      if (obj.value2 !== undefined) emu.controls[0][b].value2 = obj.value2;
+                    }}
+                  }}
+                }}
+              }} catch (e) {{}}
+            }}
+
+            if (typeof emu.checkGamepadInputs === "function") {{
+              try {{ emu.checkGamepadInputs(); }} catch (e) {{}}
+            }}
+
+            if (typeof emu.saveSettings === "function" && !emu._saveWrapped) {{
+              const origSave = emu.saveSettings.bind(emu);
+              emu.saveSettings = function() {{
+                origSave();
+                saveUsbControlsToStorage(emu.controls);
+              }};
+              emu._saveWrapped = true;
+            }}
           }}
 
           function ensureHooked() {{
             const emu = window.EJS_emulator;
             if (!emu || !emu.gameManager) return null;
+            initUsbControlsConfig(emu);
             const gm = emu.gameManager;
             if (!gm._multiWrapped && typeof gm.simulateInput === "function") {{
               rawSim = gm.simulateInput.bind(gm);
@@ -346,8 +468,285 @@ def render_browser_emulator(game):
             updateGamepadVisuals();
           }}
 
+          function getAllConnectedGamepads() {{
+            const list = [];
+            const seen = new Set();
+            const navs = [navigator];
+            try {{
+              if (window.parent && window.parent !== window && window.parent.navigator) {{
+                navs.push(window.parent.navigator);
+              }}
+            }} catch (e) {{}}
+            for (const nav of navs) {{
+              try {{
+                const raw = nav.getGamepads ? nav.getGamepads() : (nav.webkitGetGamepads ? nav.webkitGetGamepads() : []);
+                if (!raw) continue;
+                for (let i = 0; i < raw.length; i++) {{
+                  const gp = raw[i];
+                  if (gp && gp.connected !== false && !seen.has(gp.index)) {{
+                    seen.add(gp.index);
+                    list.push(gp);
+                  }}
+                }}
+              }} catch (e) {{}}
+            }}
+            return list;
+          }}
+
+          function isGpButtonPressed(gp, idx) {{
+            if (!gp || !gp.buttons || idx < 0 || idx >= gp.buttons.length) return false;
+            const b = gp.buttons[idx];
+            if (!b) return false;
+            return typeof b === "object" ? (Boolean(b.pressed) || (typeof b.value === "number" && b.value > 0.55)) : (b === 1);
+          }}
+
+          function getAxisName(idx) {{
+            return ["LEFT_STICK_X", "LEFT_STICK_Y", "RIGHT_STICK_X", "RIGHT_STICK_Y"][idx] || ("EXTRA_STICK_" + idx);
+          }}
+
+          function getAxisIndex(name) {{
+            const std = ["LEFT_STICK_X", "LEFT_STICK_Y", "RIGHT_STICK_X", "RIGHT_STICK_Y"].indexOf(name);
+            if (std >= 0) return std;
+            if (name && name.startsWith("EXTRA_STICK_")) {{
+              const n = parseInt(name.slice(12), 10);
+              return isNaN(n) ? -1 : n;
+            }}
+            return -1;
+          }}
+
+          function decodePovHatDirections(val) {{
+            if (typeof val !== "number" || !isFinite(val) || val > 1.08 || val < -1.08) return [];
+            const step = Math.round(val * 7);
+            const dirs = [];
+            if (step === -7 || step === -5 || step === 7) dirs.push(4);
+            if (step === -1 || step === 1 || step === 3) dirs.push(5);
+            if (step === 3 || step === 5 || step === 7) dirs.push(6);
+            if (step === -5 || step === -3 || step === -1) dirs.push(7);
+            return dirs;
+          }}
+
+          function pollUsbGamepads() {{
+            const emu = window.EJS_emulator;
+            if (emu) initUsbControlsConfig(emu);
+
+            const gamepads = getAllConnectedGamepads();
+            if (!gamepads.length) {{
+              if (gpBtns.size > 0) {{
+                gpBtns.clear();
+                syncAllInputs();
+              }}
+              return;
+            }}
+
+            for (const gp of gamepads) {{
+              if (gp.axes && gp.axes.length >= 10 && gp.axes[9] > 1.08) {{
+                hatAxes.add(gp.index);
+              }}
+            }}
+
+            if (emu && emu.gamepadLabels && emu.gamepadSelection) {{
+              if (emu.gamepad) {{
+                emu.gamepad.gamepads = gamepads.map(gp => ({{
+                  id: gp.id,
+                  index: gp.index,
+                  axes: Array.from(gp.axes || []),
+                  buttons: {{}}
+                }}));
+              }}
+              let selChanged = false;
+              const firstVal = gamepads[0].id + "_" + gamepads[0].index;
+              if (!emu.gamepadSelection[0] || emu.gamepadSelection[0] === "notconnected") {{
+                emu.gamepadSelection[0] = firstVal;
+                selChanged = true;
+              }}
+              const sel0 = emu.gamepadLabels[0];
+              if (sel0 && (sel0.options.length !== gamepads.length + 1 || selChanged)) {{
+                try {{ emu.updateGamepadLabels(); }} catch (e) {{}}
+              }}
+            }}
+
+            const popupWrap = emu && emu.controlPopup && emu.controlPopup.parentElement && emu.controlPopup.parentElement.parentElement;
+            const isPopupOpen = Boolean(popupWrap && !popupWrap.hasAttribute("hidden"));
+
+            if (isPopupOpen) {{
+              const btnNum = emu.controlPopup.getAttribute("button-num") || "";
+              const playerNum = parseInt(emu.controlPopup.getAttribute("player-num") || "0", 10);
+              const popupKey = playerNum + ":" + btnNum;
+
+              if (emu.controlPopup.innerText && emu.controlPopup.innerText.includes("Press Keyboard")) {{
+                emu.controlPopup.innerText = emu.controlPopup.innerText.replace("Press Keyboard", "Pressione no Controle USB ou Teclado");
+              }}
+
+              if (!popupWasOpen || popupLastKey !== popupKey) {{
+                popupWasOpen = true;
+                popupLastKey = popupKey;
+                popupBaseline = {{ buttons: {{}}, axes: {{}}, hat: {{}} }};
+                let anyPressedNow = false;
+                for (const gp of gamepads) {{
+                  popupBaseline.buttons[gp.index] = {{}};
+                  popupBaseline.axes[gp.index] = {{}};
+                  for (let b = 0; b < (gp.buttons ? gp.buttons.length : 0); b++) {{
+                    const p = isGpButtonPressed(gp, b);
+                    popupBaseline.buttons[gp.index][b] = p;
+                    if (p) anyPressedNow = true;
+                  }}
+                  for (let a = 0; a < (gp.axes ? gp.axes.length : 0); a++) {{
+                    popupBaseline.axes[gp.index][a] = gp.axes[a] || 0;
+                  }}
+                  if (hatAxes.has(gp.index) && gp.axes && gp.axes.length >= 10) {{
+                    const hd = decodePovHatDirections(gp.axes[9]);
+                    popupBaseline.hat[gp.index] = hd;
+                    if (hd.length > 0) anyPressedNow = true;
+                  }}
+                }}
+                popupWaitRelease = anyPressedNow;
+                return;
+              }}
+
+              if (popupWaitRelease) {{
+                let stillHeld = false;
+                for (const gp of gamepads) {{
+                  for (let b = 0; b < (gp.buttons ? gp.buttons.length : 0); b++) {{
+                    if (isGpButtonPressed(gp, b)) stillHeld = true;
+                  }}
+                  if (hatAxes.has(gp.index) && gp.axes && gp.axes.length >= 10) {{
+                    if (decodePovHatDirections(gp.axes[9]).length > 0) stillHeld = true;
+                  }}
+                }}
+                if (stillHeld) return;
+                popupWaitRelease = false;
+                for (const gp of gamepads) {{
+                  for (let b = 0; b < (gp.buttons ? gp.buttons.length : 0); b++) {{
+                    popupBaseline.buttons[gp.index][b] = false;
+                  }}
+                  for (let a = 0; a < (gp.axes ? gp.axes.length : 0); a++) {{
+                    popupBaseline.axes[gp.index][a] = gp.axes[a] || 0;
+                  }}
+                }}
+              }}
+
+              let detectedLabel = null;
+              let detectedGp = null;
+
+              for (const gp of gamepads) {{
+                for (let b = 0; b < (gp.buttons ? gp.buttons.length : 0); b++) {{
+                  const nowP = isGpButtonPressed(gp, b);
+                  const wasP = popupBaseline && popupBaseline.buttons[gp.index] && popupBaseline.buttons[gp.index][b];
+                  if (nowP && !wasP) {{
+                    detectedLabel = GP_BTN_LABELS[b] || ("GAMEPAD_" + b);
+                    detectedGp = gp;
+                    break;
+                  }}
+                }}
+                if (detectedLabel) break;
+
+                if (hatAxes.has(gp.index) && gp.axes && gp.axes.length >= 10) {{
+                  const hd = decodePovHatDirections(gp.axes[9]);
+                  if (hd.length > 0) {{
+                    const hatMap = {{ 4: "DPAD_UP", 5: "DPAD_DOWN", 6: "DPAD_LEFT", 7: "DPAD_RIGHT" }};
+                    detectedLabel = hatMap[hd[0]];
+                    detectedGp = gp;
+                    break;
+                  }}
+                }}
+
+                for (let a = 0; a < (gp.axes ? gp.axes.length : 0); a++) {{
+                  if (a === 9 && hatAxes.has(gp.index)) continue;
+                  const val = gp.axes[a] || 0;
+                  const rest = (popupBaseline && popupBaseline.axes[gp.index] && typeof popupBaseline.axes[gp.index][a] === "number")
+                    ? popupBaseline.axes[gp.index][a]
+                    : 0;
+                  if (Math.abs(val - rest) >= 0.45 && Math.abs(val) >= 0.5) {{
+                    const dir = val > 0 ? "+1" : "-1";
+                    detectedLabel = getAxisName(a) + ":" + dir;
+                    detectedGp = gp;
+                    break;
+                  }}
+                }}
+                if (detectedLabel) break;
+              }}
+
+              if (detectedLabel && detectedGp) {{
+                if (emu.gamepadSelection) {{
+                  emu.gamepadSelection[playerNum] = detectedGp.id + "_" + detectedGp.index;
+                  if (typeof emu.updateGamepadLabels === "function") {{
+                    try {{ emu.updateGamepadLabels(); }} catch (e) {{}}
+                  }}
+                }}
+                emu.controls[playerNum] = emu.controls[playerNum] || {{}};
+                emu.controls[playerNum][btnNum] = emu.controls[playerNum][btnNum] || {{}};
+                emu.controls[playerNum][btnNum].value2 = detectedLabel;
+                popupWrap.setAttribute("hidden", "");
+                popupWasOpen = false;
+                if (typeof emu.checkGamepadInputs === "function") {{
+                  try {{ emu.checkGamepadInputs(); }} catch (e) {{}}
+                }}
+                if (typeof emu.saveSettings === "function") {{
+                  try {{ emu.saveSettings(); }} catch (e) {{}}
+                }}
+                saveUsbControlsToStorage(emu.controls);
+              }}
+              return;
+            }} else {{
+              popupWasOpen = false;
+            }}
+
+            gpBtns.clear();
+            const p0Controls = (emu && emu.controls && emu.controls[0]) ? emu.controls[0] : null;
+
+            for (const gp of gamepads) {{
+              if (p0Controls) {{
+                for (let b = 0; b <= 11; b++) {{
+                  const entry = p0Controls[b];
+                  if (!entry || entry.value2 === undefined || entry.value2 === null || entry.value2 === "") continue;
+                  const spec = String(entry.value2);
+
+                  if (spec.includes(":")) {{
+                    const [axName, axDir] = spec.split(":");
+                    const axIdx = getAxisIndex(axName);
+                    if (axIdx >= 0 && gp.axes && axIdx < gp.axes.length) {{
+                      const v = gp.axes[axIdx] || 0;
+                      if ((axDir === "+1" || axDir === "1") && v >= 0.38) gpBtns.add(b);
+                      else if (axDir === "-1" && v <= -0.38) gpBtns.add(b);
+                    }}
+                  }} else {{
+                    let bIdx = GP_BTN_INDEX[spec];
+                    if (bIdx === undefined && spec.startsWith("GAMEPAD_")) {{
+                      bIdx = parseInt(spec.slice(8), 10);
+                    }} else if (bIdx === undefined && !isNaN(spec)) {{
+                      bIdx = parseInt(spec, 10);
+                    }}
+                    if (bIdx !== undefined && !isNaN(bIdx) && isGpButtonPressed(gp, bIdx)) {{
+                      gpBtns.add(b);
+                    }}
+                  }}
+                }}
+              }}
+
+              if (gp.axes && gp.axes.length >= 2) {{
+                if (gp.axes[0] <= -0.38) {{ gpBtns.add(6); gpBtns.delete(7); }}
+                else if (gp.axes[0] >= 0.38) {{ gpBtns.add(7); gpBtns.delete(6); }}
+                if (gp.axes[1] <= -0.38) {{ gpBtns.add(4); gpBtns.delete(5); }}
+                else if (gp.axes[1] >= 0.38) {{ gpBtns.add(5); gpBtns.delete(4); }}
+              }}
+              if (hatAxes.has(gp.index) && gp.axes && gp.axes.length >= 10) {{
+                const hd = decodePovHatDirections(gp.axes[9]);
+                for (const d of hd) gpBtns.add(d);
+              }}
+              if (gp.buttons && gp.buttons.length >= 16) {{
+                if (isGpButtonPressed(gp, 12)) gpBtns.add(4);
+                if (isGpButtonPressed(gp, 13)) gpBtns.add(5);
+                if (isGpButtonPressed(gp, 14)) gpBtns.add(6);
+                if (isGpButtonPressed(gp, 15)) gpBtns.add(7);
+              }}
+            }}
+
+            syncAllInputs();
+          }}
+
           setInterval(() => {{
-            if (touchBtns.size > 0 || keyBtns.size > 0) {{
+            pollUsbGamepads();
+            if (touchBtns.size > 0 || keyBtns.size > 0 || gpBtns.size > 0) {{
               const sim = ensureHooked();
               if (!sim) return;
               internalSimCall = true;
