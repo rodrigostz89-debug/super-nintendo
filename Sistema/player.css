@@ -1,0 +1,33 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+  touch-action: none !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -webkit-touch-callout: none !important;
+}
+#player,
+.ejs_virtualGamepad_parent,
+.ejs_virtualGamepad_left,
+.ejs_virtualGamepad_right,
+.ejs_virtualGamepad_top,
+.ejs_virtualGamepad_bottom,
+.ejs_virtualGamepad_button,
+.ejs_dpad_main,
+#player,
+#player * {
+  touch-action: none !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -webkit-touch-callout: none !important;
+}
+#player { width: 100%; height: 100%; }
+.ejs_virtualGamepad_button_down {
+  background-color: rgba(121, 80, 242, 0.78) !important;
+  border-color: #fff !important;
+  transform: scale(0.94);
+}

@@ -1,0 +1,25 @@
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'none'; script-src 'self' https://cdn.emulatorjs.org blob: 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline' https://cdn.emulatorjs.org; img-src 'self' data: blob: https://raw.githubusercontent.com https://cdn.emulatorjs.org; connect-src 'self' blob: https://cdn.emulatorjs.org https://raw.githubusercontent.com https://extendsclass.com https://ntfy.sh https://keyvalue.immanuel.co; worker-src 'self' blob:; child-src 'self' blob:; frame-src 'self' blob:; media-src 'self' blob: data:; font-src 'self' data: https://cdn.emulatorjs.org; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ]
+}
