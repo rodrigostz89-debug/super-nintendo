@@ -265,9 +265,11 @@ def render_browser_emulator(game):
           const keyBtns = new Set();
           const heldCodes = new Set();
           const touchOrigins = new Map();
+          const dpadTouches = new Map();
           const prevManaged = new Map();
           const externalHeld = new Set();
-          let lockY = false;
+          let hasUsedTouch = false;
+          let internalSimCall = false;
           let rawSim = null;
 
           const CODE_MAP = {{
@@ -284,7 +286,7 @@ def render_browser_emulator(game):
           }};
 
           function isHeld(btnId) {{
-            return touchBtns.has(btnId) || keyBtns.has(btnId) || (btnId === 1 && lockY);
+            return touchBtns.has(btnId) || keyBtns.has(btnId);
           }}
 
           function ensureHooked() {{
@@ -294,7 +296,12 @@ def render_browser_emulator(game):
             if (!gm._multiWrapped && typeof gm.simulateInput === "function") {{
               rawSim = gm.simulateInput.bind(gm);
               gm.simulateInput = function(player, btnId, val) {{
-                if (player === 0) {{
+                if (player === 0 && !internalSimCall) {{
+                  if (hasUsedTouch && ((btnId >= 4 && btnId <= 7) || btnId === 0 || btnId === 1 || btnId === 8 || btnId === 9 || btnId === 10 || btnId === 11)) {{
+                    rawSim(0, btnId, isHeld(btnId) ? 1 : 0);
+                    updateGamepadVisuals();
+                    return;
+                  }}
                   if (val === 0 && isHeld(btnId)) {{
                     rawSim(0, btnId, 1);
                     return;
@@ -303,7 +310,7 @@ def render_browser_emulator(game):
                   else externalHeld.delete(btnId);
                 }}
                 rawSim(player, btnId, val);
-                if (player === 0 && val > 0) {{
+                if (player === 0 && val > 0 && !internalSimCall) {{
                   for (let b = 0; b <= 11; b++) {{
                     if (b !== btnId && (isHeld(b) || externalHeld.has(b))) {{
                       rawSim(0, b, 1);
@@ -316,9 +323,14 @@ def render_browser_emulator(game):
             return rawSim;
           }}
 
+          const hookTimer = setInterval(() => {{
+            if (ensureHooked()) clearInterval(hookTimer);
+          }}, 100);
+
           function syncAllInputs() {{
             const sim = ensureHooked();
             if (!sim) return;
+            internalSimCall = true;
             for (let b = 0; b <= 11; b++) {{
               const nowActive = isHeld(b);
               const wasActive = prevManaged.get(b) || false;
@@ -330,31 +342,72 @@ def render_browser_emulator(game):
                 prevManaged.set(b, false);
               }}
             }}
+            internalSimCall = false;
             updateGamepadVisuals();
           }}
 
+          setInterval(() => {{
+            if (touchBtns.size > 0 || keyBtns.size > 0) {{
+              const sim = ensureHooked();
+              if (!sim) return;
+              internalSimCall = true;
+              for (let b = 0; b <= 11; b++) {{
+                if (isHeld(b)) {{
+                  sim(0, b, 1);
+                  prevManaged.set(b, true);
+                }}
+              }}
+              internalSimCall = false;
+            }}
+          }}, 16);
+
           function updateGamepadVisuals() {{
-            const rightPad = document.querySelector(".ejs_virtualGamepad_right");
-            if (!rightPad) return;
-            const map = [[".b_y", 1], [".b_b", 0], [".b_a", 8], [".b_x", 9]];
+            const padParent = document.querySelector(".ejs_virtualGamepad_parent");
+            if (!padParent) return;
+            const map = [[".b_y", 1], [".b_b", 0], [".b_a", 8], [".b_x", 9], [".b_l", 10], [".b_r", 11]];
             for (const [sel, id] of map) {{
-              const el = rightPad.querySelector(sel);
+              const el = padParent.querySelector(sel);
               if (el) el.classList.toggle("ejs_virtualGamepad_button_down", isHeld(id));
             }}
+            const dpadMain = padParent.querySelector(".ejs_dpad_main");
+            if (dpadMain) {{
+              dpadMain.classList.toggle("ejs_dpad_up_pressed", isHeld(4));
+              dpadMain.classList.toggle("ejs_dpad_down_pressed", isHeld(5));
+              dpadMain.classList.toggle("ejs_dpad_left_pressed", isHeld(6));
+              dpadMain.classList.toggle("ejs_dpad_right_pressed", isHeld(7));
+            }}
+          }}
+
+          function getDpadGeometry() {{
+            const leftPad = document.querySelector(".ejs_virtualGamepad_left");
+            if (!leftPad || leftPad.offsetParent === null) return null;
+            const visualEl = leftPad.querySelector(".back, .ejs_dpad_main") || leftPad;
+            const vRect = visualEl.getBoundingClientRect();
+            const lRect = leftPad.getBoundingClientRect();
+            const baseRect = (vRect.width > 20 && vRect.height > 20) ? vRect : lRect;
+            if (baseRect.width === 0 || baseRect.height === 0) return null;
+            return {{
+              cx: baseRect.left + baseRect.width / 2,
+              cy: baseRect.top + baseRect.height / 2,
+              rect: lRect.width > 0 ? lRect : baseRect
+            }};
           }}
 
           function getButtonCenters() {{
             const rightPad = document.querySelector(".ejs_virtualGamepad_right");
             if (!rightPad || rightPad.offsetParent === null) return null;
+            const padParent = document.querySelector(".ejs_virtualGamepad_parent") || document;
             const specs = [
               {{ sel: ".b_y", ids: [1], r: 38 }},
               {{ sel: ".b_b", ids: [0], r: 38 }},
               {{ sel: ".b_a", ids: [8], r: 38 }},
-              {{ sel: ".b_x", ids: [9], r: 38 }}
+              {{ sel: ".b_x", ids: [9], r: 38 }},
+              {{ sel: ".b_l", ids: [10], r: 42 }},
+              {{ sel: ".b_r", ids: [11], r: 42 }}
             ];
             const list = [];
             for (const s of specs) {{
-              const el = rightPad.querySelector(s.sel);
+              const el = padParent.querySelector(s.sel);
               if (!el) continue;
               const rect = el.getBoundingClientRect();
               if (rect.width === 0) continue;
@@ -368,47 +421,87 @@ def render_browser_emulator(game):
             return list.length ? list : null;
           }}
 
-          function handleActionTouch(e) {{
+          function handleGamepadTouch(e) {{
             const centers = getButtonCenters();
-            if (!centers) return;
+            const dpad = getDpadGeometry();
+            if (!centers && !dpad) return;
 
-            let intercepted = false;
+            hasUsedTouch = true;
+            let isGamepadTouch = false;
 
             if (e.type === "touchstart") {{
               for (let i = 0; i < e.changedTouches.length; i++) {{
                 const t = e.changedTouches[i];
                 const hitOrigin = new Set();
-                for (const c of centers) {{
-                  if (Math.hypot(t.clientX - c.cx, t.clientY - c.cy) <= c.r + 6) {{
-                    c.ids.forEach(id => hitOrigin.add(id));
+                if (centers) {{
+                  for (const c of centers) {{
+                    if (Math.hypot(t.clientX - c.cx, t.clientY - c.cy) <= c.r + 8) {{
+                      c.ids.forEach(id => hitOrigin.add(id));
+                    }}
                   }}
                 }}
                 if (hitOrigin.size > 0) {{
                   touchOrigins.set(t.identifier, hitOrigin);
-                  intercepted = true;
+                  isGamepadTouch = true;
+                }} else if (
+                  dpad &&
+                  t.clientX >= dpad.rect.left - 60 &&
+                  t.clientX <= dpad.rect.right + 60 &&
+                  t.clientY >= dpad.rect.top - 60 &&
+                  t.clientY <= dpad.rect.bottom + 60
+                ) {{
+                  dpadTouches.set(t.identifier, {{ startX: t.clientX, startY: t.clientY }});
+                  isGamepadTouch = true;
                 }}
               }}
             }}
 
             const activeIds = new Set();
             for (let i = 0; i < e.touches.length; i++) {{
-              activeIds.add(e.touches[i].identifier);
-              if (touchOrigins.has(e.touches[i].identifier)) intercepted = true;
+              const id = e.touches[i].identifier;
+              activeIds.add(id);
+              if (touchOrigins.has(id) || dpadTouches.has(id)) {{
+                isGamepadTouch = true;
+              }}
             }}
             for (const oldId of Array.from(touchOrigins.keys())) {{
               if (!activeIds.has(oldId)) {{
                 touchOrigins.delete(oldId);
-                intercepted = true;
+                isGamepadTouch = true;
+              }}
+            }}
+            for (const oldId of Array.from(dpadTouches.keys())) {{
+              if (!activeIds.has(oldId)) {{
+                dpadTouches.delete(oldId);
+                isGamepadTouch = true;
               }}
             }}
 
-            if (!intercepted && touchBtns.size === 0) return;
+            if (!isGamepadTouch && touchBtns.size === 0) return;
 
             touchBtns.clear();
             for (let i = 0; i < e.touches.length; i++) {{
               const t = e.touches[i];
+
+              if (dpad && dpadTouches.has(t.identifier)) {{
+                const dx = t.clientX - dpad.cx;
+                const dy = t.clientY - dpad.cy;
+                const dist = Math.hypot(dx, dy);
+                if (dist >= 6) {{
+                  const absX = Math.abs(dx);
+                  const absY = Math.abs(dy);
+                  if (absX >= 6 && absX >= absY * 0.40) {{
+                    touchBtns.add(dx < 0 ? 6 : 7);
+                  }}
+                  if (absY >= 6 && absY >= absX * 0.40) {{
+                    touchBtns.add(dy < 0 ? 4 : 5);
+                  }}
+                }}
+                continue;
+              }}
+
               const originSet = touchOrigins.get(t.identifier);
-              if (!originSet) continue;
+              if (!originSet || !centers) continue;
 
               for (const c of centers) {{
                 const dist = Math.hypot(t.clientX - c.cx, t.clientY - c.cy);
@@ -418,10 +511,10 @@ def render_browser_emulator(game):
               }}
 
               for (const origId of originSet) {{
-                const origCenter = centers.find(c => c.ids.length === 1 && c.ids[0] === origId);
+                const origCenter = centers.find(c => c.ids[0] === origId);
                 if (origCenter) {{
                   const distFromOrigin = Math.hypot(t.clientX - origCenter.cx, t.clientY - origCenter.cy);
-                  if (distFromOrigin <= 85) {{
+                  if (distFromOrigin <= 90) {{
                     touchBtns.add(origId);
                   }}
                 }}
@@ -429,16 +522,15 @@ def render_browser_emulator(game):
             }}
 
             syncAllInputs();
-            if (intercepted) {{
+            if (isGamepadTouch && e.cancelable) {{
               e.preventDefault();
-              e.stopImmediatePropagation();
             }}
           }}
 
-          document.addEventListener("touchstart", handleActionTouch, {{ passive: false, capture: true }});
-          document.addEventListener("touchmove", handleActionTouch, {{ passive: false, capture: true }});
-          document.addEventListener("touchend", handleActionTouch, {{ passive: false, capture: true }});
-          document.addEventListener("touchcancel", handleActionTouch, {{ passive: false, capture: true }});
+          document.addEventListener("touchstart", handleGamepadTouch, {{ passive: false, capture: true }});
+          document.addEventListener("touchmove", handleGamepadTouch, {{ passive: false, capture: true }});
+          document.addEventListener("touchend", handleGamepadTouch, {{ passive: false, capture: true }});
+          document.addEventListener("touchcancel", handleGamepadTouch, {{ passive: false, capture: true }});
 
           function rebuildKeyBtns() {{
             keyBtns.clear();
@@ -460,10 +552,8 @@ def render_browser_emulator(game):
             if (!mapped) return;
 
             if (e.type === "keydown") {{
-              if (!e.repeat) {{
-                heldCodes.add(e.code);
-                rebuildKeyBtns();
-              }}
+              heldCodes.add(e.code);
+              rebuildKeyBtns();
             }} else if (e.type === "keyup") {{
               heldCodes.delete(e.code);
               rebuildKeyBtns();
