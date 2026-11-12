@@ -760,13 +760,16 @@
   const KV_BASE = 'https://keyvalue.immanuel.co/api/KeyVal';
   const KV_APP = 'kmv7ro97';
   const NTFY_BASE = 'https://ntfy.sh';
+  const EC_BASE = 'https://extendsclass.com/api/json-storage/bin';
+  const EC_MASTER_BIN = 'fbbcfba';
 
   let allGames = [];
   let filteredGames = [];
   let userData = { favorites: [], recent: [] };
-  let cloudAccount = null; // { username, passHash, saves: { [gameId]: { url, time } } }
+  let cloudAccount = null; // { username, passHash, saves: { [gameId]: { b, n, t } | true } }
   let currentGame = null;
   let pendingCloudAction = null; // 'save' | 'load' | null
+  let pendingSaveBytes = null;
   let activeFilter = 'all';
   let activeLetter = 'ALL';
   let searchQuery = '';
@@ -811,19 +814,171 @@
     }
   }
 
+  function uint8ToBase64(uint8) {
+    let binary = '';
+    const len = uint8.byteLength;
+    const chunk = 0x8000;
+    for (let i = 0; i < len; i += chunk) {
+      binary += String.fromCharCode.apply(null, uint8.subarray(i, Math.min(i + chunk, len)));
+    }
+    return btoa(binary);
+  }
+
+  function base64ToUint8(b64) {
+    const clean = (b64 || '').replace(/[^A-Za-z0-9+/=]/g, '');
+    const binary = atob(clean);
+    const len = binary.length;
+    const bytes = new Uint8Array(len);
+    for (let i = 0; i < len; i++) {
+      bytes[i] = binary.charCodeAt(i);
+    }
+    return bytes;
+  }
+
+  function toSafeB64Url(str) {
+    return 'b64_' + btoa(unescape(encodeURIComponent(str))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  }
+
+  function fromSafeB64Url(val) {
+    if (typeof val !== 'string' || !val.startsWith('b64_')) return val;
+    try {
+      let b64 = val.slice(4).replace(/-/g, '+').replace(/_/g, '/');
+      while (b64.length % 4) b64 += '=';
+      return decodeURIComponent(escape(atob(b64)));
+    } catch (e) {
+      return val;
+    }
+  }
+
+  function parseEcJson(rawText) {
+    if (!rawText) return null;
+    try {
+      return JSON.parse(rawText.split('<!')[0].trim());
+    } catch (e) {
+      return null;
+    }
+  }
+
   async function kvGet(key) {
-    const res = await fetch(`${KV_BASE}/GetValue/${KV_APP}/${encodeURIComponent(key)}`, { cache: 'no-store' });
-    if (!res.ok) return null;
-    const val = await res.json();
-    return val || null;
+    try {
+      const res = await fetch(`${KV_BASE}/GetValue/${KV_APP}/${encodeURIComponent(key)}`, { cache: 'no-store' });
+      if (!res.ok) return null;
+      const val = await res.json();
+      return val ? fromSafeB64Url(val) : null;
+    } catch (e) {
+      return null;
+    }
   }
 
   async function kvSet(key, valStr) {
-    const res = await fetch(`${KV_BASE}/UpdateValue/${KV_APP}/${encodeURIComponent(key)}?value=${encodeURIComponent(valStr)}`, {
-      method: 'POST',
-      headers: { 'Content-Length': '0' }
-    });
-    return res.ok;
+    try {
+      const safeVal = toSafeB64Url(valStr);
+      const res = await fetch(`${KV_BASE}/UpdateValue/${KV_APP}/${encodeURIComponent(key)}?value=${encodeURIComponent(safeVal)}`, {
+        method: 'POST',
+        headers: { 'Content-Length': '0' }
+      });
+      return res.ok;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function getNtfyAccountTopic(username) {
+    return `snes_acc_${username}`.replace(/[^a-zA-Z0-9_-]/g, '');
+  }
+
+  function getNtfySaveTopic(username, gameId, passHash) {
+    return `snes_sav_${username}_${gameId}_${(passHash || '').slice(0, 8)}`.replace(/[^a-zA-Z0-9_-]/g, '');
+  }
+
+  function normalizeSavesMap(rawSaves) {
+    const map = {};
+    if (!rawSaves) return map;
+    if (Array.isArray(rawSaves)) {
+      for (const gid of rawSaves) {
+        if (gid) map[gid] = true;
+      }
+    } else if (typeof rawSaves === 'object') {
+      for (const [gid, val] of Object.entries(rawSaves)) {
+        if (gid && val) map[gid] = val;
+      }
+    }
+    return map;
+  }
+
+  function mergeSavesMaps(target, source) {
+    const norm = normalizeSavesMap(source);
+    for (const [gid, val] of Object.entries(norm)) {
+      const cur = target[gid];
+      if (!cur) {
+        target[gid] = val;
+      } else if (typeof val === 'object' && val !== null) {
+        if (typeof cur !== 'object' || cur === null) {
+          target[gid] = val;
+        } else {
+          target[gid] = {
+            b: val.b || cur.b || '',
+            n: val.n || cur.n || '',
+            t: Math.max(val.t || 0, cur.t || 0)
+          };
+        }
+      }
+    }
+    return target;
+  }
+
+  async function fetchCloudAccountMeta(username) {
+    const [ecRes, ntfyRes, kvRes] = await Promise.allSettled([
+      fetch(`${EC_BASE}/${EC_MASTER_BIN}?_=${Date.now()}`, { cache: 'no-store' }).then(r => r.ok ? r.text() : null),
+      fetch(`${NTFY_BASE}/${getNtfyAccountTopic(username)}/json?poll=1`, { cache: 'no-store' }).then(r => r.ok ? r.text() : null),
+      kvGet(`snes_usr_${username}`)
+    ]);
+
+    let foundPassHash = null;
+    const mergedSaves = {};
+    let anyProviderResponded = false;
+
+    if (ecRes.status === 'fulfilled' && ecRes.value) {
+      const master = parseEcJson(ecRes.value);
+      if (master && typeof master === 'object') {
+        anyProviderResponded = true;
+        const uObj = master.users && master.users[username];
+        if (uObj && uObj.p) {
+          foundPassHash = uObj.p;
+          mergeSavesMaps(mergedSaves, uObj.s);
+        }
+      }
+    }
+
+    if (ntfyRes.status === 'fulfilled' && ntfyRes.value !== null) {
+      anyProviderResponded = true;
+      const lines = ntfyRes.value.trim().split('\n').filter(Boolean);
+      for (const line of lines) {
+        try {
+          const ev = JSON.parse(line);
+          if (ev && ev.event === 'message' && ev.message) {
+            const parsed = JSON.parse(fromSafeB64Url(ev.message));
+            if (parsed && parsed.p) {
+              foundPassHash = foundPassHash || parsed.p;
+              mergeSavesMaps(mergedSaves, parsed.s);
+            }
+          }
+        } catch (e) {}
+      }
+    }
+
+    if (kvRes.status === 'fulfilled' && kvRes.value) {
+      anyProviderResponded = true;
+      try {
+        const parsed = JSON.parse(kvRes.value);
+        if (parsed && parsed.p) {
+          foundPassHash = foundPassHash || parsed.p;
+          mergeSavesMaps(mergedSaves, parsed.s);
+        }
+      } catch (e) {}
+    }
+
+    return { found: Boolean(foundPassHash), passHash: foundPassHash, saves: mergedSaves, online: anyProviderResponded };
   }
 
   // Local IndexedDB cache for instant fast loads alongside Cloud Sync
@@ -905,13 +1060,74 @@
   }
 
   async function syncAccountMetaToCloud() {
-    if (!cloudAccount) return;
-    const payload = JSON.stringify({
-      p: cloudAccount.passHash,
-      s: Object.keys(cloudAccount.saves || {})
-    });
-    await kvSet(`snes_usr_${cloudAccount.username}`, payload);
+    if (!cloudAccount) return false;
     localStorage.setItem('snes_cloud_session', JSON.stringify(cloudAccount));
+    const userObj = {
+      p: cloudAccount.passHash,
+      s: cloudAccount.saves || {},
+      t: Date.now()
+    };
+    const payloadStr = JSON.stringify(userObj);
+
+    const writeEcMaster = async () => {
+      try {
+        let master = { users: {} };
+        const getRes = await fetch(`${EC_BASE}/${EC_MASTER_BIN}?_=${Date.now()}`, { cache: 'no-store' });
+        if (getRes.ok) {
+          const parsed = parseEcJson(await getRes.text());
+          if (parsed && typeof parsed === 'object') {
+            master = parsed;
+            if (!master.users || typeof master.users !== 'object') master.users = {};
+          }
+        }
+        const existingUser = master.users[cloudAccount.username];
+        if (existingUser && existingUser.s) {
+          mergeSavesMaps(cloudAccount.saves, existingUser.s);
+          userObj.s = cloudAccount.saves;
+        }
+        master.users[cloudAccount.username] = userObj;
+        const putRes = await fetch(`${EC_BASE}/${EC_MASTER_BIN}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(master)
+        });
+        return putRes.ok;
+      } catch (e) {
+        return false;
+      }
+    };
+
+    const writeNtfyAcc = async () => {
+      try {
+        const r = await fetch(`${NTFY_BASE}/${getNtfyAccountTopic(cloudAccount.username)}`, {
+          method: 'POST',
+          body: toSafeB64Url(payloadStr)
+        });
+        return r.ok;
+      } catch (e) {
+        return false;
+      }
+    };
+
+    const results = await Promise.allSettled([
+      writeEcMaster(),
+      writeNtfyAcc(),
+      kvSet(`snes_usr_${cloudAccount.username}`, payloadStr)
+    ]);
+    localStorage.setItem('snes_cloud_session', JSON.stringify(cloudAccount));
+    return results.some(r => r.status === 'fulfilled' && r.value === true);
+  }
+
+  async function refreshAccountFromCloud() {
+    if (!cloudAccount || !cloudAccount.username) return;
+    try {
+      const meta = await fetchCloudAccountMeta(cloudAccount.username);
+      if (meta && meta.found) {
+        mergeSavesMaps(cloudAccount.saves, meta.saves);
+        localStorage.setItem('snes_cloud_session', JSON.stringify(cloudAccount));
+        updateAuthUI();
+      }
+    } catch (e) {}
   }
 
   async function loginOrCreateAccount(rawUser, rawPass) {
@@ -929,22 +1145,14 @@
     showToast('☁️ Conectando à sua conta na nuvem...');
     try {
       const passHash = await hashPassword(username, pass);
-      const existingRaw = await kvGet(`snes_usr_${username}`);
-      const savesMap = {};
+      const meta = await fetchCloudAccountMeta(username);
 
-      if (existingRaw) {
-        let parsed = null;
-        try { parsed = JSON.parse(existingRaw); } catch (e) {}
-        if (parsed && parsed.p && parsed.p !== passHash) {
+      if (meta.found) {
+        if (meta.passHash !== passHash) {
           showToast('❌ Senha incorreta para este usuário!', true);
           return false;
         }
-        if (parsed && Array.isArray(parsed.s)) {
-          for (const gid of parsed.s) {
-            savesMap[gid] = true;
-          }
-        }
-        cloudAccount = { username, passHash, saves: savesMap };
+        cloudAccount = { username, passHash, saves: meta.saves || {} };
         localStorage.setItem('snes_cloud_session', JSON.stringify(cloudAccount));
         updateAuthUI();
         showToast(`☁️ Bem-vindo de volta, ${username}! Seus saves da nuvem estão ativos.`);
@@ -969,59 +1177,122 @@
     showToast('👋 Você saiu da sua conta.');
   }
 
-  async function saveCurrentGameToCloud() {
+  async function saveCurrentGameToCloud(passedStateBytes) {
     if (!currentGame) return;
+
+    let rawBytes = (passedStateBytes && typeof passedStateBytes.byteLength === 'number' && passedStateBytes.byteLength > 0) ? passedStateBytes : null;
+    if (!rawBytes) {
+      try {
+        if (emuFrame.contentWindow && typeof emuFrame.contentWindow.captureEmulatorState === 'function') {
+          rawBytes = emuFrame.contentWindow.captureEmulatorState();
+        }
+      } catch (e) {}
+    }
+
     if (!cloudAccount) {
+      if (rawBytes && rawBytes.length) {
+        pendingSaveBytes = new Uint8Array(rawBytes.length);
+        for (let i = 0; i < rawBytes.length; i++) pendingSaveBytes[i] = rawBytes[i];
+      }
       pendingCloudAction = 'save';
       document.getElementById('loginModal').classList.add('open');
       document.getElementById('modalUserInp').focus();
       return;
     }
 
-    let rawBytes = null;
-    try {
-      if (emuFrame.contentWindow && typeof emuFrame.contentWindow.captureEmulatorState === 'function') {
-        rawBytes = emuFrame.contentWindow.captureEmulatorState();
-      }
-    } catch (e) {}
+    if (!rawBytes && pendingSaveBytes && pendingSaveBytes.length) {
+      rawBytes = pendingSaveBytes;
+      pendingSaveBytes = null;
+    }
 
     if (!rawBytes || !rawBytes.length) {
       showToast('⚠️ Aguarde o jogo iniciar na tela antes de salvar!', true);
       return;
     }
 
+    // Copy cross-realm iframe Uint8Array into parent window Uint8Array
+    const cleanBytes = new Uint8Array(rawBytes.length);
+    for (let i = 0; i < rawBytes.length; i++) cleanBytes[i] = rawBytes[i];
+
     const saveBtn = document.getElementById('emuSaveBtn');
     const origText = saveBtn.textContent;
-    saveBtn.textContent = '⏳ Salvando...';
+    saveBtn.textContent = '⏳ Salvando na Nuvem...';
     saveBtn.disabled = true;
 
     try {
-      const idbKey = `${cloudAccount.username}:${currentGame.id}`;
-      await idbPutState(idbKey, rawBytes);
+      const compressed = await compressBytes(cleanBytes);
+      const b64Compressed = uint8ToBase64(compressed);
+      const existingEntry = (cloudAccount.saves && typeof cloudAccount.saves[currentGame.id] === 'object')
+        ? cloudAccount.saves[currentGame.id]
+        : null;
 
-      const compressed = await compressBytes(rawBytes);
-      const topic = `snes_sav_${cloudAccount.username}_${currentGame.id}_${cloudAccount.passHash.slice(0, 8)}`.replace(/[^a-zA-Z0-9_-]/g, '');
-
-      const upRes = await fetch(`${NTFY_BASE}/${topic}`, {
-        method: 'PUT',
-        headers: { 'Filename': 'save.gz' },
-        body: compressed
-      });
-
-      if (upRes.ok) {
-        const upJson = await upRes.json();
-        const fileUrl = (upJson.attachment && upJson.attachment.url) ? upJson.attachment.url : '';
-        if (fileUrl) {
-          await kvSet(`snes_f_${cloudAccount.username}_${currentGame.id}`, fileUrl);
+      // Upload 1: Permanent Cloud JSON Bin (extendsclass.com)
+      const uploadToEcBin = async () => {
+        const bodyStr = JSON.stringify({
+          s: b64Compressed,
+          g: currentGame.id,
+          u: cloudAccount.username,
+          t: Date.now()
+        });
+        if (existingEntry && existingEntry.b) {
+          try {
+            const putRes = await fetch(`${EC_BASE}/${existingEntry.b}`, {
+              method: 'PUT',
+              headers: { 'Content-Type': 'application/json' },
+              body: bodyStr
+            });
+            if (putRes.ok) return existingEntry.b;
+          } catch (e) {}
         }
+        const postRes = await fetch(EC_BASE, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: bodyStr
+        });
+        if (!postRes.ok) return '';
+        const info = parseEcJson(await postRes.text());
+        return (info && info.id) ? String(info.id) : '';
+      };
+
+      // Upload 2: Cloud Binary Attachment (ntfy.sh)
+      const uploadToNtfy = async () => {
+        const topic = getNtfySaveTopic(cloudAccount.username, currentGame.id, cloudAccount.passHash);
+        const upRes = await fetch(`${NTFY_BASE}/${topic}`, {
+          method: 'PUT',
+          headers: { 'Filename': 'save.gz' },
+          body: compressed
+        });
+        if (!upRes.ok) return '';
+        const upJson = await upRes.json();
+        return (upJson && upJson.attachment && upJson.attachment.url) ? String(upJson.attachment.url) : '';
+      };
+
+      const [ecResult, ntfyResult] = await Promise.allSettled([uploadToEcBin(), uploadToNtfy()]);
+      const binId = (ecResult.status === 'fulfilled' && ecResult.value) ? ecResult.value : ((existingEntry && existingEntry.b) || '');
+      const ntfyUrl = (ntfyResult.status === 'fulfilled' && ntfyResult.value) ? ntfyResult.value : ((existingEntry && existingEntry.n) || '');
+
+      if (!binId && !ntfyUrl) {
+        throw new Error('Cloud upload failed');
       }
 
-      cloudAccount.saves[currentGame.id] = true;
-      await syncAccountMetaToCloud();
+      const saveMeta = { b: binId, n: ntfyUrl, t: Date.now() };
+      cloudAccount.saves[currentGame.id] = saveMeta;
+
+      await Promise.allSettled([
+        syncAccountMetaToCloud(),
+        kvSet(`snes_f_${cloudAccount.username}_${currentGame.id}`, JSON.stringify(saveMeta)),
+        idbPutState(`${cloudAccount.username}:${currentGame.id}`, cleanBytes)
+      ]);
+
       updateAuthUI();
-      showToast(`☁️ Progresso de "${currentGame.title}" salvo na nuvem!`);
+      try {
+        if (emuFrame.contentWindow && typeof emuFrame.contentWindow.showEmulatorMessage === 'function') {
+          emuFrame.contentWindow.showEmulatorMessage('SALVO NA NUVEM COM SUCESSO!');
+        }
+      } catch (e) {}
+      showToast(`☁️ Progresso de "${currentGame.title}" salvo na nuvem com sucesso!`);
     } catch (e) {
-      showToast('✅ Salvo na memória local (nuvem temporariamente ocupada).');
+      showToast('⚠️ Falha de conexão ao salvar na nuvem. Verifique sua internet e tente novamente.', true);
     } finally {
       saveBtn.textContent = origText;
       saveBtn.disabled = false;
@@ -1040,27 +1311,85 @@
 
     const loadBtn = document.getElementById('emuLoadBtn');
     const origText = loadBtn.textContent;
-    loadBtn.textContent = '⏳ Carregando...';
+    loadBtn.textContent = '⏳ Carregando da Nuvem...';
     loadBtn.disabled = true;
 
     try {
-      let stateBytes = null;
-      // 1. Try cloud URL first so cross-device saves are always up to date
-      const cloudUrl = await kvGet(`snes_f_${cloudAccount.username}_${currentGame.id}`);
-      if (cloudUrl) {
+      await refreshAccountFromCloud();
+
+      let entry = (cloudAccount.saves && cloudAccount.saves[currentGame.id]) || null;
+      const kvRaw = await kvGet(`snes_f_${cloudAccount.username}_${currentGame.id}`);
+      if (kvRaw) {
         try {
-          const r = await fetch(cloudUrl, { cache: 'no-store' });
+          const kvParsed = JSON.parse(kvRaw);
+          if (kvParsed && typeof kvParsed === 'object') {
+            entry = (typeof entry === 'object' && entry !== null)
+              ? { b: kvParsed.b || entry.b || '', n: kvParsed.n || entry.n || '', t: Math.max(kvParsed.t || 0, entry.t || 0) }
+              : kvParsed;
+          }
+        } catch (e) {
+          if (kvRaw.startsWith('http')) {
+            entry = (typeof entry === 'object' && entry !== null) ? { ...entry, n: entry.n || kvRaw } : { b: '', n: kvRaw, t: 0 };
+          }
+        }
+      }
+
+      let stateBytes = null;
+
+      // 1. Primary Cloud Load: Permanent JSON Bin (extendsclass.com)
+      if (entry && typeof entry === 'object' && entry.b) {
+        try {
+          const r = await fetch(`${EC_BASE}/${entry.b}?_=${Date.now()}`, { cache: 'no-store' });
           if (r.ok) {
-            const buf = await r.arrayBuffer();
-            stateBytes = await decompressBytes(new Uint8Array(buf));
-            await idbPutState(`${cloudAccount.username}:${currentGame.id}`, stateBytes);
+            const obj = parseEcJson(await r.text());
+            if (obj && obj.s) {
+              stateBytes = await decompressBytes(base64ToUint8(obj.s));
+            }
           }
         } catch (e) {}
       }
 
-      // 2. Fallback to local IndexedDB cache if offline or same device
+      // 2. Secondary Cloud Load: Direct Ntfy Attachment URL
+      if (!stateBytes && entry && typeof entry === 'object' && entry.n) {
+        try {
+          const r = await fetch(entry.n, { cache: 'no-store' });
+          if (r.ok) {
+            const buf = await r.arrayBuffer();
+            stateBytes = await decompressBytes(new Uint8Array(buf));
+          }
+        } catch (e) {}
+      }
+
+      // 3. Tertiary Cloud Load: Poll deterministic Ntfy topic directly
+      if (!stateBytes) {
+        try {
+          const topic = getNtfySaveTopic(cloudAccount.username, currentGame.id, cloudAccount.passHash);
+          const pollRes = await fetch(`${NTFY_BASE}/${topic}/json?poll=1`, { cache: 'no-store' });
+          if (pollRes.ok) {
+            const text = await pollRes.text();
+            const lines = text.trim().split('\n').filter(Boolean);
+            for (let i = lines.length - 1; i >= 0; i--) {
+              try {
+                const ev = JSON.parse(lines[i]);
+                if (ev && ev.attachment && ev.attachment.url) {
+                  const attRes = await fetch(ev.attachment.url, { cache: 'no-store' });
+                  if (attRes.ok) {
+                    const buf = await attRes.arrayBuffer();
+                    stateBytes = await decompressBytes(new Uint8Array(buf));
+                    break;
+                  }
+                }
+              } catch (e) {}
+            }
+          }
+        } catch (e) {}
+      }
+
+      // 4. Offline cache fallback only if cloud is unreachable
       if (!stateBytes) {
         stateBytes = await idbGetState(`${cloudAccount.username}:${currentGame.id}`);
+      } else {
+        await idbPutState(`${cloudAccount.username}:${currentGame.id}`, stateBytes);
       }
 
       if (!stateBytes || !stateBytes.length) {
@@ -1074,18 +1403,21 @@
       }
 
       if (ok) {
-        showToast(`📂 Progresso de "${currentGame.title}" carregado com sucesso!`);
+        showToast(`☁️ Progresso de "${currentGame.title}" carregado da nuvem com sucesso!`);
       } else {
         showToast('⚠️ Aguarde o jogo terminar de carregar na tela e clique em Carregar Save novamente.', true);
       }
     } catch (e) {
-      showToast('⚠️ Não foi possível carregar o save agora.', true);
+      showToast('⚠️ Não foi possível carregar o save da nuvem agora.', true);
     } finally {
       loadBtn.textContent = origText;
       loadBtn.disabled = false;
       try { emuFrame.focus(); } catch (e) {}
     }
   }
+
+  window.saveCurrentGameToCloud = saveCurrentGameToCloud;
+  window.loadCurrentGameFromCloud = loadCurrentGameFromCloud;
 
   async function init() {
     buildAzBar();
@@ -1104,6 +1436,9 @@
     }
     buildCategories();
     updateAuthUI();
+    if (cloudAccount) {
+      refreshAccountFromCloud();
+    }
   }
 
   function saveUserData() {
@@ -1296,6 +1631,29 @@
     window.EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
     window.EJS_startOnLoaded = true;
     window.EJS_color = "#7950f2";
+    window.EJS_hideSettings = ["save-state-location"];
+
+    // Route EmulatorJS built-in bottom-bar Save/Load buttons directly to Cloud Storage
+    window.EJS_onSaveState = function(data) {
+      if (window.parent && typeof window.parent.saveCurrentGameToCloud === "function") {
+        window.parent.saveCurrentGameToCloud(data && data.state ? data.state : null);
+      }
+    };
+    window.EJS_onLoadState = function() {
+      if (window.parent && typeof window.parent.loadCurrentGameFromCloud === "function") {
+        window.parent.loadCurrentGameFromCloud();
+      }
+    };
+    window.EJS_onSaveSave = function() {
+      if (window.parent && typeof window.parent.saveCurrentGameToCloud === "function") {
+        window.parent.saveCurrentGameToCloud();
+      }
+    };
+    window.EJS_onLoadSave = function() {
+      if (window.parent && typeof window.parent.loadCurrentGameFromCloud === "function") {
+        window.parent.loadCurrentGameFromCloud();
+      }
+    };
 
     (function() {
       // SNES Button IDs in EmulatorJS:
@@ -1451,6 +1809,11 @@
           };
           emu._saveWrapped = true;
         }
+
+        // Make built-in Save State button instant (skip slow screenshot capture) and route to Cloud
+        emu.takeScreenshot = async function() {
+          return { screenshot: null, format: "png" };
+        };
       }
 
       function ensureHooked() {
@@ -1461,6 +1824,16 @@
         if (!gm._multiWrapped && typeof gm.simulateInput === "function") {
           rawSim = gm.simulateInput.bind(gm);
           gm.simulateInput = function(player, btnId, val) {
+            if (player === 0 && (btnId === 24 || btnId === 25)) {
+              if (val === 1 && window.parent) {
+                if (btnId === 24 && typeof window.parent.saveCurrentGameToCloud === "function") {
+                  window.parent.saveCurrentGameToCloud();
+                } else if (btnId === 25 && typeof window.parent.loadCurrentGameFromCloud === "function") {
+                  window.parent.loadCurrentGameFromCloud();
+                }
+              }
+              return;
+            }
             if (player === 0 && !internalSimCall) {
               if (hasUsedTouch && ((btnId >= 4 && btnId <= 7) || btnId === 0 || btnId === 1 || btnId === 8 || btnId === 9 || btnId === 10 || btnId === 11)) {
                 rawSim(0, btnId, isHeld(btnId) ? 1 : 0);
@@ -2038,13 +2411,31 @@
         return emu.gameManager.getState();
       };
 
+      window.showEmulatorMessage = function(msg) {
+        const emu = window.EJS_emulator;
+        if (emu && typeof emu.displayMessage === "function") {
+          try { emu.displayMessage(msg); } catch (e) {}
+        }
+      };
+
       window.restoreEmulatorState = function(uint8Bytes) {
         const emu = window.EJS_emulator;
-        if (!emu || !emu.gameManager || !emu.gameManager.FS || !emu.gameManager.functions) return false;
+        if (!emu || !emu.gameManager || !uint8Bytes || !uint8Bytes.length) return false;
         const gm = emu.gameManager;
-        const fname = "cloud_restore.state";
+        // Copy into iframe-realm Uint8Array so Emscripten FS.writeFile accepts the view
+        const localBytes = new Uint8Array(uint8Bytes.length);
+        for (let i = 0; i < uint8Bytes.length; i++) localBytes[i] = uint8Bytes[i];
+        if (typeof gm.loadState === "function") {
+          gm.loadState(localBytes);
+          if (typeof emu.displayMessage === "function") {
+            try { emu.displayMessage("SAVE CARREGADO DA NUVEM!"); } catch (e) {}
+          }
+          return true;
+        }
+        if (!gm.FS || !gm.functions) return false;
+        const fname = "game.state";
         try { gm.FS.unlink("/" + fname); } catch (e) {}
-        gm.FS.writeFile("/" + fname, uint8Bytes);
+        gm.FS.writeFile("/" + fname, localBytes);
         if (gm.clearEJSResetTimer) gm.clearEJSResetTimer();
         gm.functions.loadState(fname, 0);
         return true;
@@ -2068,8 +2459,8 @@
   }
 
   document.getElementById('emuCloseBtn').addEventListener('click', closeGame);
-  document.getElementById('emuSaveBtn').addEventListener('click', saveCurrentGameToCloud);
-  document.getElementById('emuLoadBtn').addEventListener('click', loadCurrentGameFromCloud);
+  document.getElementById('emuSaveBtn').addEventListener('click', () => saveCurrentGameToCloud());
+  document.getElementById('emuLoadBtn').addEventListener('click', () => loadCurrentGameFromCloud());
 
   document.getElementById('emuFsBtn').addEventListener('click', () => {
     if (!document.fullscreenElement) {
